@@ -4,7 +4,9 @@ A number of organisations* involved in industrial ontology development have been
 
 The goal of releasing the draft document here is to provide guidance to industry users and the data modelling community about the vision for this document and more specifically about a set of principles which resources will have to comply with in order to be considered `compliant' with the ISO 23726 series.
 
-A copy of the draft document will be uploaded to this site in early August 2025.
+A copy of the draft document will be uploaded to this site in early August 2025. Please note that edits may continue to be uploaded until the draft is submitted in October. Interested readers can subscribe to this Github to receive notifications.
+
+We shall also be keeping an eye on the Issues tab. If you have questions or comments about this document and/or its progress. Please post an issue.
 
 * PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58.
 
