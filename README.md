@@ -8,6 +8,6 @@ A copy of the draft document will be uploaded to this site in early August 2025.
 
 We shall also be keeping an eye on the Issues tab. If you have questions or comments about this document and/or its progress. Please post an issue.
 
-* PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58.
+* PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58, Cognite, Aker Solutions, Equinor.
 
 
