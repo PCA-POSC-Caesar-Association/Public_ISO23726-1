@@ -4,7 +4,7 @@
 
 The goal of releasing this document here is to provide guidance to industry users and the semantic data modelling community about 1) the vision for the ISO 23726 Ontology-based Interoperability (OBI) series and 2) a set of principles which resources will have to comply with in order to be considered `compliant' with IDO and the ISO 23726 series. The Industrial Data Ontology (IDO) is the upper ontology in the ISO 23726 series. [IDO](https://rds.posccaesar.org/ontology/lis14/) is currently inside the ISO process and due to be published as an ISO standard in 2026. 
 
-These organisations[1] have been supporting work to develop a proposal for ISO TC184 SC4 for a document describing an Ontology-based Interoperability ecosystem for industrial ontologies. This document will be submitted to ISO in October 2025. Once inside the ISO process only members of the ISO TC184/SC4 WG26 commmittee and the liaison groups will have access to the draft standard and any associated digital artefacts. 
+These organisations[1] have been supporting work to develop a proposal for ISO TC184 SC4 for a document describing an Ontology-based Interoperability ecosystem for industrial ontologies. This document will be submitted to ISO in October 2025. Once inside the ISO process only members of the ISO TC184/SC4 WG26 commmittee and the liaison groups will have access to the draft standard and any associated digital artefacts until it is published in 2027/2028. 
 
 [1] PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58, Cognite, Aker Solutions, Equinor & Standards Norway
 
