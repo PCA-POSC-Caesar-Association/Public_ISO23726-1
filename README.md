@@ -22,6 +22,8 @@ A semantically explicit format is key to human and machine interoperability. An 
 
 Ontologies are increasingly integrated into enterprise architecture, particularly within knowledge management layers. An example is shown in Figure 1. The Ontology-Based interoperability (OBI) ecosystem comprises artefacts managed by ISO 23726 WG26, external organizations, enterprises, as well as organizational stakeholders, processes, and capabilities.
 
+Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability
+
 ![Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability](https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/blob/main/images/OBI_ecosystem.jpeg)
 
 
