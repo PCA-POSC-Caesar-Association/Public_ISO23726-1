@@ -8,6 +8,14 @@ A copy of the draft document will be uploaded to this site in early August 2025.
 
 We shall also be keeping an eye on the Issues tab. If you have questions or comments about this document and/or its progress. Please post an issue.
 
-[1] PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58, Cognite, Aker Solutions, Equinor.
+[1] PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58, Cognite, Aker Solutions, Equinor & Standards Norway
+
+## Developers of this version of the document
+
+Lead developers: [Professor Melinda Hodkiewicz](https://www.linkedin.com/in/melinda-hodkiewicz-b6bbba7/)  & [Andreas Neumann}(https://www.linkedin.com/in/andreas-neumann-09b267160/) 
+
+Development team: [Pål Rylandsholm](https://www.linkedin.com/in/prylandsholm/), [Maja Milicic Brandt](https://www.linkedin.com/in/majamilicicbrandt/), [Johan W Kluwer](https://www.linkedin.com/in/johanwkluwer/), [Caitlin Woods](https://www.linkedin.com/in/caitlin-woods/), [Dirk Walter](https://www.linkedin.com/in/dirk-walther/), [Inghild Kaarstad](https://www.linkedin.com/in/inghild-kaarstad-936734a/) 
+
+
 
 
