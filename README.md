@@ -10,7 +10,7 @@ These organisations[1] have been supporting work to develop a proposal for ISO T
 
 ## Developers of this version of the document
 
-Lead developers: [Professor Melinda Hodkiewicz](https://www.linkedin.com/in/melinda-hodkiewicz-b6bbba7/)  & [Andreas Neumann}(https://www.linkedin.com/in/andreas-neumann-09b267160/) 
+Lead developers: [Professor Melinda Hodkiewicz](https://www.linkedin.com/in/melinda-hodkiewicz-b6bbba7/)  & [Andreas Neumann](https://www.linkedin.com/in/andreas-neumann-09b267160/) 
 
 Development team: [Pål Rylandsholm](https://www.linkedin.com/in/prylandsholm/), [Maja Milicic Brandt](https://www.linkedin.com/in/majamilicicbrandt/), [Johan W Kluwer](https://www.linkedin.com/in/johanwkluwer/), [Caitlin Woods](https://www.linkedin.com/in/caitlin-woods/), [Dirk Walter](https://www.linkedin.com/in/dirk-walther/), [Inghild Kaarstad](https://www.linkedin.com/in/inghild-kaarstad-936734a/) 
 
