@@ -8,6 +8,10 @@ These organisations[1] have been supporting work to develop a proposal for ISO T
 
 [1] PoscCaesar Association, Siemens, DNV, Grundfos, The University of Western Australia, Freelance Catalyst58, Cognite, Aker Solutions, Equinor & Standards Norway
 
+## Link to the document
+
+https://pca-posc-caesar-association.github.io/Public_ISO23726-1/
+
 ## Developers of this version of the document
 
 Lead developers: [Professor Melinda Hodkiewicz](https://www.linkedin.com/in/melinda-hodkiewicz-b6bbba7/)  & [Andreas Neumann](https://www.linkedin.com/in/andreas-neumann-09b267160/) 
