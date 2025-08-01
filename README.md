@@ -40,6 +40,6 @@ IDO specifies an abstract representation of the industrial data domain, includin
 IDO is implemented as an OWL 2 upper ontology. OWL 2 DL ontologies are interpreted using the Direct Semantics. DL (description logics) are a family of languages used in artificial intelligence and Semantic Web technologies for logic-based knowledge representation and reasoning. Typical ontology reasoning tasks include: (1) consistency checking, (2) automated classification (i.e. inferring implicit subclass hierarchies), and (3) derivation of implicit facts. OWL DL reasoners are software systems that perform these reasoning tasks automatically. Such automated reasoning is essential for quality assurance, semantic consistency, and knowledge inference within ontologies.
 
 ## To contact us
-A copy of the draft document will be uploaded to this site in early August 2025. Please note that edits may continue to be uploaded until the draft is submitted in October. Interested readers can subscribe to this Github by clicking the 'watching' option to receive notifications.
+A copy of the draft document was initially uploaded here in 1 Aug 2025. Please note that edits may continue to be uploaded until the draft is submitted in October. Interested readers can subscribe to this Github by clicking the 'watching' option to receive notifications.
 
 We shall also be keeping an eye on the Issues tab. If you have questions or comments about this document and/or its progress. Please post an issue.
