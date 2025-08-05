@@ -1,0 +1,10 @@
+site_name: Ontology-based Interoperability for Industrial Data
+theme:
+  name: material
+  features:
+    - toc.integrate
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 2
