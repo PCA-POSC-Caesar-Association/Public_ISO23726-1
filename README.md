@@ -28,7 +28,7 @@ Ontologies are increasingly integrated into enterprise architecture, particularl
 
 Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability
 
-![Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability](https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/blob/main/images/OBI_ecosystem.jpeg)
+![Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability](https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/blob/main/images/Fig2_OBI_ecosystem.jpeg)
 
 
 At the base of the Figure 1 is a level representing the data sources created by enterprises and stored in the data storage system layer. To organize, check, and integrate data from disparate source systems, organisations are incorporating a knowledge management layer into their enterprise architecture. An ontology-based knowledge management layer provides quality controlled, interoperable data for data products, analytics and AI used by data consumers within and across organisations. IDO is the upper ontology in the OBI ecosystem knowledge management layer. In addition to IDO the knowledge management layer includes enterprise ontologies and shared artefacts such as reference ontologies, ontology modelling patterns, templates, reference data libraries, data quality rules, SHACL shapes, and SPARQL queries. Above the knowledge management layer sits in an enterprise architecture for data products, data analytics and artificial intelligence models which are accessible to data consumers.
