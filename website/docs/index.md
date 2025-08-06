@@ -1,4 +1,6 @@
-### Lead authors: Melinda Hodkiewicz and Andreas Neumann
+# Ontology-based Interoperability for Industrial Data
+
+#### Lead authors: Melinda Hodkiewicz and Andreas Neumann
 
 #### Development team: Pål Rylandsholm, Maja Milicic Brandt, Johan W Kluwer, Caitlin Woods, Dirk Walter, Inghild Kaarstad
 
@@ -9,8 +11,6 @@ The contents of this document will be submitted to ISO as part of ISO 23726-1 in
 
 ### Licence
 [CC-BY-SA-4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/)
-
-## Ontology-based Interoperability for Industrial Data
 
 ## Introduction
 Machine-interpretable data are a key enabler of 1) industrial automation, and 2) the application of artificial intelligence to products, plants, processes, and services. However, organizational data are often stored in digital formats that use proprietary terms, definitions, and schemas. This lack of [semantic interoperability](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9) means that data exchange frequently relies on manual interpretation or custom mappings. Documents such as engineering standards, procedures, spreadsheets, and reference data libraries are prone to misinterpretation when their semantics are not formally and explicitly defined.
