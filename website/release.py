@@ -3,31 +3,31 @@ import shutil
 import subprocess
 import datetime
 import glob
+import tempfile
 
-# --- Paths ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # /website
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # repo root
-GH_PAGES_WORKTREE = os.path.join(REPO_ROOT, "site")  # gh-pages worktree
 BUILD_DIR = os.path.join(SCRIPT_DIR, "site_build")   # temp build output
-LATEST_DIR = os.path.join(GH_PAGES_WORKTREE, "latest")
-ARCHIVE_DIR = os.path.join(GH_PAGES_WORKTREE, "archive")
 KEEP_AT_ROOT = {".nojekyll", "index.html", "CNAME"}  # Files to keep at root
 
-def run(cmd):
+def run(cmd, cwd=None):
     print(f"+ {cmd}")
-    subprocess.check_call(cmd, shell=True)
+    subprocess.check_call(cmd, shell=True, cwd=cwd)
 
-# 1. Build MkDocs into temp folder
+# 1. Build MkDocs
 if os.path.exists(BUILD_DIR):
     shutil.rmtree(BUILD_DIR)
+run(f'mkdocs build -f "{os.path.join(SCRIPT_DIR, "mkdocs.yml")}" -d "{BUILD_DIR}"', cwd=SCRIPT_DIR)
 
-mkdocs_yml = os.path.join(SCRIPT_DIR, "mkdocs.yml")
-run(f"mkdocs build -f {mkdocs_yml} -d {BUILD_DIR}")
+# 2. Prepare temp folder for gh-pages
+tmp_dir = tempfile.mkdtemp(prefix="ghpages_")
+run(f'git clone --branch gh-pages --single-branch $(git config --get remote.origin.url) "{tmp_dir}"', cwd=REPO_ROOT)
 
-# 2. Ensure archive dir exists
+LATEST_DIR = os.path.join(tmp_dir, "latest")
+ARCHIVE_DIR = os.path.join(tmp_dir, "archive")
 os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
-# 3. Create version string
+# 3. Version string
 today = datetime.date.today().strftime("%Y-%m-%d")
 existing_versions = [
     os.path.basename(p) for p in glob.glob(os.path.join(ARCHIVE_DIR, f"{today}_*"))
@@ -41,28 +41,31 @@ if existing_versions:
 version_str = f"{today}_{build_num}"
 version_path = os.path.join(ARCHIVE_DIR, version_str)
 
-# 4. Clean /latest/ and copy build
+# 4. Replace latest
 if os.path.exists(LATEST_DIR):
     shutil.rmtree(LATEST_DIR)
 shutil.copytree(BUILD_DIR, LATEST_DIR)
 
-# 5. Copy build to archive
+# 5. Add to archive
 if os.path.exists(version_path):
     shutil.rmtree(version_path)
 shutil.copytree(BUILD_DIR, version_path)
 
-# 6. Remove old root files except KEEP_AT_ROOT
-for item in os.listdir(GH_PAGES_WORKTREE):
-    if item not in KEEP_AT_ROOT and item not in {"latest", "archive"}:
-        path = os.path.join(GH_PAGES_WORKTREE, item)
+# 6. Clean old root files except KEEP_AT_ROOT
+for item in os.listdir(tmp_dir):
+    if item not in KEEP_AT_ROOT and item not in {"latest", "archive", ".git"}:
+        path = os.path.join(tmp_dir, item)
         if os.path.isdir(path):
             shutil.rmtree(path)
         else:
             os.remove(path)
 
-# 7. Commit and push
-run(f'cd "{GH_PAGES_WORKTREE}" && git add .')
-run(f'cd "{GH_PAGES_WORKTREE}" && git commit -m "Release {version_str}" || echo "No changes to commit"')
-run(f'cd "{GH_PAGES_WORKTREE}" && git push origin gh-pages')
+# 7. Commit & push
+run("git add .", cwd=tmp_dir)
+run(f'git commit -m "Release {version_str}" || echo "No changes to commit"', cwd=tmp_dir)
+run("git push origin gh-pages", cwd=tmp_dir)
+
+# 8. Cleanup
+shutil.rmtree(tmp_dir)
 
 print(f"✅ Released version {version_str}")
