@@ -10,18 +10,33 @@ REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # repo root
 BUILD_DIR = os.path.join(SCRIPT_DIR, "site_build")   # temp build output
 KEEP_AT_ROOT = {".nojekyll", "index.html", "CNAME"}  # Files to keep at root
 
+
 def run(cmd, cwd=None):
-    print(f"+ {cmd}")
-    subprocess.check_call(cmd, shell=True, cwd=cwd)
+    """Run a command cross-platform."""
+    if isinstance(cmd, str):
+        cmd = cmd.split()  # basic split for safety
+    print(f"+ {' '.join(cmd)}")
+    subprocess.check_call(cmd, cwd=cwd)
+
 
 # 1. Build MkDocs
 if os.path.exists(BUILD_DIR):
     shutil.rmtree(BUILD_DIR)
-run(f'mkdocs build -f "{os.path.join(SCRIPT_DIR, "mkdocs.yml")}" -d "{BUILD_DIR}"', cwd=SCRIPT_DIR)
+run(
+    ["mkdocs", "build", "-f", os.path.join(SCRIPT_DIR, "mkdocs.yml"), "-d", BUILD_DIR],
+    cwd=SCRIPT_DIR
+)
 
 # 2. Prepare temp folder for gh-pages
 tmp_dir = tempfile.mkdtemp(prefix="ghpages_")
-run(f'git clone --branch gh-pages --single-branch $(git config --get remote.origin.url) "{tmp_dir}"', cwd=REPO_ROOT)
+
+# Get repo URL
+repo_url = subprocess.check_output(
+    ["git", "config", "--get", "remote.origin.url"], cwd=REPO_ROOT
+).decode().strip()
+
+# Clone gh-pages branch
+run(["git", "clone", "--branch", "gh-pages", "--single-branch", repo_url, tmp_dir])
 
 LATEST_DIR = os.path.join(tmp_dir, "latest")
 ARCHIVE_DIR = os.path.join(tmp_dir, "archive")
@@ -61,9 +76,12 @@ for item in os.listdir(tmp_dir):
             os.remove(path)
 
 # 7. Commit & push
-run("git add .", cwd=tmp_dir)
-run(f'git commit -m "Release {version_str}" || echo "No changes to commit"', cwd=tmp_dir)
-run("git push origin gh-pages", cwd=tmp_dir)
+run(["git", "add", "."], cwd=tmp_dir)
+try:
+    run(["git", "commit", "-m", f"Release {version_str}"], cwd=tmp_dir)
+except subprocess.CalledProcessError:
+    print("No changes to commit.")
+run(["git", "push", "origin", "gh-pages"], cwd=tmp_dir)
 
 # 8. Cleanup
 shutil.rmtree(tmp_dir)
