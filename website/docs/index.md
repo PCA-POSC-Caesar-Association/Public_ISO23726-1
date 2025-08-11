@@ -46,13 +46,13 @@ There are no normative references.
 <div class="sts-tbx-sec" id="90902_id-12ab04b2-4d7c-4789-ba9e-4791b2bf1baa"></div> 
 
 #### 3.1.1
-application ontology  
+**application ontology**  
 ontology developed for a particular task or [use case (3.3.6)](#90902_id-52907548-af05-4df7-819b-16eb3c223620) that contains only the concepts, relationships, and constraints necessary for the context  
 Note 1 to entry: Designed to be used in a specific context and are not always reusable.  
 <div class="sts-tbx-sec" id="90902_id-25040f49-0155-4535-a64c-bd29075672fa"></div> 
 
 #### 3.1.2
-enterprise ontology  
+**enterprise ontology**  
 ontology developed, owned, and maintained by an enterprise  
 Note 1 to entry: Enterprise ontologies include [reference ontologies (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) and [application ontologies (3.1.1)](#90902_id-12ab04b2-4d7c-4789-ba9e-4791b2bf1baa).  
 Note 2 to entry: An [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a64c-bd29075672fa) conceptualizes enterprise vocabulary and knowledge.  
@@ -60,7 +60,7 @@ Note 3 to entry: An [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a
 <div class="sts-tbx-sec" id="90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914"></div> 
 
 #### 3.1.3
-reference ontology  
+**reference ontology**  
 provides a shared, formal understanding of the concepts and relationships within a specific domain or field of knowledge  
 Note 1 to entry: Reference ontologies provide a common vocabulary and structure. They are reusable across multiple applications.  
 Note 2 to entry: Reference ontologies are stable and actively maintained.  
@@ -68,7 +68,7 @@ Note 3 to entry: There is no agreement in the literature as to a naming conventi
 <div class="sts-tbx-sec" id="90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229"></div> 
 
 #### 3.1.4
-upper ontology  
+**upper ontology**  
 top level ontology  
 defines abstract concepts and general relationships that are common across all domains  
 Note 1 to entry: Abstract concepts are things like Object, Event, Process, Role, Quality and Function and general relationships are relations such as lis:partOf, lis:participatesIn and lis:hasQuality
@@ -77,14 +77,14 @@ Note 1 to entry: Abstract concepts are things like Object, Event, Process, Role,
 <div class="sts-tbx-sec" id="90902_id-f6f5d02c-8539-48dc-e037-64849b136806"></div> 
 
 #### 3.2.1
-axiom  
+**axiom**  
 logical statement that is taken to be true, to serve as a premise for further reasoning  
 Note 1 to entry: Axioms may be formulated as natural language sentences or as formulae in a formal language. In the OWL community, `[axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806)’ is used to refer to statements that say what is true in the domain that are ‘basic’ in the sense that they are not inferred from other statements.  
 [SOURCE:ISO DIS 23726-3]  
 <div class="sts-tbx-sec" id="90902_id-95b051ab-f8bc-4efa-b922-bf1061dc6501"></div> 
 
 #### 3.2.2
-annotation property  
+**annotation property**  
 RDF property included in the vocabulary of an OWL ontology, with no semantic significance  
 Note 1 to entry: Annotation properties allow for [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) on entities in an ontology that is not subject to OWL reasoning.  
 Note 2 to entry: Annotation properties are used to add human-readable descriptions such as labels, definitions and notes.  
@@ -93,19 +93,19 @@ Note 3 to entry: [https://www.w3.org/TR/owl2-syntax/#Annotation_Properties](http
 <div class="sts-tbx-sec" id="90902_id-24e5dbde-d01b-4709-d1b4-3f4f9b2c1fed"></div> 
 
 #### 3.2.3
-class restriction  
+**class restriction**  
 OWL class restriction  
 type of logical [axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) that constrain the properties and relationships of individuals within a class  
 Note 1 to entry: The main types of class restrictions in OWL ontologies (owl:Restriction) are existential (some), universal (only), value restriction (have a specific value for a property) and cardinality (have exactly, at least, or at most a certain number of relations).  
 <div class="sts-tbx-sec" id="90902_id-dbf73766-faeb-4a8c-ffc8-71e66fb154da"></div> 
 
 #### 3.2.4
-description logics  
+**description logics**  
 family of languages used in artificial intelligence and [Semantic Web (3.4.4)](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) technologies for logic-based knowledge representation and reasoning  
 <div class="sts-tbx-sec" id="90902_id-ae7ee2d0-70d6-44f3-9114-ac7793cd2b7c"></div> 
 
 #### 3.2.5
-expressivity  
+**expressivity**  
 level of expressivity  
 degree of complexity and richness in the types of knowledge an ontology can represent using its logical language  
 Note 1 to entry: Different aspects of [expressivity (3.2.5)](#90902_id-ae7ee2d0-70d6-44f3-9114-ac7793cd2b7c) include:  
@@ -118,7 +118,7 @@ Note 2 to entry: More expressive ontologies allow deeper automated reasoning (e.
 <div class="sts-tbx-sec" id="90902_id-98625d31-c4dd-4272-8204-817b4517dd53"></div> 
 
 #### 3.2.6
-ontological commitment  
+**ontological commitment**  
 agreement to use the shared vocabulary in a coherent and consistent manner  
 Note 1 to entry: a commitment to an [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) is a guarantee of consistency, but not completeness, with respect to queries and assertions using the vocabulary defined in the ontology   
 
@@ -127,7 +127,7 @@ Note 2 to entry: minimizing [ontological commitment (3.2.6)](#90902_id-98625d31-
 <div class="sts-tbx-sec" id="90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e"></div> 
 
 #### 3.2.7
-ontology alignment  
+**ontology alignment**  
 process of identifying relationships between concepts in two different ontologies  
 Note 1 to entry: There are three types of alignment:  
   1. equivalence - concepts are the same,
@@ -138,13 +138,13 @@ Note 1 to entry: There are three types of alignment:
 <div class="sts-tbx-sec" id="90902_id-75768bd8-00ef-4c11-a67a-8e2dd8d9566e"></div> 
 
 #### 3.2.8
-ontology reasoning  
+**ontology reasoning**  
 OWL DL reasoning  
 inference of implicit facts from knowledge expressed in an OWL 2 ontology using the direct model theoretic semantics of OWL 2 DL  
 <div class="sts-tbx-sec" id="90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9"></div> 
 
 #### 3.2.9
-semantic interoperability  
+**semantic interoperability**  
 interoperability so that the meaning of the data within the context of a subject area is understood by the participating systems  
 Note 1 to entry: Systems include pieces of equipment, software, human and computing systems.  
 
@@ -155,7 +155,7 @@ Note 4 to entry: A foundation for Industry 4.0, Smart Factories and Digital Prod
 <div class="sts-tbx-sec" id="90902_id-c1a1aa0f-2558-417a-99df-61bdf46a076d"></div> 
 
 #### 3.2.10
-shortcut property  
+**shortcut property**  
 object or datatype property in OWL intended as equivalent in meaning to a modelling [pattern (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) that would involve additional entities or classifications if made explicit  
 [SOURCE:ISO DIS 23726-3 Annex B]
 
@@ -163,28 +163,28 @@ object or datatype property in OWL intended as equivalent in meaning to a modell
 <div class="sts-tbx-sec" id="90902_id-6deda62d-4bef-458e-a4b9-fc17de42c121"></div> 
 
 #### 3.3.1
-competency question  
+**competency question**  
 question formulated in natural language that defines a formal requirement in the ontology engineering process  
 Note 1 to entry: Competency questions capture requirements from domain experts and check they can be addressed and guide developers in identifying what classes, properties, and constraints are needed.  
 Note 2 to entry: Competency questions allows a reasoner or query engine to produce a correct and complete answer to a question that the ontology was intended to support  
 <div class="sts-tbx-sec" id="90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea"></div> 
 
 #### 3.3.2
-ontology module  
+**ontology module**  
 subset of an ontology containing only the concepts and [axioms (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) needed for a specific purpose or context  
 Note 1 to entry: An [ontology module (3.3.2)](#90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea) is imported into other ontologies as a building block.  
 Note 2 to entry: An [ontology module (3.3.2)](#90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea) is like the chapter or page of a book where the ontology is the whole book  
 <div class="sts-tbx-sec" id="90902_id-375bcae2-7d95-4df7-ed03-626059f2b691"></div> 
 
 #### 3.3.3
-ontology pattern  
+**ontology pattern**  
 pattern  
 reusable modelling solution in ontology development  
 Note 1 to entry: Used to streamline the design of an ontology or artefact by offering tried-and-tested solutions to recurring conceptualization challenges in a principled way to enable consistency, best practices, completeness, support of automation and simplification in communication.  
 <div class="sts-tbx-sec" id="90902_id-8babb47a-1a60-4a80-b2ff-7b03f9d5c926"></div> 
 
 #### 3.3.4
-ontology template  
+**ontology template**  
 template  
 means by which ontology models and modelling [patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) can be instantiated transforming conceptual knowledge and instance data into an OWL/RDF serialization  
 
@@ -192,7 +192,7 @@ Note 1 to entry: Best practice is to map templates to the modelling patterns tha
 <div class="sts-tbx-sec" id="90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf"></div> 
 
 #### 3.3.5
-reference data library  
+**reference data library**  
 RDL  
 managed collection of reference data  
 [SOURCE: ISO 15926-1:2004]  
@@ -202,20 +202,20 @@ Note 2 to entry: An [RDL (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf
 <div class="sts-tbx-sec" id="90902_id-52907548-af05-4df7-819b-16eb3c223620"></div> 
 
 #### 3.3.6
-use case  
+**use case**  
 technique for capturing potential functional requirements
 
 ### 3.4 General terms
 <div class="sts-tbx-sec" id="90902_id-cbf2491c-8def-4a9e-bc12-0c1929d85096"></div> 
 
 #### 3.4.1
-data product  
+**data product**  
 rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycle  
 [SOURCE:Data Product Ontology [https://ekgf.github.io/dprod/](https://ekgf.github.io/dprod/)]  
 <div class="sts-tbx-sec" id="90902_id-fe088aab-9638-49db-e45b-316b4f274a11"></div> 
 
 #### 3.4.2
-internationalized resource identifier  
+**internationalized resource identifier**  
 IRI  
 unique sequence of characters from the Universal Character Set constructed according to the syntax rules provided in RFC 3987  
 Note 1 to entry: IRIs identify resources on the web in a way that supports a wide range of characters and languages enabling a more diverse representation of information, especially in languages other than English.  
@@ -224,18 +224,18 @@ Note 2 to entry: IRIs are globally unique.
 <div class="sts-tbx-sec" id="90902_id-5c183346-1414-49e8-be56-8dc3a60d704e"></div> 
 
 #### 3.4.3
-metadata  
+**metadata**  
 data whose purpose is to describe and give information about other data  
 [SOURCE:Oxford English Dictionary]  
 <div class="sts-tbx-sec" id="90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda"></div> 
 
 #### 3.4.4
-Semantic Web  
+**Semantic Web**  
 extension of the World Wide Web in which data are structured and tagged with [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) that can be read directly by computers  
 <div class="sts-tbx-sec" id="90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3"></div> 
 
 #### 3.4.5
-uniform resource identifier  
+**uniform resource identifier**  
 URI  
 compact sequence of characters that identifies an abstract or physical resource
 
@@ -243,7 +243,7 @@ compact sequence of characters that identifies an abstract or physical resource
 <div class="sts-tbx-sec" id="90902_id-4509e841-21f3-4527-ace6-f0a28443b248"></div> 
 
 #### 3.5.1
-maintenance agency  
+**maintenance agency**  
 MA  
 body appointed by ISO or an External group responsible for the maintenance, application, and administration, and publication of ontology and artefacts  
 Note 1 to entry: In the OBI series there are two types of [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248), the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) and any ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248)  
@@ -251,12 +251,12 @@ Note 2 to entry: A key responsibility for a [Maintenance Agency (3.5.1)](#90902_
 <div class="sts-tbx-sec" id="90902_id-a818dabf-317e-4318-a9b1-31ca624cc493"></div> 
 
 #### 3.5.2
-OBI ecosystem  
+**OBI ecosystem**  
 [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) , stakeholders, and processes to develop, maintain and deploy solutions to deliver enterprise [semantic interoperability (3.2.9)](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9)  
 <div class="sts-tbx-sec" id="90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c"></div> 
 
 #### 3.5.3
-OBI artefact  
+**OBI artefact**  
 objects created, documented, controlled, maintained and used in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493)  
 Note 1 to entry: These artefacts are assured by the [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) of the ISO 23726 WG26 committee or the [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) of an external group.  
 
@@ -881,4 +881,4 @@ _isDefinedBy_ [https://rds.posccaesar.org/ontology/lis14/rdl/splitFrom/](https:/
 <div id="ref-5">[5] – Annotation Commons, EDM Council, Inc. 2022. https://www.omg.org/spec/Commons/AnnotationVocabulary/</div>
 <div id="ref-6">[6] – Todd Schneider, Evan Wallace, IOF Technical Oversight Board, et al., Industrial ontology foundry (IOF) annotation vocabulary, 2023. https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/.</div>
 <div id="ref-7">[7] – Paolo Ciccarese et al. PAV ontology: Provenance, authoring and versioning. Journal of Biomedical Semantics, 4:37, 2013. Available at https://bioportal.bioontology.org/ontologies/PAV.</div>
-<div id="ref-8">[8] – DCMI. DCMI metadata terms. Technical report, Dublin Core Metadata Initiative, 2020. http://dublincore.org/speci􀏐ications/dublin‑core/dcmi‑terms/2020‑01‑20/.</div>
+<div id="ref-8">[8] – DCMI. DCMI metadata terms. Technical report, Dublin Core Metadata Initiative, 2020. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/</div>

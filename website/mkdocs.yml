@@ -8,3 +8,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 2
+
+repo_url: https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/
+repo_name: Public_ISO23726-1
+repo_icon: fontawesome/brands/github
