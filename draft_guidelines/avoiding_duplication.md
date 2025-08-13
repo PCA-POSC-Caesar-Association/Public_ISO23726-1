@@ -58,7 +58,7 @@ Likewise all concepts in the schedule ontology (sdo) should be in something like
 
 Challenges:
 
-The Maintenance Agency - in this case PCA needs to make sure that concepts defined in one RDL do not conflict with concepts in other RDLs both in their definitions, their IRIs and their properties and relationsh to other concepts (and their IRI). 
+The Maintenance Agency - in this case PCA needs to make sure that concepts defined in one RDL do not conflict with concepts in other RDLs both in their definitions, their IRIs and their properties and relationships to other concepts (and their IRI). 
 
 Advantages: 
 
