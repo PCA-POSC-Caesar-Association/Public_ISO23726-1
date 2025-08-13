@@ -44,27 +44,30 @@ The class physical object is written as PhysicalObject with an example IRI (3.4.
 
 ## What does this mean in practice?
 
-In practice all classes, object and data properties in any ontology managed by the PCA maintenance agency and considered part of the ISO 23726 series MUST be stored in the rdl folder available at http://rds.posccaesar.org/ontology/lis14/rdl/ and NOT in the home ontology address.
+In practice all classes, object and data properties in any ontology managed by the PCA maintenance agency and considered part of the ISO 23726 series MUST be stored in the ontology rdl folder and NOT in the home ontology address.
 
-For example the lis:Information class in `ise:Schedule subClassOf lis:InformationObject' has the following iri:
+For example the lis:Information class in `ise:Schedule subClassOf lis:InformationObject' has the following iri: 
 
-lis:InformationObject
-
-http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject and NOT 
-
-http://rds.posccaesar.org/ontology/lis14/ont/core/InformationObject 
+http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject and NOT http://rds.posccaesar.org/ontology/lis14/ont/core/InformationObject 
 
 The IDO core ontology has its own iri http://rds.posccaesar.org/ontology/lis14/ont/core/ but this is not used for concepts in the ontology, just for the ontology itself.
 
 All concepts in lis14 are stored in the rdl folder. 
 
+Likewise all concepts in the schedule ontology (sdo) should be in something like http://rds.posccaesar.org/ontology/sdo/rdl/ whereas the sdo ontology itself will have this IRI http://rds.posccaesar.org/ontology/sdo/ont/core
+
+Challenges:
+
+The Maintenance Agency - in this case PCA needs to make sure that concepts defined in one RDL do not conflict with concepts in other RDLs both in their definitions, their IRIs and their properties and relationsh to other concepts (and their IRI). 
+
 Advantages: 
 
-This practice stops duplication of concepts. Only one definition of each concept exists. 
+This practice is intended to duplication of concepts. Only one definition of each concept exists.  
 
 Disadvantages:
 
 Care needs to be taken with how concepts are defined as they will be used by others in the community when ontologies are imported.
+
 
 ## What happens if you don't do this?
 
