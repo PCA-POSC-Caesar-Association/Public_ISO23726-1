@@ -19,7 +19,7 @@ Ontologies are increasingly integrated into enterprise architecture, particularl
   
 Figure 1 — Example of enterprise architecture for OBI ontology-based interoperability
 
-![graphic-1750749058153](./p1_files/Fig1.png)
+![graphic-1750749058153](./figs/Fig1.png)
 
 At the base of the Figure 1 is a level representing the data sources created by enterprises and stored in the data storage system layer. To organize, check, and integrate data from disparate source systems, organisations are incorporating a knowledge management layer into their enterprise architecture. An ontology-based knowledge management layer provides quality controlled, interoperable data for data products, analytics and AI used by data consumers within and across organisations. IDO is the [upper ontology](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) in the [OBI ecosystem](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493) knowledge management layer. In addition to IDO the knowledge management layer includes [enterprise ontologies](#90902_id-25040f49-0155-4535-a64c-bd29075672fa) and shared artefacts such as reference ontologies, ontology modelling patterns, [templates](#90902_id-8babb47a-1a60-4a80-b2ff-7b03f9d5c926), [reference data libraries](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf), data quality rules, SHACL shapes, and SPARQL queries. Above the knowledge management layer sits in an enterprise architecture for [data products](#90902_id-cbf2491c-8def-4a9e-bc12-0c1929d85096), data analytics and artificial intelligence models which are accessible to data consumers.  
 The W3C standards Web Ontology Language (OWL) and Resource Description Framework (RDF) are foundational standards for the [Semantic Web](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) and considered normative for ontologies in the Ontology based interoperability (OBI) standards. These standards enable machine -readable, semantically interoperable representations based on shared vocabularies and logical structures. The foundation for the OBI series is ISO 23726-3, the Industrial Data Ontology (IDO).  
@@ -301,7 +301,7 @@ g) The outer two circles are managed by individual enterprises. These artefacts 
   
 Figure 2 — Artefacts in the OBI ecosystem. Artefacts inside the dashed line are trusted and shared between enterprises. Artefacts and data between the two outside dashed lines are proprietary and managed by an enterprise.
 
-![graphic-1752913810670](./p1_files/Fig2.png)
+![graphic-1752913810670](./figs/Fig2.png)
 
 ### 5.2 Stakeholders in the OBI ecosystem
 Stakeholders in this ontology-centric ecosystem include (but are not limited to) asset owners and operators, engineering product and process plant designers, standards organisations, industry groups that manage reference data libraries, organisations involved knowledge representation and AI, and those providing ontology development and maintenance services, assurance and conformity assessment services.  
@@ -310,7 +310,7 @@ The diagram in Figure 3 shows an example of how an enterprise might use trusted 
   
 Figure 3 — Illustrative example of processes and roles involved in managing an enterprise ontology ecosystem which uses both internal and externally-managed trusted OBI series ontologies
 
-![graphic-1752628595045](./p1_files/Fig3.png)
+![graphic-1752628595045](./figs/Fig3.png)
 
 ### 5.3 Ontology alignment
 A shared ecosystem requires [ontological alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) to ensure new artefacts are aligned to IDO or to existing IDO-aligned [reference ontologies (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) in the OBI series. The goal is to avoid adding classes and properties that are already represented in the OBI series.  
@@ -322,7 +322,7 @@ There is no agreement in the community as to a naming convention for ontologies 
   
 Figure 4 — Illustration of the different terms used in ISO 23726 to describe different types of ontologies
 
-![graphic-1745998184105](./p1_files/Fig4.png)
+![graphic-1745998184105](./figs/Fig4.png)
 
 A [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) may be discoverable on the internet if they have an [internationalized resource identifier (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) (IRI) which can be looked up ("dereferenced") over the web to retrieve its contents.  
 Reference ontologies developed and managed by external groups such as W3C do not align to any specific [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229). Modellers may use individual classes or import the entire ontology. In the latter case, care needs to be taken that ontological commitments for artefacts in the OBI series do not conflict with modelling [class restrictions (3.2.3)](#90902_id-24e5dbde-d01b-4709-d1b4-3f4f9b2c1fed) in external reference ontologies.  
@@ -372,7 +372,7 @@ Ensuring data in enterprise applications has the same semantic meaning as intend
 Figure 5 —  
 Example based on a motor (ex:Motor71) and representation of its mass (20 kg) to illustrate how SHACL may be used in both the knowledge and application layers
 
-![graphic-1754012236701](./p1_files/Fig5.png)
+![graphic-1754012236701](./figs/Fig5.png)
 
 The top two boxes of Figure 5 show the ontology (upper layer) and an example of an enterprise's instance data (middle layer). The ontology is application-independent and represents facts about an object and its properties (in this case a motor is used as an example). Different applications will have need specific data (application-dependent views). For example, electrical engineering-centric and safety professional-centric views are shown. Two common uses of SHACL are shown. These are to 1) to apply general, application-independent constraints on enterprise ontology (SHACL shape in the top layer) or to apply application-dependent constraints in addition to those specified in the data (SHACL shapes in the lowest layer).
 
