@@ -5,14 +5,20 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const v = params.get('version');
+  const staged = params.get('staged');
   const base = location.pathname.replace(/\/$/, '');
+
   if (v) {
+    // e.g. ?version=2025-09-19_1
     location.replace(base + '/archive/' + encodeURIComponent(v) + '/');
+  } else if (staged !== null) {
+    // e.g. ?staged
+    location.replace(base + '/staged/');
   } else {
     location.replace(base + '/latest/');
   }
 })();
 </script>
 <noscript>
-  <p>This site requires JavaScript. Try <a href="./latest/">latest</a>.</p>
+  <p>This site requires JavaScript. Try <a href="./latest/">latest</a> or <a href="./staged/">staged</a>.</p>
 </noscript>
