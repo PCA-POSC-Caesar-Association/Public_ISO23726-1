@@ -42,11 +42,13 @@ jobs:
 
           # Replace /latest
           rm -rf latest
-          cp -r ../site_build latest
+          mkdir -p latest
+          cp -r ../site_build/* latest/
 
           # Add to /archive
           rm -rf "archive/$version_str"
-          cp -r ../site_build "archive/$version_str"
+          mkdir -p "archive/$version_str"
+          cp -r ../site_build/* "archive/$version_str/"
 
           # Clean old root files except keepers
           for item in *; do

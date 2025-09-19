@@ -28,7 +28,8 @@ jobs:
           git fetch origin gh-pages
           git checkout gh-pages
           rm -rf staged
-          mv ../site_build staged
+          mkdir -p staged
+          cp -r ../site_build/* staged/
           git add staged
           git commit -m "Stage build from $GITHUB_SHA" || echo "No changes"
           git push origin gh-pages
