@@ -13,7 +13,7 @@ git pull
 
 1. Save the HTML version from the ISO website as `p1.html` in `src/docs/`.
 2. If figures have changed, download the Word version from the ISO website, extract each figure, and save as `Fig1.png`, `Fig2.png`, etc. in `src/docs/figs/`.
-3. Run the notebook to generate the sanitized Markdown file `index.md`.
+3. Run the notebook `sanitise.ipynb` to generate the sanitized Markdown file `index.md`.
 
 ---
 
