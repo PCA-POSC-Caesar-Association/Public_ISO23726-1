@@ -17,7 +17,7 @@ git pull
 
 ---
 
-## Releasing the New Version to the MkDocs Site
+## Building the MkDocs Site
 
 ### Setup Environment
 
@@ -28,15 +28,28 @@ venv\Scripts\activate      # Windows
 pip install mkdocs mkdocs-material
 ```
 
-### Release
+### Stage 
+
+This step is optional. Run the below command if wanting to test the site looks as expected (staged version).
+
+```bash
+python3 src/stage.py
+```
+
+Visit [https://pca-posc-caesar-association.github.io/Public_ISO23726-1/staged/](https://pca-posc-caesar-association.github.io/Public_ISO23726-1/staged/) to see the staged site.
+
+### Release 
+
+Run the below command to release a new latest version of the site (if happy with how the staged version looks).
 
 ```bash
 python3 src/release.py
 ```
 
+Visit [https://pca-posc-caesar-association.github.io/Public_ISO23726-1/](https://pca-posc-caesar-association.github.io/Public_ISO23726-1/) to see the updated site.
+
 ---
 
-## Viewing Versions
+## Viewing Older Versions
 
-* **Latest:** [https://pca-posc-caesar-association.github.io/Public\_ISO23726-1/](https://pca-posc-caesar-association.github.io/Public_ISO23726-1/)
-* **Specific version:** `https://pca-posc-caesar-association.github.io/Public_ISO23726-1/?version=YYYY-MM-DD_N`
+Visit [https://pca-posc-caesar-association.github.io/Public_ISO23726-1/?version=YYYY-MM-DD_N](https://pca-posc-caesar-association.github.io/Public_ISO23726-1/?version=YYYY-MM-DD_N), and replace `YYYY-MM-DD_N` with the desired file version. 
