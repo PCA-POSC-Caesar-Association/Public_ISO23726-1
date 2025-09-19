@@ -25,12 +25,15 @@ jobs:
 
       - name: Deploy to /latest and /archive
         run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
+          repo_url=$(git config --get remote.origin.url)
+          tmp_dir=$(mktemp -d)
+
+          git clone --branch gh-pages --single-branch "$repo_url" "$tmp_dir"
+
+          cd "$tmp_dir"
 
           mkdir -p archive
 
-          # Create version string
           today=$(date +'%Y-%m-%d')
           build_num=$(ls archive | grep "^${today}_" | sed "s/${today}_//" | sort -n | tail -1)
           if [ -z "$build_num" ]; then

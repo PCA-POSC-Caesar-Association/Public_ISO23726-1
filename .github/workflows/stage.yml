@@ -25,11 +25,16 @@ jobs:
 
       - name: Deploy to /staged
         run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          rm -rf staged
-          mkdir -p staged
-          cp -r ../site_build/* staged/
+          repo_url=$(git config --get remote.origin.url)
+          tmp_dir=$(mktemp -d)
+
+          git clone --branch gh-pages --single-branch "$repo_url" "$tmp_dir"
+
+          rm -rf "$tmp_dir/staged"
+          mkdir -p "$tmp_dir/staged"
+          cp -r site_build/* "$tmp_dir/staged/"
+
+          cd "$tmp_dir"
           git add staged
           git commit -m "Stage build from $GITHUB_SHA" || echo "No changes"
           git push origin gh-pages
