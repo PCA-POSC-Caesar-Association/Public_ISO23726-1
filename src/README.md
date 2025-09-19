@@ -30,13 +30,11 @@ pip install mkdocs mkdocs-material
 
 ### Stage 
 
-This step is optional. Run the below command if wanting to test the site looks as expected (staged version).
+This step is optional. Run the below command if wanting to test the site looks as expected (local host).
 
 ```bash
-python3 src/stage.py
+mkdocs serve -f src/mkdocs.yml
 ```
-
-Visit [https://pca-posc-caesar-association.github.io/Public_ISO23726-1/staged/](https://pca-posc-caesar-association.github.io/Public_ISO23726-1/staged/) to see the staged site.
 
 ### Release 
 
