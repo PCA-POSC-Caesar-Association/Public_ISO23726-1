@@ -21,7 +21,7 @@ jobs:
         run: pip install mkdocs mkdocs-material
 
       - name: Build site
-        run: mkdocs build -f src/docs/mkdocs.yml -d site_build
+        run: mkdocs build -f src/mkdocs.yml -d site_build
 
       - name: Deploy to /staged
         run: |
