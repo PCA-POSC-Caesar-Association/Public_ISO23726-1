@@ -1,18 +1,19 @@
 import os
 import shutil
 import subprocess
+import tempfile
 import datetime
 import glob
-import tempfile
+import sys
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # /website
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))   # /website
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # repo root
-BUILD_DIR = os.path.join(SCRIPT_DIR, "site_build")   # temp build output
-KEEP_AT_ROOT = {".nojekyll", "index.html", "CNAME"}  # Files to keep at root
+BUILD_DIR = os.path.join(SCRIPT_DIR, "site_build")        # MkDocs build output
+KEEP_AT_ROOT = {".nojekyll", "index.html", "CNAME"}       # Files to keep at repo root
 
 
 def run(cmd, cwd=None, check=True):
-    """Run a command cross-platform."""
+    """Run a command cross-platform with logging."""
     if isinstance(cmd, str):
         cmd = cmd.split()
     print(f"+ {' '.join(cmd)}")
@@ -31,62 +32,73 @@ def safe_rmtree(path):
         shutil.rmtree(path, onerror=onerror)
 
 
-# 1. Build MkDocs
-safe_rmtree(BUILD_DIR)
-run(
-    ["mkdocs", "build", "-f", os.path.join(SCRIPT_DIR, "mkdocs.yml"), "-d", BUILD_DIR],
-    cwd=SCRIPT_DIR
-)
+def main():
+    # 1. Build MkDocs site
+    safe_rmtree(BUILD_DIR)
+    run([
+        "mkdocs", "build",
+        "-f", os.path.join(SCRIPT_DIR, "mkdocs.yml"),
+        "-d", BUILD_DIR
+    ], cwd=SCRIPT_DIR)
 
-# 2. Prepare worktree for gh-pages
-tmp_dir = tempfile.mkdtemp(prefix="ghpages_")
-# Ensure branch exists locally
-run(["git", "fetch", "origin", "gh-pages"], cwd=REPO_ROOT)
-# Add worktree (checkout gh-pages branch into tmp_dir)
-run(["git", "worktree", "add", "--force", tmp_dir, "gh-pages"], cwd=REPO_ROOT)
+    # 2. Clone gh-pages branch into temp dir
+    tmp_dir = tempfile.mkdtemp(prefix="ghpages_")
+    remote_url = subprocess.check_output(
+        ["git", "config", "--get", "remote.origin.url"], cwd=REPO_ROOT
+    ).decode().strip()
+    run(["git", "clone", "--branch", "gh-pages", "--depth", "1", remote_url, tmp_dir])
 
-LATEST_DIR = os.path.join(tmp_dir, "latest")
-ARCHIVE_DIR = os.path.join(tmp_dir, "archive")
-os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    latest_dir = os.path.join(tmp_dir, "latest")
+    archive_dir = os.path.join(tmp_dir, "archive")
+    os.makedirs(archive_dir, exist_ok=True)
 
-# 3. Version string
-today = datetime.date.today().strftime("%Y-%m-%d")
-existing_versions = [
-    os.path.basename(p) for p in glob.glob(os.path.join(ARCHIVE_DIR, f"{today}_*"))
-]
-build_num = 1
-if existing_versions:
-    try:
-        build_num = max(int(v.split("_", 1)[1]) for v in existing_versions) + 1
-    except Exception:
-        pass
-version_str = f"{today}_{build_num}"
-version_path = os.path.join(ARCHIVE_DIR, version_str)
+    # 3. Create version string (YYYY-MM-DD_buildNum)
+    today = datetime.date.today().strftime("%Y-%m-%d")
+    existing_versions = [
+        os.path.basename(p)
+        for p in glob.glob(os.path.join(archive_dir, f"{today}_*"))
+    ]
+    build_num = 1
+    if existing_versions:
+        try:
+            build_num = max(int(v.split("_", 1)[1]) for v in existing_versions) + 1
+        except Exception:
+            pass
+    version_str = f"{today}_{build_num}"
+    version_path = os.path.join(archive_dir, version_str)
 
-# 4. Replace latest
-safe_rmtree(LATEST_DIR)
-shutil.copytree(BUILD_DIR, LATEST_DIR)
+    # 4. Replace latest
+    safe_rmtree(latest_dir)
+    shutil.copytree(BUILD_DIR, latest_dir)
 
-# 5. Add to archive
-safe_rmtree(version_path)
-shutil.copytree(BUILD_DIR, version_path)
+    # 5. Add to archive
+    safe_rmtree(version_path)
+    shutil.copytree(BUILD_DIR, version_path)
 
-# 6. Clean old root files except KEEP_AT_ROOT
-for item in os.listdir(tmp_dir):
-    if item not in KEEP_AT_ROOT and item not in {"latest", "archive", ".git"}:
+    # 6. Clean root (except KEEP_AT_ROOT, .git, latest, archive)
+    for item in os.listdir(tmp_dir):
+        if item in {".git", "latest", "archive"} or item in KEEP_AT_ROOT:
+            continue
         path = os.path.join(tmp_dir, item)
         safe_rmtree(path) if os.path.isdir(path) else os.remove(path)
 
-# 7. Commit & push
-run(["git", "add", "."], cwd=tmp_dir)
-try:
-    run(["git", "commit", "-m", f"Release {version_str}"], cwd=tmp_dir)
-except subprocess.CalledProcessError:
-    print("No changes to commit.")
-run(["git", "push", "origin", "gh-pages"], cwd=tmp_dir)
+    # 7. Commit & push
+    run(["git", "add", "."], cwd=tmp_dir)
+    try:
+        run(["git", "commit", "-m", f"Release {version_str}"], cwd=tmp_dir)
+    except subprocess.CalledProcessError:
+        print("ℹ️ No changes to commit.")
+    else:
+        run(["git", "push", "origin", "gh-pages"], cwd=tmp_dir)
 
-# 8. Cleanup: remove worktree & temp dir
-run(["git", "worktree", "remove", "--force", tmp_dir], cwd=REPO_ROOT)
-safe_rmtree(tmp_dir)
+    # 8. Cleanup
+    safe_rmtree(tmp_dir)
+    print(f"✅ Released version {version_str}")
 
-print(f"✅ Released version {version_str}")
+
+if __name__ == "__main__":
+    try:
+        main()
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Command failed: {e}")
+        sys.exit(1)
