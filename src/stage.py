@@ -50,12 +50,16 @@ def main():
 
     staged_dir = os.path.join(tmp_dir, DEPLOY_SUBDIR)
 
-    # 3. Replace staged build
+    # 3. Clean repo but keep /staged so we can replace it
+    run(["git", "clean", "-fdx", "-e", DEPLOY_SUBDIR], cwd=tmp_dir)
+
+    # 4. Replace staged build
     safe_rmtree(staged_dir)
     shutil.copytree(BUILD_DIR, staged_dir)
 
     # 4. Commit & push
     run(["git", "add", "."], cwd=tmp_dir)
+
     try:
         run(["git", "commit", "-m", "Deploy staged build"], cwd=tmp_dir)
     except subprocess.CalledProcessError:

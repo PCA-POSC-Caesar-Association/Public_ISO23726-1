@@ -71,28 +71,36 @@ def main():
     safe_rmtree(latest_dir)
     shutil.copytree(BUILD_DIR, latest_dir)
 
-    # 5. Add to archive
+    # 5. Check if latest has changes
+    has_changes = subprocess.run(
+        ["git", "diff", "--quiet", "--", "latest"],
+        cwd=tmp_dir
+    ).returncode != 0
+
+    if not has_changes:
+        print("ℹ️ No changes in latest/, skipping archive and commit.")
+        safe_rmtree(tmp_dir)
+        print("✅ No release created (site unchanged).")
+        return
+
+    # 6. Add to archive (only if changes detected)
     safe_rmtree(version_path)
     shutil.copytree(BUILD_DIR, version_path)
 
-    # 6. Clean root (except KEEP_AT_ROOT, .git, latest, archive)
+    # 7. Clean root (except KEEP_AT_ROOT, .git, latest, archive)
     for item in os.listdir(tmp_dir):
         if item in {".git", "latest", "archive"} or item in KEEP_AT_ROOT:
             continue
         path = os.path.join(tmp_dir, item)
         safe_rmtree(path) if os.path.isdir(path) else os.remove(path)
 
-    # 6b. Extra safety: force-remove any leftover junk (Windows locked files, etc.)
-    run(["git", "clean", "-fdx"], cwd=tmp_dir)
+    # 7b. Extra safety: clean junk, but spare latest/archive
+    run(["git", "clean", "-fdx", "-e", "latest", "-e", "archive"], cwd=tmp_dir)
 
-    # 7. Commit & push
+    # 8. Commit & push
     run(["git", "add", "."], cwd=tmp_dir)
-    try:
-        run(["git", "commit", "-m", f"Release {version_str}"], cwd=tmp_dir)
-    except subprocess.CalledProcessError:
-        print("ℹ️ No changes to commit.")
-    else:
-        run(["git", "push", "origin", "gh-pages"], cwd=tmp_dir)
+    run(["git", "commit", "-m", f"Release {version_str}"], cwd=tmp_dir)
+    run(["git", "push", "origin", "gh-pages"], cwd=tmp_dir)
 
     # 8. Cleanup
     safe_rmtree(tmp_dir)
