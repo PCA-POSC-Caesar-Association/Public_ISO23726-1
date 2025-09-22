@@ -5,6 +5,7 @@ import tempfile
 import datetime
 import glob
 import sys
+import stat
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))   # /website
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # repo root
@@ -21,11 +22,15 @@ def run(cmd, cwd=None, check=True):
 
 
 def safe_rmtree(path):
-    """Robust folder delete: skip locked files on Windows."""
+    """Robust folder delete: handle locked/read-only files on Windows."""
     def onerror(func, p, exc_info):
         err = exc_info[1]
         if isinstance(err, PermissionError):
-            print(f"⚠️ Skipping locked file: {p}")
+            try:
+                os.chmod(p, stat.S_IWRITE)  # make file writable
+                func(p)  # retry
+            except Exception:
+                print(f"⚠️ Skipping locked file: {p}")
         else:
             raise err
     if os.path.exists(path):

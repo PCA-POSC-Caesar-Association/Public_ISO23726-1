@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import tempfile
 import sys
+import stat
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))   # /website
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))  # repo root
@@ -19,11 +20,16 @@ def run(cmd, cwd=None, check=True):
 
 
 def safe_rmtree(path):
-    """Robust folder delete: skip locked files on Windows."""
+    """Robust folder delete: handle locked/read-only files on Windows."""
     def onerror(func, p, exc_info):
         err = exc_info[1]
         if isinstance(err, PermissionError):
-            print(f"⚠️ Skipping locked file: {p}")
+            try:
+                os.chmod(p, stat.S_IWRITE)  # clear read-only bit
+                func(p)  # retry
+                print(f"🔧 Fixed read-only and deleted: {p}")
+            except Exception:
+                print(f"⚠️ Skipping locked file: {p}")
         else:
             raise err
     if os.path.exists(path):
@@ -46,7 +52,6 @@ def main():
         ["git", "config", "--get", "remote.origin.url"], cwd=REPO_ROOT
     ).decode().strip()
     run(["git", "clone", "--branch", "gh-pages", "--depth", "1", remote_url, tmp_dir])
-
 
     staged_dir = os.path.join(tmp_dir, DEPLOY_SUBDIR)
 
