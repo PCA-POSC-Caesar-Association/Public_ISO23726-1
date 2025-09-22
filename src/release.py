@@ -82,6 +82,9 @@ def main():
         path = os.path.join(tmp_dir, item)
         safe_rmtree(path) if os.path.isdir(path) else os.remove(path)
 
+    # 6b. Extra safety: force-remove any leftover junk (Windows locked files, etc.)
+    run(["git", "clean", "-fdx"], cwd=tmp_dir)
+
     # 7. Commit & push
     run(["git", "add", "."], cwd=tmp_dir)
     try:
