@@ -1,0 +1,1019 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Ontology-based Interoperability for Industrial Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ontology-based-interoperability-for-industrial-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Ontology-based Interoperability for Industrial Data" class="md-header__button md-logo" aria-label="Ontology-based Interoperability for Industrial Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ontology-based Interoperability for Industrial Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ontology-based Interoperability for Industrial Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Public_ISO23726-1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Ontology-based Interoperability for Industrial Data" class="md-nav__button md-logo" aria-label="Ontology-based Interoperability for Industrial Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ontology-based Interoperability for Industrial Data
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/PCA-POSC-Caesar-Association/Public_ISO23726-1/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Public_ISO23726-1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ontology-based Interoperability for Industrial Data
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ontology-based Interoperability for Industrial Data
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#annex-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annex A
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ontology-based-interoperability-for-industrial-data">Ontology-based Interoperability for Industrial Data<a class="headerlink" href="#ontology-based-interoperability-for-industrial-data" title="Permanent link">&para;</a></h1>
+<h4 id="lead-authors-melinda-hodkiewicz-and-andreas-neumann">Lead authors: Melinda Hodkiewicz and Andreas Neumann<a class="headerlink" href="#lead-authors-melinda-hodkiewicz-and-andreas-neumann" title="Permanent link">&para;</a></h4>
+<h4 id="development-team-pal-rylandsholm-maja-milicic-brandt-johan-w-kluwer-caitlin-woods-dirk-walter-inghild-kaarstad">Development team: Pål Rylandsholm, Maja Milicic Brandt, Johan W Kluwer, Caitlin Woods, Dirk Walter, Inghild Kaarstad<a class="headerlink" href="#development-team-pal-rylandsholm-maja-milicic-brandt-johan-w-kluwer-caitlin-woods-dirk-walter-inghild-kaarstad" title="Permanent link">&para;</a></h4>
+<h3 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h3>
+<p>This document provides guidance to industry users and the semantic data modelling community on 1) the vision for the ISO 23726 Ontology-based Interoperability (OBI) series, and 2) a set of principles which resources will have to comply with in order to be considered <code>compliant</code> with IDO and the ISO 23726 series. The <a href="https://rds.posccaesar.org/ontology/lis14/">Industrial Data Ontology (IDO)</a> is the upper ontology in the ISO 23726 series. IDO is currently inside the ISO process and due to be published as an ISO standard in 2026.  </p>
+<p>The contents of this document will be submitted to ISO as part of ISO 23726-1 in October 2025. The standardisation process is expected to take 3 years. During this period the contents of this document will evolve as other organisations and national bodies work to shape the ideas presented in this initial version. Once inside the ISO process only members of the ISO TC184/SC4 WG26 committee and the liaison groups will have access to the draft standard and any associated digital artefacts until it is published in 2027/2028. </p>
+<h3 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h3>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0 licence</a><br />
+ISO/PWI 23726-1 ISO/PWI 23726-1 </p>
+<h4 id="foreword">Foreword<a class="headerlink" href="#foreword" title="Permanent link">&para;</a></h4>
+<p>ISO (the International Organization for Standardization) is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out through ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.<br />
+The procedures used to develop this document and those intended for its further maintenance are described in the ISO/IEC Directives, Part 1. In particular the different approval criteria needed for the different types of ISO documents should be noted. This document was drafted in accordance with the editorial rules of the ISO/IEC Directives, Part 2 (see <a href="http://www.iso.org/directives">www.iso.org/directives</a>).<br />
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the ISO list of patent declarations received (see <a href="http://www.iso.org/patents">www.iso.org/patents</a>).<br />
+Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.<br />
+For an explanation on the meaning of ISO specific terms and expressions related to conformity assessment, as well as information about ISO's adherence to the World Trade Organization (WTO) principles in the Technical Barriers to Trade (TBT) see the following URL: <a href="http://www.iso.org/iso/foreword.html">www.iso.org/iso/foreword.html</a>.<br />
+This document was prepared by Technical Committee ISO/TC 184, <em>Automation systems and integration</em> , Subcommittee SC 4, <em>Industrial data</em>.<br />
+This edition cancels and replaces the edition (ISO :), which has been technically revised.<br />
+The main changes compared to the previous edition are as follows:<br />
+A list of all parts in the ISO 23276 series can be found on the ISO website.<br />
+Any feedback or questions on this document should be directed to the user’s national standards body. A complete listing of these bodies can be found at <a href="http://www.iso.org/members.html">www.iso.org/members.html</a>.</p>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p>The ISO/TC 184/SC 4 committee for Industrial Data is the technical committee responsible for developing and maintaining standards for the representation of industrial data. These standards support the management of engineered products, plants and systems throughout their life cycle - from conception to decommissioning - and enable data-driven business and technical decisions.<br />
+This standard provides an overview of the ISO 23726 set of standards and a set of principles for <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agencies</a> to assure alignment of ontologies and ontology artefacts to the Industrial Data (IDO) <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology</a>. The goal is to enable enterprises to use trusted shared artefacts in an ontology-based interoperable ecosystem.<br />
+Machine-interpretable data are a key enabler of 1) industrial automation, and 2) the application of artificial intelligence to products, plants, processes, and services. However, organizational data are often stored in digital formats that use proprietary terms, definitions, and schemas. This lack of <a href="#id-344a1021-4c5f-4ef4-d1db-354537626045">semantic interoperability</a> means that data exchange frequently relies on manual interpretation or custom mappings. Documents such as engineering standards, procedures, spreadsheets, and reference data libraries are prone to misinterpretation when their semantics are not formally and explicitly defined.<br />
+A semantically explicit format is key to human and machine interoperability. An ontology is a structured set of terms, their interrelationships, and associated definitions, supported by formal logic to ensure that the intended meaning is unambiguous and machine-interpretable. The use of formal representation enables consistent preservation and exchange of meaning.<br />
+Ontologies are increasingly integrated into enterprise architecture, particularly within knowledge management layers. An example is shown in <a href="#id-bb458912-53dc-4ab7-9886-bfffd6603e9c">Figure 1</a>. The Ontology-Based interoperability (OBI) ecosystem comprises artefacts managed by ISO 23726 WG26, external organizations, enterprises, as well as organizational stakeholders, processes, and capabilities.</p>
+<h4 id="figure-1-example-of-enterprise-architecture-for-obi-ontology-based-interoperability">Figure 1 - Example of enterprise architecture for OBI ontology-based interoperability<a class="headerlink" href="#figure-1-example-of-enterprise-architecture-for-obi-ontology-based-interoperability" title="Permanent link">&para;</a></h4>
+<p>At the base of the <a href="#id-bb458912-53dc-4ab7-9886-bfffd6603e9c">Figure 1</a> is a level representing the data sources created by enterprises and stored in the data storage system layer. To organize, check, and integrate data from disparate source systems, organisations are incorporating a knowledge management layer into their enterprise architecture. An ontology-based knowledge management layer provides quality controlled, interoperable data for data products, analytics and AI used by data consumers within and across organisations. IDO is the <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology</a> in the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem</a> knowledge management layer. In addition to IDO the knowledge management layer includes <a href="#id-0a1cc0ea-8046-4c2b-e320-e536492e5061">enterprise ontologies</a> and shared artefacts such as <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontologies</a> , <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">ontology modelling patterns</a>, <a href="#id-78cffeef-4ffd-42db-c16f-475ee5d2ec7a">templates</a>, <a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">reference data libraries</a>, data quality rules, SHACL shapes, and SPARQL queries. Above the knowledge management layer sits in an enterprise architecture for <a href="#id-390c6e77-5d5e-470b-d04d-7a612b17bcff">data products</a>, data analytics and artificial intelligence models which are accessible to data consumers.<br />
+The W3C standards Web Ontology Language (OWL) and Resource Description Framework (RDF) are foundational standards for the <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web</a> and considered normative for ontologies in the Ontology based interoperability (OBI) standards. These standards enable machine -readable, semantically interoperable representations based on shared vocabularies and logical structures. The foundation for the OBI series is ISO 23726-3, the Industrial Data Ontology (IDO).<br />
+IDO specifies an abstract representation of the industrial data domain, including a high level of conceptual abstraction and associated modelling constraints. The semantic interpretation of a concept modelled according to an IDO-aligned artefact is explicitly defined. This enables consistent interpretation and automated reasoning by both humans and machines.<br />
+IDO is implemented as an OWL 2 <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology</a>. OWL 2 DL ontologies are interpreted using the Direct Semantics. DL (<a href="#id-ce662828-0283-45a6-d21a-be69ace43f7a">description logics</a>) are a family of languages used in artificial intelligence and <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web</a> technologies for logic-based knowledge representation and reasoning. Typical <a href="#id-81fc5391-37fe-4d0f-d1ab-51076143afce">ontology reasoning</a> tasks include: (1) consistency checking, (2) generation of taxonomical classification (i.e. inferring implicit subclass hierarchies), and (3) derivation of implicit facts. OWL DL reasoners are software systems that perform these reasoning tasks automatically. Such automated reasoning is essential for quality assurance, semantic consistency, and knowledge inference within ontologies.</p>
+<h4 id="1-scope">1 Scope<a class="headerlink" href="#1-scope" title="Permanent link">&para;</a></h4>
+<p>This document provides an overview and the fundamental principles of the multipart standard ISO 23726 series <em>Industrial automation systems and integration – Ontology based interoperability (OBI).</em><br />
+This document specifies the principles for ontologies and artefacts aligned with IDO <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology</a> to be considered part of the OBI series.<br />
+This document is applicable in the construction of ontologies and artefacts for the representation of engineering data associated with all phases of the life cycle of industrial products, plants and systems to enable <a href="#id-344a1021-4c5f-4ef4-d1db-354537626045">semantic interoperability</a>.<br />
+The following are outside the scope of this document:<br />
+  * specification of ontology languages.
+  * specification of <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web</a> standards such as Resource Description Framework (RDF), SHACL, SPARQL, and <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">Internationalized Resource Identifiers</a> (IRIs).
+  * specification of methods for reasoning with ontologies.
+  * Methods to build, maintain, align, and evaluate ontologies and artefacts to meet the principles in this document. These will be covered in separate guideline documents.</p>
+<h4 id="2-normative-references">2 Normative references<a class="headerlink" href="#2-normative-references" title="Permanent link">&para;</a></h4>
+<p>There are no normative references in this document.</p>
+<h4 id="3-terms-and-definitions">3 Terms and definitions<a class="headerlink" href="#3-terms-and-definitions" title="Permanent link">&para;</a></h4>
+<p><em>The Terms and definitions clause is a mandatory element of the text.</em><br />
+<em>For rules on the drafting of the Terms and definitions, refer to the <a href="https://www.iec.ch/standardsdev/resources/draftingpublications/directives/subdivision/terms_definitions.htm">ISO/IEC Directives, Part 2:2018, Clause 16</a>.</em><br />
+To insert a new terminological entry, go to the <em>Structure</em> tab and click on <em>Insert Term entry</em>.<br />
+Terms and definitions commonly used across the different parts of the OBI series are defined in the ISO PWI 23726-2 Automation systems and integration - Ontology based interoperability Part 2: Vocabulary.<br />
+This overview and principles standard contains general IDO definitions and definitions that are specific to this document and deemed useful to the reader in understanding how specific concepts should be interpreted.</p>
+<h4 id="31-types-of-ontologies">3.1 Types of ontologies<a class="headerlink" href="#31-types-of-ontologies" title="Permanent link">&para;</a></h4>
+<h5 id="311">3.1.1<a class="headerlink" href="#311" title="Permanent link">&para;</a></h5>
+<h5 id="application-ontology">application ontology<a class="headerlink" href="#application-ontology" title="Permanent link">&para;</a></h5>
+<p>ontology developed for a particular task or <a href="#">use case (3.3.6)</a> that contains only the concepts, relationships, and constraints necessary for the contextDesigned to be used in a specific context and are not always reusable.</p>
+<h5 id="312">3.1.2<a class="headerlink" href="#312" title="Permanent link">&para;</a></h5>
+<h5 id="enterprise-ontology">enterprise ontology<a class="headerlink" href="#enterprise-ontology" title="Permanent link">&para;</a></h5>
+<p>ontology developed, owned, and maintained by an enterpriseEnterprise ontologies include <a href="#">reference ontologies (3.1.3)</a> and <a href="#">application ontologies (3.1.1)</a>.An <a href="#">enterprise ontology (3.1.2)</a> conceptualizes enterprise vocabulary and knowledge.An <a href="#">enterprise ontology (3.1.2)</a> is not an ontology for a specific software application or program.</p>
+<h5 id="313">3.1.3<a class="headerlink" href="#313" title="Permanent link">&para;</a></h5>
+<h5 id="reference-ontology">reference ontology<a class="headerlink" href="#reference-ontology" title="Permanent link">&para;</a></h5>
+<p>ontology based on a shared understanding of the concepts and relationships within a specific domain or field of knowledgeReference ontologies provide a common vocabulary and structure. They are reusable across multiple applications.Reference ontologies are stable and actively maintained.There is no agreement in the literature as to a naming convention for ontologies that sit between the <a href="#">upper ontology (3.1.4)</a>and an <a href="#">enterprise ontology (3.1.2)</a>. Various names such as Core, Domain, Domain-independent, Domain-dependent are used but not clearly defined. The term <a href="#">reference ontology (3.1.3)</a> is used in this standard as a label for all of these terms. <a href="#">Application ontologies (3.1.1)</a> will usually import a number of reference ontologies from both within the enterprise and from trusted external groups such as ISO.</p>
+<h5 id="314">3.1.4<a class="headerlink" href="#314" title="Permanent link">&para;</a></h5>
+<h5 id="upper-ontology">upper ontology<a class="headerlink" href="#upper-ontology" title="Permanent link">&para;</a></h5>
+<p>ontology of abstract concepts and general relationships that are common across all domainsAbstract concepts are things like lis:Object, lis:Event, lis:Process, lis:Role, lis:Quality and lis:Function and general relationships are relations such as lis:partOf, lis:participatesIn and lis:hasQuality.</p>
+<h4 id="32-owl-and-rdf-concepts">3.2 OWL and RDF concepts<a class="headerlink" href="#32-owl-and-rdf-concepts" title="Permanent link">&para;</a></h4>
+<h5 id="321">3.2.1<a class="headerlink" href="#321" title="Permanent link">&para;</a></h5>
+<h5 id="axiom">axiom<a class="headerlink" href="#axiom" title="Permanent link">&para;</a></h5>
+<p>logical statement that is taken to be true, to serve as a premise for further reasoningAxioms may be formulated as natural language sentences or as formulae in a formal language. In the OWL community, '<a href="#">axiom (3.2.1)</a>’ is used to refer to statements that say what is true in the domain that are ‘basic’ in the sense that they are not inferred from other statements.</p>
+<h5 id="322">3.2.2<a class="headerlink" href="#322" title="Permanent link">&para;</a></h5>
+<h5 id="annotation-property">annotation property<a class="headerlink" href="#annotation-property" title="Permanent link">&para;</a></h5>
+<p>RDF property included in the vocabulary of an OWL ontology, with no semantic significanceAnnotation properties allow for <a href="#">metadata (3.4.3)</a> on entities in an <a href="#">ontology</a> that is not subject to OWL reasoning.Annotation properties are used to add human-readable descriptions such as labels, definitions and notes.<a href="https://www.w3.org/TR/owl2-syntax/#Annotation_Properties">https://www.w3.org/TR/owl2-syntax/#Annotation_Properties</a>ISO DIS 23726-3</p>
+<h5 id="323">3.2.3<a class="headerlink" href="#323" title="Permanent link">&para;</a></h5>
+<h5 id="class-restriction">class restriction<a class="headerlink" href="#class-restriction" title="Permanent link">&para;</a></h5>
+<p>logical <a href="#">axiom (3.2.1)</a> that constrain the properties and relationships of individuals within a classThe main types of class restrictions in OWL ontologies (owl:Restriction) are existential (some), universal (only), value restriction (have a specific value for a property) and cardinality restriction (have exactly, at least, or at most a certain number of relations).</p>
+<h5 id="324">3.2.4<a class="headerlink" href="#324" title="Permanent link">&para;</a></h5>
+<h5 id="description-logics">description logics<a class="headerlink" href="#description-logics" title="Permanent link">&para;</a></h5>
+<p>family of languages used in artificial intelligence and <a href="#">Semantic Web (3.4.4)</a> technologies for logic-based knowledge representation and reasoning</p>
+<h5 id="325">3.2.5<a class="headerlink" href="#325" title="Permanent link">&para;</a></h5>
+<h5 id="expressivity">expressivity<a class="headerlink" href="#expressivity" title="Permanent link">&para;</a></h5>
+<p>degree of complexity and richness in the types of knowledge an ontology can represent using its logical languageDifferent aspects of <a href="#">expressivity (3.2.5)</a> include:<br />
+  * Conceptual - ability to define complex class descriptions, such as reification, intersection, union, complement, restriction, and equivalence.
+  * Property - ability to define object and data properties with characteristics such as transitivity, symmetry, inverse, and functionality.
+  * Axioms and constraints - ability to represent general class axioms, disjointness, property hierarchies, and cardinality constraints.</p>
+<p>The use of axioms such as cardinality constraints or restrictions on makes implicit knowledge explicit and this explicit knowledge can be used by reasoners to infer missing information or to be used as data quality rule for the validation of instance data.</p>
+<h5 id="326">3.2.6<a class="headerlink" href="#326" title="Permanent link">&para;</a></h5>
+<h5 id="obi-design-commitment">OBI design commitment<a class="headerlink" href="#obi-design-commitment" title="Permanent link">&para;</a></h5>
+<p>commitment to a specification of a conceptualizationA commitment to an <a href="#">upper ontology (3.1.4)</a> is a guarantee of consistency, but not completeness, with respect to queries and assertions using the vocabulary defined in the ontology. This commitment is akin to a contract to ensure that data are represented and exchanged in an agreed manner.agreement to ensure <a href="#">ontology patterns (3.3.3)</a> are modelled in a way that is approved by, and consistent with, the <a href="#">OBI ecosystem (3.5.2)</a>.</p>
+<h5 id="327">3.2.7<a class="headerlink" href="#327" title="Permanent link">&para;</a></h5>
+<h5 id="ontology-alignment">ontology alignment<a class="headerlink" href="#ontology-alignment" title="Permanent link">&para;</a></h5>
+<p>process of identifying relationships between concepts in two different ontologiesThere are three types of relationships that are typically identified:<br />
+  * equivalence - concepts are the same,
+  * subsumption - one concept is more general than the other,
+  * relatedness - concepts are related but not identical.</p>
+<h5 id="328">3.2.8<a class="headerlink" href="#328" title="Permanent link">&para;</a></h5>
+<h5 id="owl-dl-reasoning">OWL DL reasoning<a class="headerlink" href="#owl-dl-reasoning" title="Permanent link">&para;</a></h5>
+<p>inference of implicit facts from knowledge expressed in an OWL 2 ontology using the direct model theoretic semantics of OWL 2 DL</p>
+<h5 id="329">3.2.9<a class="headerlink" href="#329" title="Permanent link">&para;</a></h5>
+<h5 id="semantic-interoperability">semantic interoperability<a class="headerlink" href="#semantic-interoperability" title="Permanent link">&para;</a></h5>
+<p>interoperability so that the meaning of the data within the context of a subject area is understood by the participating systemsSystems include pieces of equipment, software, human and computing systems.This is accomplished by linking data elements to a controlled, shared vocabulary.Ensures that data from current and legacy systems, sensors, software tools and databases can be integrated and used without manual reconciliation or misunderstanding.A foundation for Industry 4.0, Smart Factories and Digital Product passports.</p>
+<h5 id="3210">3.2.10<a class="headerlink" href="#3210" title="Permanent link">&para;</a></h5>
+<h5 id="shortcut-property">shortcut property<a class="headerlink" href="#shortcut-property" title="Permanent link">&para;</a></h5>
+<p>object or datatype property in OWL intended as equivalent in meaning to a modelling <a href="#">pattern (3.3.3)</a> that would involve additional entities or classifications if made explicitISO DIS 23726-3 Annex B</p>
+<h4 id="33-ontology-elements">3.3 Ontology elements<a class="headerlink" href="#33-ontology-elements" title="Permanent link">&para;</a></h4>
+<h5 id="331">3.3.1<a class="headerlink" href="#331" title="Permanent link">&para;</a></h5>
+<h5 id="competency-question">competency question<a class="headerlink" href="#competency-question" title="Permanent link">&para;</a></h5>
+<p>question formulated in natural language that defines a formal requirement in the ontology engineering processCompetency questions capture requirements from domain experts and check they can be addressed and guide developers in identifying what classes, properties, and constraints are needed.Competency questions are used to validate that a reasoner or query engine can produce the answer to a question that the ontology was built to address.</p>
+<h5 id="332">3.3.2<a class="headerlink" href="#332" title="Permanent link">&para;</a></h5>
+<h5 id="ontology-module">ontology module<a class="headerlink" href="#ontology-module" title="Permanent link">&para;</a></h5>
+<p>subset of an ontology containing only the concepts and <a href="#">axioms (3.2.1)</a> needed for a specific purpose or contextAn <a href="#">ontology module (3.3.2)</a> is imported into other ontologies as a building block.An <a href="#">ontology module (3.3.2)</a> is like the chapter or page of a book where the ontology is the whole book.</p>
+<h5 id="333">3.3.3<a class="headerlink" href="#333" title="Permanent link">&para;</a></h5>
+<h5 id="ontology-pattern">ontology pattern<a class="headerlink" href="#ontology-pattern" title="Permanent link">&para;</a></h5>
+<p>reusable modelling solution in ontology developmentUsed to streamline the design of an ontology or artefact by offering tried-and-tested solutions to recurring conceptualization challenges in a principled way to enable consistency, best practices, completeness, support of automation and simplification in communication.</p>
+<h5 id="334">3.3.4<a class="headerlink" href="#334" title="Permanent link">&para;</a></h5>
+<h5 id="ontology-template">ontology template<a class="headerlink" href="#ontology-template" title="Permanent link">&para;</a></h5>
+<p>definition of a structure and its expansion that can translate a simplified representation of instance data into an OWL.RDF serialization of the instanceBest practice is to map templates to the modelling patterns that they contribute to instantiating (noting that several templates are involved in the instantiation of one modelling <a href="#">pattern (3.3.3)</a>).Means by which ontology models and modelling <a href="#">patterns (3.3.3)</a> can be instantiated transforming conceptual knowledge and instance data into an OWL/RDF serialization.</p>
+<h5 id="335">3.3.5<a class="headerlink" href="#335" title="Permanent link">&para;</a></h5>
+<h5 id="reference-data-library">reference data library<a class="headerlink" href="#reference-data-library" title="Permanent link">&para;</a></h5>
+<p>vocabulary of industrial terms organized according to ontological categories[SOURCE: ISO PWI ISO 23726-2]IDO is intended to be a suitable basic vocabulary for Reference Data Libraries (RDL) represented as OWL 2 ontologies.</p>
+<h5 id="336">3.3.6<a class="headerlink" href="#336" title="Permanent link">&para;</a></h5>
+<h5 id="use-case">use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h5>
+<p>description of a scenario to which an ontology is appliedUse cases ground ontology development in a practical need, assist with the design of competency questions and provide a way to evaluate the suitability of the ontology for a specific need.</p>
+<h4 id="34-general-terms">3.4 General terms<a class="headerlink" href="#34-general-terms" title="Permanent link">&para;</a></h4>
+<h5 id="341">3.4.1<a class="headerlink" href="#341" title="Permanent link">&para;</a></h5>
+<h5 id="data-product">data product<a class="headerlink" href="#data-product" title="Permanent link">&para;</a></h5>
+<p>rational, managed, and governed collection of data, with purpose, value and ownership, meeting consumer needs over a planned life-cycleData Product Ontology <a href="https://ekgf.github.io/dprod/">https://ekgf.github.io/dprod/</a></p>
+<h5 id="342">3.4.2<a class="headerlink" href="#342" title="Permanent link">&para;</a></h5>
+<h5 id="internationalized-resource-identifier">internationalized resource identifier<a class="headerlink" href="#internationalized-resource-identifier" title="Permanent link">&para;</a></h5>
+<p>unique sequence of characters from the Universal Character Set constructed according to the syntax rules provided in RFC 3987IRIs identify resources on the web in a way that supports a wide range of characters and languages enabling a more diverse representation of information, especially in languages other than English.IRIs are globally unique.<a href="#id-8361c1a0-ed14-43ce-9979-9d59bc781904">ISO/IEC 10646:2020 <a href="#ref-1">[1]</a></a></p>
+<h5 id="343">3.4.3<a class="headerlink" href="#343" title="Permanent link">&para;</a></h5>
+<h5 id="metadata">metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h5>
+<p>data whose purpose is to describe and give information about other dataOxford English Dictionary</p>
+<h5 id="344">3.4.4<a class="headerlink" href="#344" title="Permanent link">&para;</a></h5>
+<h5 id="semantic-web">Semantic Web<a class="headerlink" href="#semantic-web" title="Permanent link">&para;</a></h5>
+<p>extension of the World Wide Web in which data are structured and tagged with <a href="#">metadata (3.4.3)</a> that can be read directly by computers</p>
+<h5 id="345">3.4.5<a class="headerlink" href="#345" title="Permanent link">&para;</a></h5>
+<h5 id="uniform-resource-identifier">uniform resource identifier<a class="headerlink" href="#uniform-resource-identifier" title="Permanent link">&para;</a></h5>
+<p>unique sequence of characters that identifies an abstract or physical resourceSOURCEBerners-Lee, T., Fielding, R. and Masinter, L., 2005. <em>Uniform resource identifier (URI): Generic syntax</em> (No. rfc3986).</p>
+<h4 id="35-terms-related-to-organisational-groups">3.5 Terms related to organisational groups<a class="headerlink" href="#35-terms-related-to-organisational-groups" title="Permanent link">&para;</a></h4>
+<h5 id="351">3.5.1<a class="headerlink" href="#351" title="Permanent link">&para;</a></h5>
+<h5 id="maintenance-agency">maintenance agency<a class="headerlink" href="#maintenance-agency" title="Permanent link">&para;</a></h5>
+<p>body appointed by ISO (ISO-recognised) or an external (ISO-external) group responsible for the maintenance, application, and administration, and publication of ontology and artefactsA key responsibility for a <a href="#">maintenance agency (3.5.1)</a> is the provision of a namespace for the <a href="#">IRIs (3.4.2)</a> and a website on which <a href="#">ontology artefact (3.5.3)</a> are made available.</p>
+<h5 id="352">3.5.2<a class="headerlink" href="#352" title="Permanent link">&para;</a></h5>
+<h5 id="obi-ecosystem">OBI ecosystem<a class="headerlink" href="#obi-ecosystem" title="Permanent link">&para;</a></h5>
+<p>system of <a href="#">OBI artefacts (3.5.3)</a> , stakeholders, and processes to develop, maintain and deploy solutions to deliver enterprise <a href="#">semantic interoperability (3.2.9)</a></p>
+<h5 id="353">3.5.3<a class="headerlink" href="#353" title="Permanent link">&para;</a></h5>
+<h5 id="obi-artefact">OBI artefact<a class="headerlink" href="#obi-artefact" title="Permanent link">&para;</a></h5>
+<p>object created, documented, controlled, maintained and used in the <a href="#">OBI ecosystem (3.5.2)</a>Examples include <a href="#">reference ontologies (3.1.3)</a>, <a href="#">ontology patterns (3.3.3)</a> , <a href="#">ontology templates (3.3.4)</a>, <a href="#">reference data libraries (3.3.5)</a> ,and artefacts such as data quality rules and SHACL.These artefacts are assured by a <a href="#">maintenance agency (3.5.1)</a>.</p>
+<h4 id="4-parts-in-the-obi-series">4 Parts in the OBI series<a class="headerlink" href="#4-parts-in-the-obi-series" title="Permanent link">&para;</a></h4>
+<h4 id="41-overview-and-fundamental-principles">4.1 Overview and fundamental principles<a class="headerlink" href="#41-overview-and-fundamental-principles" title="Permanent link">&para;</a></h4>
+<p>This document presents a vision for the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> and a set of principles (<a href="#id-bd83fee3-8542-4077-8654-caa63e1cbf48">Clause 6</a>) to ensure artefacts in the OBI series are compliant with a set of principles.</p>
+<h4 id="42-vocabulary">4.2 Vocabulary<a class="headerlink" href="#42-vocabulary" title="Permanent link">&para;</a></h4>
+<p>Document describing the terms and definitions used in the ISO 23726 standard series.</p>
+<h4 id="43-industrial-data-ontology">4.3 Industrial data ontology<a class="headerlink" href="#43-industrial-data-ontology" title="Permanent link">&para;</a></h4>
+<p>This document describes the Industrial Data Ontology (IDO), an <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a> intended for industrial data and information, to build vocabularies and manage asset models which employ reference data libraries and exploit OWL DL.<br />
+The IDO standard described in ISO 23726-3 provides a foundation for all parts of the ISO 23726 standards.<br />
+The purpose of the IDO standard is to serve the representation and integration of industrial data and industry standards. This means, to build vocabularies and asset models, to manage asset models which employ reference data libraries, and to support automated machine reasoning and data quality. The IDO standard supports information models used in all life cycle phases of industrial systems, processes and products.</p>
+<h4 id="44-schedule-data-ontology">4.4 Schedule data ontology<a class="headerlink" href="#44-schedule-data-ontology" title="Permanent link">&para;</a></h4>
+<p>The Schedule Data <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> specifies the vocabulary for schedule data and information. It is intended for industrial schedule data and information. The ontology provides definitions for terms related to schedules, schedule activity, work patterns for schedule execution, and the relationships between schedule activities and resources.</p>
+<h4 id="5-obi-ecosystem">5 OBI ecosystem<a class="headerlink" href="#5-obi-ecosystem" title="Permanent link">&para;</a></h4>
+<h4 id="51-general">5.1 General<a class="headerlink" href="#51-general" title="Permanent link">&para;</a></h4>
+<p>This informative clause provides an overview of the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> and introduces ontology concepts relevant to the other sections in this Standard. The <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> includes ontologies, artefacts, stakeholders, and processes.<br />
+In order to achieve semantic data exchange and interoperability within and between organisations there has to be principles to which data modellers adhere and an infrastructure and mechanisms to find, assess and exchange artefacts . In the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> these principles (see <a href="#id-bd83fee3-8542-4077-8654-caa63e1cbf48">Clause 6</a>) are informed by the <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a> (ISO 23726-3 Industrial Data Ontology) and its ontological commitments. The principles for an artefact being a trusted part of the OBI series are set out in <a href="#id-bd83fee3-8542-4077-8654-caa63e1cbf48">Clause 6</a>.<br />
+<a href="#id-fe21ed05-a440-47d2-b57a-97567050c43d">Figure 2</a> shows artefacts in the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a>. These include 1) shared and proprietary artefacts, and 2) ISO 23726 managed and external group managed artefacts, as follows.</p>
+<p>a) Industrial Data Ontology ISO 23726-3 (IDO) - this <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a> is shown at the core of the diagram.</p>
+<p>b) ISO 23726 managed artefacts from the ISO 23726 series. These shared artefacts are shown as the grey circle around IDO. They are assured by ISO processes and available through ISO. They are governed by the ISO-recognized <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">Maintenance Agency (3.5.1)</a> for ISO 23726.</p>
+<p>c) External group managed artefacts that meet the principles set out in this Standard. These are shown in the white circle. External groups include, for example, other standards bodies and industry organisations. These artefacts shall be managed and maintained with quality control processes equivalent to those of the ISO-recognized <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a>).</p>
+<p>d) Shared OBI series managed artefacts (OBI artefacts and external group managed artefacts). These sit within the black dashed line in <a href="#id-fe21ed05-a440-47d2-b57a-97567050c43d">Figure 2</a>. The creation and maintenance of these shared artefacts enables efficient construction of ontologies. Examples of common shared artefacts include <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a>, and <a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">reference data libraries (3.3.5)</a>.</p>
+<p>e) Enterprise managed artefacts such as <a href="#id-0a1cc0ea-8046-4c2b-e320-e536492e5061">enterprise ontologies (3.1.2)</a>, enterprise artefacts. Shown as the inner of the two outer grey circles.</p>
+<p>f) The enterprise data layer is shown as the outer grey circle.</p>
+<p>g) The outer two circles are managed by individual enterprises. These artefacts and data are proprietary and developed to address specific business needs and decisions.</p>
+<h4 id="figure-2-artefacts-in-the-obi-ecosystem-artefacts-inside-the-dashed-line-are-trusted-and-shared-between-enterprises-artefacts-and-data-between-the-two-outside-dashed-lines-are-proprietary-and-managed-by-an-enterprise">Figure 2 - Artefacts in the OBI ecosystem. Artefacts inside the dashed line are trusted and shared between enterprises. Artefacts and data between the two outside dashed lines are proprietary and managed by an enterprise.<a class="headerlink" href="#figure-2-artefacts-in-the-obi-ecosystem-artefacts-inside-the-dashed-line-are-trusted-and-shared-between-enterprises-artefacts-and-data-between-the-two-outside-dashed-lines-are-proprietary-and-managed-by-an-enterprise" title="Permanent link">&para;</a></h4>
+<h4 id="52-stakeholders-in-the-obi-ecosystem">5.2 Stakeholders in the OBI ecosystem<a class="headerlink" href="#52-stakeholders-in-the-obi-ecosystem" title="Permanent link">&para;</a></h4>
+<p>Stakeholders in this ontology-centric ecosystem include (but are not limited to) asset owners and operators, engineering product and process plant designers, standards organisations, industry groups that manage reference data libraries, organisations involved knowledge representation and AI, and those providing ontology development and maintenance services, assurance and conformity assessment services.<br />
+The Maintenance Agencies are a vital component of the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> because enterprises require quality control to build trust that artefacts are managed and maintained by an accountable body.<br />
+The diagram in <a href="#id-1f183065-5176-4be4-a501-96f86b8ff1db">Figure 3</a> shows an example of how an enterprise might use trusted artefacts from:<br />
+  * 1) ISO 23726,
+  * 2) its internal artefacts (shown in the upper box), and
+  * 3) artefacts provided by external groups compliant with this OBI standard (shown in the white box).</p>
+<p><a href="#id-1f183065-5176-4be4-a501-96f86b8ff1db">Figure 3</a> also includes some examples of roles involved in each stage of the process. The same person may have a role as part of an enterprise's internal process as well as part of an external group's process.</p>
+<h4 id="figure-3-illustrative-example-of-processes-and-roles-involved-in-managing-an-enterprise-ontology-312-ecosystem-which-uses-both-internal-and-externally-managed-trusted-obi-series-ontologies">Figure 3 - Illustrative example of processes and roles involved in managing an <a href="#id-0a1cc0ea-8046-4c2b-e320-e536492e5061">enterprise ontology (3.1.2)</a> ecosystem which uses both internal and externally-managed trusted OBI series ontologies<a class="headerlink" href="#figure-3-illustrative-example-of-processes-and-roles-involved-in-managing-an-enterprise-ontology-312-ecosystem-which-uses-both-internal-and-externally-managed-trusted-obi-series-ontologies" title="Permanent link">&para;</a></h4>
+<h4 id="53-reference-ontologies">5.3 Reference ontologies<a class="headerlink" href="#53-reference-ontologies" title="Permanent link">&para;</a></h4>
+<p>A <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> is a domain-specific ontology that models key concepts in a domain so that other more specialized ontologies or applications can reuse or extend it. A trusted <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> can be used across multiple applications.<br />
+A <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> does not necessarily aim to model everything in the domain. It requires an agreement on the level of <a href="#id-648eba5a-ed39-4427-e160-592bbb878a89">expressivity (3.2.5)</a> required to represent concepts in the domain.<br />
+There is no agreement in the community as to a naming convention for ontologies between the top-level and an <a href="#id-83134beb-8063-4a3d-89a5-626f7d6d9233">application ontology (3.1.1)</a>. Various names such as Core, Domain, Domain-independent, Domain-dependent are used but not clearly defined. Reference ontologies is used here as a label for all of these. Many <a href="#id-83134beb-8063-4a3d-89a5-626f7d6d9233">application ontologies (3.1.1)</a> will import a number of <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontologies (3.1.3)</a>. This information is presented in <a href="#id-dd37351b-ce38-4717-bbe4-a1e1fbca4404">Figure 4</a>.</p>
+<h4 id="figure-4-illustration-of-the-different-terms-used-in-iso-23726-to-describe-different-types-of-ontologies">Figure 4 - Illustration of the different terms used in ISO 23726 to describe different types of ontologies<a class="headerlink" href="#figure-4-illustration-of-the-different-terms-used-in-iso-23726-to-describe-different-types-of-ontologies" title="Permanent link">&para;</a></h4>
+<p>A <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> may be discoverable on the internet if they have an <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">internationalized resource identifier (3.4.2)</a> (IRI) which can be looked up ("dereferenced") over the web to retrieve its contents.<br />
+Reference ontologies developed and managed by external groups such as W3C do not necessarily align to any specific <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a>. Modellers may use individual classes or import the entire ontology. In the latter case, care needs to be taken that ontological commitments for artefacts in the OBI series do not conflict with modelling <a href="#id-14a66b6c-a31d-4fdb-db4f-066e2f49257e">class restrictions (3.2.3)</a> in external reference ontologies.<br />
+Where reference ontologies are commonly used in OBI there will be IDO-aligned support documentation produced. Examples of this for OWL-Time, Semantic Sensor Network (SSN) and GeoSPARQL are provided in Annex C of the ISO 23726-3 document.</p>
+<h4 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
+<p>Examples of reference ontologies developed and maintained by the World Wide Web Consortium (W3C) include the following:<br />
+  * OWL-Time: an OWL-2 DL ontology of temporal concepts, for describing the temporal properties of resources in the world or described in Web pages <a href="https://www.w3.org/TR/owl-time/">https://www.w3.org/TR/owl-time/</a>.
+  * PROV-O: an OWL-2 ontology to model provenance information for different applications and domains <a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>.
+  * SSN/SOSA: the Semantic Sensor Network is an ontology for describing sensors and their observations, the involved procedures, the studied features of interest, the samples used to do so, and the observed properties, as well as actuators <a href="https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>.</p>
+<h4 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h4>
+<p>Examples of reference ontologies developed and maintained by non-ISO, non-W3C organisations include the following:<br />
+  * GEOSPARQL: this spatial domain OWL ontology relating literal representations of geometries to with spatial features. It is maintained by the Open Geospatial Consortium (OGC) <a href="https://www.ogc.org/standards/geosparql/">https://www.ogc.org/standards/geosparql/</a>.
+  * FIBO: defines the sets of things that are of interest in financial business applications and the ways that those things can relate to one another. It is maintained by the EDM Council <a href="https://edmcouncil.org/frameworks/industry-models/fibo/">https://edmcouncil.org/frameworks/industry-models/fibo/</a>.</p>
+<p>There is an evolving space developing ontologies for specific domains such as parts of the engineering life cycle, equipment classes, and the information in engineering standards.</p>
+<h4 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h4>
+<p>Ontologies for business processes (e.g. scheduling, maintenance), for equipment (e.g. piping and valves), and for specific international standards (e.g. <a href="#id-f1bf4504-8b39-4df8-be4a-a115e3d538cc">IEC 61360-1:2017 <a href="#ref-2">[2]</a></a>).</p>
+<h4 id="54-ontology-alignment">5.4 Ontology alignment<a class="headerlink" href="#54-ontology-alignment" title="Permanent link">&para;</a></h4>
+<p>A shared ecosystem requires <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontological alignment (3.2.7)</a> to ensure new artefacts are aligned to IDO or to existing IDO-aligned <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontologies (3.1.3)</a> in the OBI series. The goal is to avoid adding classes and properties that are already represented in the OBI series.<br />
+Requirements for <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a> are specified in <a href="#id-5484ff2d-0cd1-40dc-d25f-102e52f96db2">6.5</a>.</p>
+<h4 id="55-reference-data-libraries">5.5 Reference data libraries<a class="headerlink" href="#55-reference-data-libraries" title="Permanent link">&para;</a></h4>
+<p>The engineering community has a history in developing reference data libraries (<a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">RDL (3.3.5)</a>). These are intended as shared resources managed by standards bodies and industry associations. Examples include CFIHOS, ECLASS, ISO 15926-4 and IEC CDD although in their current forms these reference data libraries are not IDO compliant.<br />
+For use in the OBI series these <a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">reference data libraries (3.3.5)</a> are be aligned to the IDO <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a>, or 2) to an existing IDO compliant <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology, (3.1.3)</a> or 3) to an existing OBI series <a href="#id-18cf9eea-2e3a-4f4b-bd27-f642913f8cd4">ontology module (3.3.2)</a>.<br />
+These RDLs may be managed by different external groups. These groups sit outside of the control of the ISO 23726 committee. In these situations, the following are some suggestions.</p>
+<p>a) Both groups align completely, and prefer to share a term and namespace</p>
+<p>b) Both groups align (perhaps after one or both groups make some concessions modifications) and they get to create the term in each of their namespaces with an appropriate <a href="#id-38b0c20b-7772-47de-806e-894d56596cbd">axiom (3.2.1)</a> between the two terms.</p>
+<p>c) The groups cannot meet a common ground. They diverge, but note a "caveat" in their <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a>, noting the misalignment with another term / concept in the OBI series.</p>
+<h4 id="56-relationship-to-semantic-web-technologies">5.6 Relationship to Semantic Web technologies<a class="headerlink" href="#56-relationship-to-semantic-web-technologies" title="Permanent link">&para;</a></h4>
+<p>IDO is an OWL 2 <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a>. It is formulated in OWL DL, a sublanguage of OWL 2 based on <a href="#id-ce662828-0283-45a6-d21a-be69ace43f7a">description logics (3.2.4)</a> (DLs). DLs are a family of languages used in artificial intelligence and <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web (3.4.4)</a> technologies for logic-based knowledge representation and reasoning.<br />
+Typical <a href="#id-81fc5391-37fe-4d0f-d1ab-51076143afce">ontology reasoning (3.2.8)</a> tasks include:<br />
+  * consistency checks;
+  * generation of taxonomical classification, i.e. inference of implicit class hierarchies; and
+  * inference of new facts.</p>
+<p>OWL DL reasoners are software engines that perform automated OWL DL reasoning tasks without human intervention. In addition to providing a high-level vocabulary for representing industrial assets and processes, IDO's modelling patterns are designed to enable efficient automated reasoning for IDO-aligned ontologies by OWL DL reasoners.<br />
+OWL 2 is a W3C recommendation. The W3C (World Wide Web Consortium) is an international organization responsible for developing and maintaining open standards for the World Wide Web. IDO is an open standard for semantic exchange of industrial data between an organization's internal and external partners. IDO leverages the OWL formalisms and other <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web (3.4.4)</a> standards like RDF and SHACL developed by W3C. These are proven and widely used technologies.</p>
+<h4 id="57-rdf-vocabularies">5.7 RDF vocabularies<a class="headerlink" href="#57-rdf-vocabularies" title="Permanent link">&para;</a></h4>
+<p>RDF-based vocabularies are a useful resource for modellers and to ensure standardization.</p>
+<h4 id="example">EXAMPLE<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Dublin Core is an example of a widely used <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a> standard for documenting ontologies and their concepts. It is used for annotation in the OBI series, see <a href="#id-1f96d32f-e528-4159-c6cc-0dde4abec19c">Clause 9</a>.<br />
+DCMI Metadata Terms: a list of classes and properties to describe <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a>. Managed by the Dublin Core Metadata Initiative <a href="https://www.dublincore.org/specifications/">https://www.dublincore.org/specifications/</a>.</p>
+<h4 id="58-modelling-templates-patterns-and-data-quality-rules">5.8 Modelling templates, patterns and data quality rules<a class="headerlink" href="#58-modelling-templates-patterns-and-data-quality-rules" title="Permanent link">&para;</a></h4>
+<h4 id="581-example">5.8.1 Example<a class="headerlink" href="#581-example" title="Permanent link">&para;</a></h4>
+<p>In the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a> ontologies are knowledge-centric and application-independent but many enterprise data models are application-dependent and data centric. A typical example for a specific enterprise application is shown in <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a>. <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a> represents physical properties of a motor using a modelling <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">pattern (3.3.3)</a>.<br />
+Example based on a motor (ex:Motor71) and representation of its mass (20 kg) to illustrate how SHACL may be used in both the knowledge and application layers</p>
+<h4 id="figure-5-">Figure 5 -<a class="headerlink" href="#figure-5-" title="Permanent link">&para;</a></h4>
+<p>The top two boxes of <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a> show the ontology (upper layer) and an example of an enterprise's instance data (middle layer). The ontology is application-independent and represents facts about an object and its properties (in this case a motor is used as an example). Different applications will need specific data (application-dependent views). For example, electrical engineering-centric and safety professional-centric views are shown.<br />
+Two common uses of SHACL are shown. These are:</p>
+<p>a) to apply general, application-independent constraints on <a href="#id-0a1cc0ea-8046-4c2b-e320-e536492e5061">enterprise ontology (3.1.2)</a> (SHACL shape in the top layer), or</p>
+<p>b) to apply application-dependent constraints in addition to those specified in the data (SHACL shapes in the lowest layer).</p>
+<p>The modeling <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">pattern (3.3.3)</a> for the OWL/RDF serialised instance data shown in <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a> can be used in multiple applications to ensure data in different enterprise applications has the same semantic meaning. This is a key goal for the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a>.</p>
+<h4 id="582-ontology-templates">5.8.2 Ontology templates<a class="headerlink" href="#582-ontology-templates" title="Permanent link">&para;</a></h4>
+<p>Ontology templates are used to produce ontologies and to populate existing ontologies with data. Ontology templates make these processes reproducible and testable. Data quality rules can be developed for templates.</p>
+<h4 id="583-ontology-modelling-patterns">5.8.3 Ontology (modelling) patterns<a class="headerlink" href="#583-ontology-modelling-patterns" title="Permanent link">&para;</a></h4>
+<p><a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">Ontology patterns (3.3.3)</a> for capturing common ontological modelling problems and solutions are an integral part of the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a>.<br />
+<a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">Ontology patterns (3.3.3)</a> are reusable artefacts to represent structures commonly found in knowledge bases. Just like software design patterns, they are used by modellers to create reusable, maintainable and scalable ontologies. Use of existing <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">ontology patterns (3.3.3)</a> reduces modelling effort. The benefits include reducing mapping effort, reducing potential for errors, and facilitating integration. The resulting standardization enables tooling to be built.<br />
+The IDO ontology supports development of both fine and coarse grained modelling patterns. The selection of a particular level of detail is a modelling choice. High and low levels of detail in conceptual models refer to the granularity and specificity with which entities, relationships, and constraints are described.<br />
+Models with high levels of detail make use fine-grained modelling patterns. These provide a verbose representation of elements in the ontology. Models with low levels of detail make use of <a href="#id-d75d010f-c008-4f0f-d118-bff3643af53f">shortcut property (3.2.10)</a> to provide a more compact representation.</p>
+<h4 id="584-shortcut-properties">5.8.4 Shortcut properties<a class="headerlink" href="#584-shortcut-properties" title="Permanent link">&para;</a></h4>
+<p>Ontologies in the OBI series support modelling at different levels of detail. This is achieved with shortcut properties. A <a href="#id-d75d010f-c008-4f0f-d118-bff3643af53f">shortcut property (3.2.10)</a> is an OWL object or datatype property intended as equivalent in meaning to a <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">modelling pattern (3.3.3)</a> that would involve additional entities or classifications if made fully explicit. The meaning of a <a href="#id-d75d010f-c008-4f0f-d118-bff3643af53f">shortcut property (3.2.10)</a> can in general be partially captured by OWL property chains.</p>
+<h4 id="note">NOTE<a class="headerlink" href="#note" title="Permanent link">&para;</a></h4>
+<p>See examples in ISO 23726-3 subclauses B.2.2 and B.4.2.<br />
+Rules should be in place on how to maintain shortcut properties and keep them synchronised as ontologies are updated.</p>
+<h4 id="585-data-and-pattern-quality-rules">5.8.5 Data and pattern quality rules<a class="headerlink" href="#585-data-and-pattern-quality-rules" title="Permanent link">&para;</a></h4>
+<p>A data quality rule defines conditions that data should satisfy to be considered valid, complete, consistent or accurate in a given context.<br />
+Data quality rules for RDF data can be expressed using languages such as (but not limited to) SHACL, SPARQL, OWL and associated reasoners. SPARQL, SHACL, and OWL are W3C standards.<br />
+SPARQL (SPARQL Protocol and RDF Query Languge) is used to query RDF graphs, update RDF datasets and perform federated queries across multiple endpoints.<br />
+SHACL (Shapes Constraint Language) is a language for validating RDF graphs against a set of conditions. Validation is based on SHACL shapes. Each shape specifies a constraint on a class or property and identifies the class or node for which the constraint should be validated.<br />
+Reasoners (e.g. HermiT, Pellet, ELK), when applied to OWL ontologies, enforce data quality rules using logical axioms defined in the ontology.</p>
+<h4 id="586-use-of-shacl">5.8.6 Use of SHACL<a class="headerlink" href="#586-use-of-shacl" title="Permanent link">&para;</a></h4>
+<p>OWL and SHACL are both part of the same linked data ecosystem. Both OWL and SHACL use graph‑shaped RDF data and are open standards, which allows them to be used across tools and vendors.<br />
+However there are differences.<br />
+  * OWL operates under the open world assumption (OWA), and SHACL under the closed world assumption (CWA).
+  * OWL is descriptive, while SHACL is prescriptive.
+  * OWL can be used for reasoning, and SHACL can be used for validation.</p>
+<p>SHACL shapes are a closed world complement to OWL and are used to enforce constraints on modelling patterns and individuals in the ontology. These constraints, for example, 1) make relations and its cardinalities explicit and 2) can be used for automated validation of each RDF instance in the ontology. SHACL shapes developed for reference ontologies or modelling patterns may be shared artefacts.<br />
+SHACL shapes are also used by data modellers working with specific enterprise applications for quality assurance. Individual SHACL shapes can be created for different applications. SHACL shapes for application-dependent models are not usually shared outside of the enterprise.<br />
+These two levels (application-independent and application dependent) are illustrated in <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a>. The upper level of the figure shows a set of classes representing knowledge about a motor and one of its qualities (mass). In OBI a ex:Motor is a subClassOf lis:InanimatePhysicalObject and the concept of ex:Mass is a subClassOf lis:PhysicalQuantity. These are facts and these facts are independent of a specific software application.<br />
+The middle layer shows one example of instance data. In this case for ex:Motor71 with a mass of 20 kg. Other attributes could include power (KW), IP rating, noise level (dB), and frequency (Hz). Each will have instance data and map to classes in the top layer (not shown).<br />
+A SHACL shape defined in the application-independent upper layer can be used to validate data at the instance level. For example, the SHACL shape on the right hand side of the <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a> checks to see if 1) lis:datumUOM has exactly kilogram as unit of measurement that is a valid instance of lis:UnitOfMeasure, and 2) at least one datum value (lis:datumValue) where the datatype is xsd:float.<br />
+A SHACL shape can also be used to check if an ontology is following the defined guidelines. For example, it can be checked if the shapes in <a href="#id-1851357c-67c0-4645-b28f-6524bfe6ce76">Figure 5</a> are in line with the patterns for such shapes defined in guidelines. SHACL shapes can also be converted to OWL restrictions in most cases.<br />
+The lowest level shows how data modellers building applications can use SHACL shapes to ensure that attributes of interest to a specific application are consistent with the instance data and admissible to the ontology. This is shown by the illustration of different views for a) safety engineer, and b) an electrical engineer. SHACL used in this way links the data modellers to the ontology.</p>
+<h4 id="6-fundamental-principles-and-requirements">6 Fundamental principles and requirements<a class="headerlink" href="#6-fundamental-principles-and-requirements" title="Permanent link">&para;</a></h4>
+<h4 id="61-direct-semantics-consistent">6.1 Direct Semantics consistent<a class="headerlink" href="#61-direct-semantics-consistent" title="Permanent link">&para;</a></h4>
+<p>Any ontology contained in the OBI series shall be compliant with OWL 2 Direct Semantics.</p>
+<h4 id="note_1">NOTE<a class="headerlink" href="#note_1" title="Permanent link">&para;</a></h4>
+<p>See reference in <a href="https://www.w3.org/TR/owl2-direct-semantics">https://www.w3.org/TR/owl2-direct-semantics</a> and refer to <a href="#id-0468b67f-24f3-4541-b76b-38a6963f8214">Clause 7</a>.</p>
+<h4 id="62-resource-description-framework-rdf-and-rdfs">6.2 Resource description framework (RDF and RDFS)<a class="headerlink" href="#62-resource-description-framework-rdf-and-rdfs" title="Permanent link">&para;</a></h4>
+<p>Ontologies, <a href="#id-18cf9eea-2e3a-4f4b-bd27-f642913f8cd4">ontology modules (3.3.2)</a> and <a href="#id-d830fd5a-1b97-41e3-93f2-ea5b023ef5fb">ontology patterns (3.3.3)</a> in the OBI series shall conform to the W3C Linked Data standard and protocols.</p>
+<h4 id="63-digital-resource">6.3 Digital resource<a class="headerlink" href="#63-digital-resource" title="Permanent link">&para;</a></h4>
+<p>Each standard describing an ontology in the OBI series shall be accompanied by a digital file containing a serialisation of all the classes and properties described in the standard document.<br />
+Each reference and <a href="#id-83134beb-8063-4a3d-89a5-626f7d6d9233">application ontology (3.1.1)</a> in the OBI series shall be accompanied by a <a href="#id-1b6e4636-3d7c-4bdf-8cc9-9aeba796c927">use case (3.3.6)</a>, competency questions, and digital file with instance data to demonstrate reasoning and compliance with the ontological commitments in IDO.<br />
+Ontologies and use cases in the OBI series should be relevant for industry.</p>
+<h4 id="64-axioms-rules-and-constraints">6.4 Axioms, rules and constraints<a class="headerlink" href="#64-axioms-rules-and-constraints" title="Permanent link">&para;</a></h4>
+<p>Resources in an OBI series ontology should be defined to constrain the meaning of that resource by specifying axioms, rules, properties or relationships necessary to make the resource semantically distinct from all the other resources.<br />
+Constraints should define criteria for an individual's membership in classes, for being related by object or data property, and for the purpose of any individual.<br />
+The extent of <a href="#id-38b0c20b-7772-47de-806e-894d56596cbd">axioms (3.2.1)</a> used should consider the intended use of the ontology.</p>
+<h4 id="note-1">NOTE 1<a class="headerlink" href="#note-1" title="Permanent link">&para;</a></h4>
+<p>Some axioms are used for consistency checking and to avoid duplication but over-use of axioms can impact reasoning performance and result in complex structures.</p>
+<h4 id="note-2">NOTE 2<a class="headerlink" href="#note-2" title="Permanent link">&para;</a></h4>
+<p>Consideration of <a href="#id-6ff17c13-15bd-410f-9e73-61968fabfe6f">competency questions (3.3.1)</a> can inform axiomisation choices.<br />
+Where rules in languages other than OWL (such as SWRL and SPARQL) are contained in an OBI series part, evidence that the application of the rules will yield results consistent with the IDO <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a> should be provided.</p>
+<h4 id="note-3">NOTE 3<a class="headerlink" href="#note-3" title="Permanent link">&para;</a></h4>
+<p>Rules for checking correctness are considered complementary to OWL 2 consistency checking, not a replacement.</p>
+<h4 id="note-4">NOTE 4<a class="headerlink" href="#note-4" title="Permanent link">&para;</a></h4>
+<p>As an example, the generation of rules in other languages (such as the SPARQL 'CONSTRUCT' statement).</p>
+<h4 id="65-ontology-alignment-review-and-documentation">6.5 Ontology alignment, review and documentation<a class="headerlink" href="#65-ontology-alignment-review-and-documentation" title="Permanent link">&para;</a></h4>
+<h4 id="651-ontology-alignment">6.5.1 Ontology alignment<a class="headerlink" href="#651-ontology-alignment" title="Permanent link">&para;</a></h4>
+<p>Each class in an OWL ontology or <a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">reference data library (3.3.5)</a> contained in the OBI series shall be a direct or indirect subclass of an IDO class.</p>
+<h4 id="note-1_1">NOTE 1<a class="headerlink" href="#note-1_1" title="Permanent link">&para;</a></h4>
+<p>This requirement can be fulfilled in one of the following ways:</p>
+<p>a) By subclassing directly from the IDO <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a>;</p>
+<p>b) By subclassing from an existing IDO-compliant <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology, (3.1.3)</a>; or</p>
+<p>c) By subclassing from an <a href="#id-18cf9eea-2e3a-4f4b-bd27-f642913f8cd4">ontology module (3.3.2)</a> within the OBI series.</p>
+<p>Each property in an OWL ontology or <a href="#id-d32eec41-4f23-43b8-98e3-2d54361b72c8">reference data library (3.3.5)</a> contained in the OBI series should extend as sub-properties whenever appropriate.</p>
+<h4 id="note-2_1">NOTE 2<a class="headerlink" href="#note-2_1" title="Permanent link">&para;</a></h4>
+<p>This can be achieved</p>
+<p>d) directly from the IDO <a href="#id-1463574b-5432-4ae9-ba09-53e637102e5e">upper ontology (3.1.4)</a>,</p>
+<p>e) from an existing IDO compliant <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology, (3.1.3)</a></p>
+<p>f) from an existing OBI series <a href="#id-18cf9eea-2e3a-4f4b-bd27-f642913f8cd4">ontology module (3.3.2)</a>, or if no term is suitable from</p>
+<p>g) an external <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a> .</p>
+<p>New OBI series classes and properties should not redefine, or duplicate classes and properties defined in other OBI series ontologies.<br />
+The highest level of detail (conceptual representation) should be used when assessing <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a></p>
+<h4 id="652-review-of-ontology-alignment-decisions">6.5.2 Review of ontology alignment decisions<a class="headerlink" href="#652-review-of-ontology-alignment-decisions" title="Permanent link">&para;</a></h4>
+<p>All <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a> decisions for artefacts in the ISO 23726 series shall be reviewed and approved by a <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a>.<br />
+All <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a> decisions for artefacts created by external groups that seek to be recognised as part of the OBI series shall be reviewed and approved using processes equivalent to this of the ISO-recognised <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a>.</p>
+<h4 id="note_2">NOTE<a class="headerlink" href="#note_2" title="Permanent link">&para;</a></h4>
+<p>In certain cases a superproperty is created that is outside of the IDO, an IDO compliant <a href="#id-bfcc3d45-17ef-40f2-91af-f008b669c969">reference ontology (3.1.3)</a>, or other existing <a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefact (3.5.3)</a> . This is a design choice as it is not practically possible or desirable to provide an exhaustive set of super-relations for all future needs.<br />
+Details to assist in consistent treatment of misalignment situations can be developed in guidance documents.</p>
+<h4 id="example_1">EXAMPLE<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<p>The following are some examples of outcomes from an <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a> review.</p>
+<p>a) There is complete alignment and the proposed ontology adopts the OBI term and namespace.</p>
+<p>b) The proposed ontology creates the term in their own namespace and uses a rdfs:seeAlso property to create a link between their ontology and the relevant <a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefact (3.5.3)</a> .</p>
+<p>c) The proposed ontology retains a concept with a different interpretation from OBI, documents this in their <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a> and follows the ontology conflict clause in <a href="#id-4b8e4827-d2c8-4d8a-923e-9dce9239b57b">6.5.3</a>.</p>
+<h4 id="653-ontological-conflicts">6.5.3 Ontological conflicts<a class="headerlink" href="#653-ontological-conflicts" title="Permanent link">&para;</a></h4>
+<p><a href="#id-779824a9-d270-4686-a3be-4123d5dd2bf2">Ontological commitments (3.2.6)</a> for ontologies in external reference ontologies should not conflict with modelling <a href="#id-14a66b6c-a31d-4fdb-db4f-066e2f49257e">class restrictions (3.2.3)</a> in existing OBI ontologies.<br />
+Where such conflicts exist, solutions to map between the artefact in the external source to the existing OBI ontologies shall be proposed and documented as described in <a href="#id-649bdc4a-b123-4946-9b41-88b111870700">6.5.4</a>.</p>
+<h4 id="654-documentation-on-ontology-alignment">6.5.4 Documentation on ontology alignment<a class="headerlink" href="#654-documentation-on-ontology-alignment" title="Permanent link">&para;</a></h4>
+<p>Each alignment should be expressed as an ontology that:<br />
+  * imports IDO, other relevant existing OBI modules and the external ontology,
+  * asserts subclass or subproperty relationships and/or axioms, and
+  * introduces new entities as needed.</p>
+<p>Each alignment shall be documented as follows:<br />
+  * Version and availability - this describes which version of the external ontology has been selected for alignment, and where that version may be obtained. This can be achieved using versioned imports.
+  * Namespaces - namespaces that are needed for the alignment.
+  * Alignment diagrams - diagrams are provided to describe the details of each mapping.
+  * Documentation of choices that can be controversial or in need of clarification or testing.</p>
+<p>Documentation on alignment shall use annotation properties described in <a href="#id-325fa5bc-fcbf-442d-8d8f-ff9a91bbdbd5">Clause 8</a> and <a href="#id-1f96d32f-e528-4159-c6cc-0dde4abec19c">Clause 9</a></p>
+<h4 id="66-annotation">6.6 Annotation<a class="headerlink" href="#66-annotation" title="Permanent link">&para;</a></h4>
+<p>Ontology models should be documented with <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a> described in <a href="#id-325fa5bc-fcbf-442d-8d8f-ff9a91bbdbd5">Clause 8</a>.<br />
+Other annotations may be included but these are as an addition to the ones listed in <a href="#id-325fa5bc-fcbf-442d-8d8f-ff9a91bbdbd5">Clause 8</a> and should be governed by a documented process.<br />
+Classes and properties in an ontology should be documented with <a href="#id-466299e4-fea0-4b87-c004-f1498a5876ca">metadata (3.4.3)</a> listed in <a href="#id-1f96d32f-e528-4159-c6cc-0dde4abec19c">Clause 9</a>.<br />
+Other annotations may be included but these are as an addition to the ones listed in <a href="#id-1f96d32f-e528-4159-c6cc-0dde4abec19c">Clause 9</a> and should be governed by a documented process.</p>
+<h4 id="67-versioning-and-storage-of-artefacts">6.7 Versioning and storage of artefacts<a class="headerlink" href="#67-versioning-and-storage-of-artefacts" title="Permanent link">&para;</a></h4>
+<p>The ontologies that are part of the OBI series shall be version controlled.<br />
+Each versioned OBI series ontology should have stable <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">IRIs (3.4.2)</a> .<br />
+Annotations provided in <a href="#id-b86082d9-b323-431c-b411-2f0f2eead152">9.5</a> and <a href="#id-611995dc-b845-4c92-d61e-b512fc5308c7">9.6</a> shall be used to document ontologies and their evolution.</p>
+<h4 id="note_3">NOTE<a class="headerlink" href="#note_3" title="Permanent link">&para;</a></h4>
+<p>Classes, properties, individuals and axioms in an ontology do not have version numbers. This is to ensure that the IRIs of the resources defined in an ontology are stable independent from the version of the ontology.</p>
+<h4 id="68-ontology-modularisation-and-re-use">6.8 Ontology modularisation and re-use<a class="headerlink" href="#68-ontology-modularisation-and-re-use" title="Permanent link">&para;</a></h4>
+<p>Ontology developers should make modular ontologies designed for re-use for different applications and ease of ontology maintenance.<br />
+Justification of the inclusions and exclusions in the module should be captured using annotation properties described in <a href="#id-cd01e274-e66a-45c0-8900-6b8039ae5a2e">9.3</a>.<br />
+Import statements pointing to specific versions of re-used ontologies should be used to ensure that the resolved <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">IRIs (3.4.2)</a> are correctly referring to the versioned ontology.<br />
+When ontologies are re-used there should be a clear hierarchy of imports to avoid circular imports.</p>
+<h4 id="69-ontology-evaluation">6.9 Ontology evaluation<a class="headerlink" href="#69-ontology-evaluation" title="Permanent link">&para;</a></h4>
+<p>All ontologies in the OBI series shall have suitable ontology quality tests.<br />
+These tests should provide evidence of ontology evaluation with, for example, model checking processes, syntax checkers, and reasoners.<br />
+Processes for ontology evaluation of ISO-managed artefacts shall be reviewed and approved by the ISO-recognised <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a>.<br />
+Processes for ontology evaluation of <a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefacts (3.5.3)</a> managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">Maintenance Agency (3.5.1)</a>.<br />
+Examples of issues examined by model checkers include but are not limited those below.</p>
+<h4 id="example-1_1">EXAMPLE 1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h4>
+<p>The presence of polysemous elements - ontology elements whose name has different meaning and represents more than one conceptual idea.</p>
+<h4 id="example-2_1">EXAMPLE 2<a class="headerlink" href="#example-2_1" title="Permanent link">&para;</a></h4>
+<p>Creation of synonyms when two or more classes that have the same meaning but different names. Such as common synonyms for foundation: base, footing and substructure.</p>
+<h4 id="610-ontology-maintenance-agencies-and-process">6.10 Ontology maintenance agencies and process<a class="headerlink" href="#610-ontology-maintenance-agencies-and-process" title="Permanent link">&para;</a></h4>
+<h4 id="6101-ontology-maintenance-agency">6.10.1 Ontology maintenance agency<a class="headerlink" href="#6101-ontology-maintenance-agency" title="Permanent link">&para;</a></h4>
+<p>A <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a> is responsible for maintaining the publishing updates to digital versions of artefacts that are part of the ISO 23726 series.</p>
+<h4 id="note-1_2">NOTE 1<a class="headerlink" href="#note-1_2" title="Permanent link">&para;</a></h4>
+<p>ISO 23726 managed documents will have a regular maintenance process at a time interval prescribed by ISO.<br />
+External groups seeking to propose and manage <a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefacts (3.5.3)</a> shall have a documented and auditable quality management process to ensure conformance with the principles in <a href="#id-bd83fee3-8542-4077-8654-caa63e1cbf48">Clause 6</a>. <a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefacts (3.5.3)</a> created by external groups shall be managed by using processes equivalent to those of the <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">Maintenance Agency (3.5.1)</a>.</p>
+<h4 id="note-2_2">NOTE 2<a class="headerlink" href="#note-2_2" title="Permanent link">&para;</a></h4>
+<p>Independent review by an external ontology expert is an option.</p>
+<h4 id="6102-maintenance-process">6.10.2 Maintenance process<a class="headerlink" href="#6102-maintenance-process" title="Permanent link">&para;</a></h4>
+<p>A maintenance process shall be documented by a <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a>.</p>
+<h4 id="example_2">EXAMPLE<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<p>Examples of questions addressed in the maintenance process include the following.</p>
+<p>a) How will digital versioning be managed?</p>
+<p>b) How will a change in the meaning of a term on previous releases be managed?</p>
+<p>c) Where and how will documentation on the purpose of an ontology, <a href="#id-18cf9eea-2e3a-4f4b-bd27-f642913f8cd4">ontology module (3.3.2)</a>, or other artefact be captured and maintained?</p>
+<p>d) How are issues identified and changes tracked?</p>
+<p>e) What sort of testing is appropriate on the impact of the changes on existing ontologies in use in industry?</p>
+<p>f) How will migration from the predecessor version to the current version be managed?</p>
+<p>g) Under what circumstances will an artefact need an <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">IRI (3.4.2)</a> and <a href="#id-1c97012f-c8a0-4e0f-ebca-fad523a1caab">annotation properties (3.2.2)</a> ?</p>
+<p>h) How will <a href="#id-6a3a2356-4ed0-4e74-e96f-fe71fa0db4d3">ontology alignment (3.2.7)</a> be checked and assured?</p>
+<p>i) How will updates to versions of imported ontologies be managed?</p>
+<p>This maintenance process shall include mechanisms for feedback from users.</p>
+<h4 id="6103-obi-artefact-ownership">6.10.3 OBI artefact ownership<a class="headerlink" href="#6103-obi-artefact-ownership" title="Permanent link">&para;</a></h4>
+<p><a href="#id-53319be6-3267-4b49-f66a-cecf11daef05">OBI artefacts (3.5.3)</a> issued by the ISO OBI standards (ISO 23726) community shall be managed by the <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a> as shown in <a href="#id-fe21ed05-a440-47d2-b57a-97567050c43d">Figure 2</a> .<br />
+OBI series artefacts issued by external group organisations shall have independent evaluation of their alignment using processes equivalent to those in the <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">Maintenance Agency (3.5.1)</a> to ensure conformance with the principles in <a href="#id-bd83fee3-8542-4077-8654-caa63e1cbf48">Clause 6</a>.</p>
+<h4 id="7-grounding-in-mathematical-logic">7 Grounding in mathematical logic<a class="headerlink" href="#7-grounding-in-mathematical-logic" title="Permanent link">&para;</a></h4>
+<p>This clause justifies why OWL 2 is chosen for use in ISO 23726 ontologies. OWL 2 is based on <a href="#id-ce662828-0283-45a6-d21a-be69ace43f7a">description logics (3.2.4)</a> (DL) which are fragments of First-order logic (FOL). FOL is a mathematical framework, specifically a formal system used in mathematical logic to express statements about structures as follows.<br />
+  * Formal Language: FOL provides a precise way to define mathematical statements using quantifiers (∀, ∃), logical connectives (∧, ∨, →, ¬), and predicates.
+  * inference system: It includes rules for reasoning (deduction), such as modus ponens and universal instantiation.
+  * Modal theory: FOL expresses the meaning (semantics) of logical statements by defining structures that satisfy them.</p>
+<p>Specifically, OWL 2 corresponds closely to SROIQ(D), a highly <a href="#id-648eba5a-ed39-4427-e160-592bbb878a89">expressive (3.2.5)</a>, decidable DL. This enables automated reasoning in knowledge representation such as satisfiability checking and automated classification.</p>
+<h4 id="8-ontology-namespace-formatting-and-annotation-guidelines">8 Ontology namespace, formatting and annotation guidelines<a class="headerlink" href="#8-ontology-namespace-formatting-and-annotation-guidelines" title="Permanent link">&para;</a></h4>
+<h4 id="81-general">8.1 General<a class="headerlink" href="#81-general" title="Permanent link">&para;</a></h4>
+<p>This clause describes formatting and annotation guidelines for ontology constructs in the <a href="#id-4cbd395b-a745-4d7d-c48d-da5f7c438278">OBI ecosystem (3.5.2)</a>. These guidelines are intended to ensure a consistent approach to formatting across the <a href="#id-0a1cc0ea-8046-4c2b-e320-e536492e5061">enterprise ontology (3.1.2)</a> user base.</p>
+<h4 id="82-namespace">8.2 Namespace<a class="headerlink" href="#82-namespace" title="Permanent link">&para;</a></h4>
+<p>Ontologies created and managed by under the OBI standard should use a namespace provided by the <a href="#id-b328b128-df4b-4b63-8bf3-074895e3e707">maintenance agency (3.5.1)</a> - as listed by ISO on <a href="https://www.iso.org/maintenance_agencies.html">https://www.iso.org/maintenance_agencies.html</a><br />
+Entities in IDO have a <a href="#id-a467d397-709f-4876-976c-4a8402657f09">URI (3.4.5)</a> that uses the namespace <a href="https://posccaesar.org/ontology/lis14/ont/core/">https://posccaesar.org/ontology/lis14/ont/core/</a><br />
+Versioning of the ontology will be managed by a version extension at the end of the <a href="#id-a467d397-709f-4876-976c-4a8402657f09">URI (3.4.5)</a> , such as <a href="https://posccaesar.org/ontology/lis14/ont/core/3.0/">https://posccaesar.org/ontology/lis14/ont/core/3.0/</a><br />
+Ontologies created and managed by external groups should use a suitable namespace. The namespace format should follow the format in this subclause.</p>
+<h4 id="83-sub-directory-structure">8.3 Sub-directory structure<a class="headerlink" href="#83-sub-directory-structure" title="Permanent link">&para;</a></h4>
+<p>Reference ontologies shall have the following URL structure <a href="http://posccaesar.org/ontology/XXX/ont/core">http://posccaesar.org/ontology/XXX/ont/core</a> where XXX is a placeholder for an acronym of the respective ontology with no limit of characters.</p>
+<h4 id="example-1_2">EXAMPLE 1<a class="headerlink" href="#example-1_2" title="Permanent link">&para;</a></h4>
+<p>For the Schedule Data Ontology the following URL is proposed: <a href="http://posccaesar.org/ontology/sdo/ont/core">http://posccaesar.org/ontology/sdo/ont/core</a><br />
+SWRL Rules and SHACL shapes shall be in dedicated directories under the ontology with which they are associated.</p>
+<h4 id="example-2_2">EXAMPLE 2<a class="headerlink" href="#example-2_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://posccaesar.org/ontology/lis14/ont/core/swrl/">https://posccaesar.org/ontology/lis14/ont/core/swrl/</a></li>
+<li><a href="https://posccaesar.org/ontology/lis14/ont/core/shacl/">https://posccaesar.org/ontology/lis14/ont/core/shacl/</a></li>
+</ul>
+<h4 id="84-prefixes">8.4 Prefixes<a class="headerlink" href="#84-prefixes" title="Permanent link">&para;</a></h4>
+<p>Namespace prefixes for ontologies in OWL should be declared in each ontology artefact in the OBI series.</p>
+<h4 id="example_3">EXAMPLE<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Prefix: rdf: <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></li>
+<li>Prefix: ssn: <a href="http://www.w3.org/ns/ssn/">http://www.w3.org/ns/ssn/</a></li>
+<li>Prefix: qudt: <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a></li>
+</ul>
+<h4 id="85-class-names">8.5 Class names<a class="headerlink" href="#85-class-names" title="Permanent link">&para;</a></h4>
+<p>Class name in the <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">IRI (3.4.2)</a> and the <a href="#id-1c97012f-c8a0-4e0f-ebca-fad523a1caab">annotation property (3.2.2)</a> rdfs:label without language tag shall be a noun group in singular, given in PascalCase (also known as UpperCamelCase).<br />
+Class names and labels should be human readable.<br />
+Class names and labels should be in English.<br />
+Class names should not use numeric identifiers for classes.<br />
+No acronyms should be used except those in the dictionary, such as RADAR, which should be converted to Radar in PascalCase.<br />
+Annotation labels for class names with language tags (e.g. Japanese, Chinese, German) should be human readable.</p>
+<h4 id="example_4">EXAMPLE<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<p>The rdfs:label for the class "physical object" can be written as follows using a postscript to specify language variants.<br />
+  * rdfs:label "PhysicalObject"
+  * rdfs:label "Physical object"@en
+  * rdfs:label "Physikalisches Objekt"@de
+  * rdfs_label "Obejt phyexpresssique"@fr</p>
+<h4 id="86-object-property-names">8.6 Object property names<a class="headerlink" href="#86-object-property-names" title="Permanent link">&para;</a></h4>
+<p>Object property names in the <a href="#id-210b4a9b-7014-4cdf-8a58-c67e2a2dd196">IRI (3.4.2)</a> and the annotation label shall be verb phrases in third person singular in present tense, in lowerCamelCase.<br />
+Object property names and labels should be human readable.<br />
+Object property names and labels should be in English.</p>
+<h4 id="example_5">EXAMPLE<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The object property lis:hasArrangedPart in <a href="http://posccaesar.org/ontology/lis14/rdl/hasArrangedPart">http://posccaesar.org/ontology/lis14/rdl/hasArrangedPart</a></li>
+<li>The <a href="#id-1c97012f-c8a0-4e0f-ebca-fad523a1caab">annotation property (3.2.2)</a> pav:hasEarlierVersion in <a href="http://purl.org/pav/hasEarlierVersion">http://purl.org/pav/hasEarlierVersion</a></li>
+</ul>
+<h4 id="87-data-property-names">8.7 Data property names<a class="headerlink" href="#87-data-property-names" title="Permanent link">&para;</a></h4>
+<p>Data property names shall be be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.<br />
+Data property names should be human readable.<br />
+Data property names should be in English.</p>
+<h4 id="example_6">EXAMPLE<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The data property <a href="http://rds.posccaesar.org/ontology/lis14/rdl/datumValue">http://rds.posccaesar.org/ontology/lis14/rdl/datumValue</a></li>
+</ul>
+<h4 id="9-annotation-properties">9 Annotation properties<a class="headerlink" href="#9-annotation-properties" title="Permanent link">&para;</a></h4>
+<h4 id="91-general">9.1 General<a class="headerlink" href="#91-general" title="Permanent link">&para;</a></h4>
+<p>Artefacts in the OBI series make use of existing annotation properties used for <a href="#id-adf4cdbe-e6b4-410a-f9f4-68a599b3b0ca">Semantic Web (3.4.4)</a> data and applications. As indicated by the respective prefixes these hall be defined in the following vocabularies.<br />
+  * rdfs: RDF Schema, W3C Recommendation, 2014 <a href="#id-6d10bb2b-3198-457e-8b9c-3b6917e1b509"><a href="#ref-3">[3]</a></a>
+  * skos: Simple Knowledge Organization System Reference, W3C Recommendation, 2009 <a href="#id-7b687ddf-c5e9-4e87-ad0e-d19a40cfc961"><a href="#ref-4">[4]</a></a>
+  * cmns-av: Commons Annotation Vocabulary, Open Applications Group, 2022 <a href="#id-18c5910b-dacd-4759-931f-85dad7837b4d"><a href="#ref-5">[5]</a></a>
+  * iof‑av: Industrial Ontology Foundry Annotation Vocabulary, Open Applications Group, 2023 <a href="#id-83936a6f-56a2-4b1d-8cfd-de1fe8a1e010"><a href="#ref-6">[6]</a></a>
+  * pav: Provenance, Authoring and Versioning, Ciccarese et al., J. Biomedical Semantics 4, 2013 <a href="#id-06f604bb-e090-4046-8189-0c922bf0bda5"><a href="#ref-7">[7]</a></a>
+  * dc:, dcterms: Dublin Core Metadata Initiative Recommendation, 2020 <a href="#id-e5be06dc-a123-4ada-8fb9-434ba366f2cd"><a href="#ref-8">[8]</a></a></p>
+<p><a href="#id-1c97012f-c8a0-4e0f-ebca-fad523a1caab">annotation property (3.2.2)</a> definitions shall not start with an `a' or 'the'.</p>
+<h4 id="92-required-annotation-properties">9.2 Required annotation properties<a class="headerlink" href="#92-required-annotation-properties" title="Permanent link">&para;</a></h4>
+<h4 id="921-rdfslabel">9.2.1 rdfs:label<a class="headerlink" href="#921-rdfslabel" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> instance of rdf:Property used to provide a human-readable version of a resource's name<br />
+<em>usageNote</em> every ontology class, object property, data property and SHACL shape in OBI shall have an rdfs:label<br />
+<em>usageNote</em> labels shall be unique across all OBI ontologies and should be unique across all imported non-OBI ontologies in a given natural language<br />
+<em>usageNote</em> lables for other languages may be provided, but if so they must be language tagged<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://www.w3.org/2000/01/rdf-schema#">https://www.w3.org/2000/01/rdf-schema#</a></p>
+<h4 id="922-skosdefinition">9.2.2 skos:definition<a class="headerlink" href="#922-skosdefinition" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> definition written in plain text for human understanding<br />
+<em>usageNote</em> exactly one natural language definition shall be given for each ontology class, object property, and data property<br />
+<em>usageNote</em> natural language definition should be consistent with any formal definition or elucidation<br />
+<em>usageNote</em> definition should be understandable by a practitioner in the industrial domain<br />
+<em>usageNote</em> definition should adhere to ISO 704 rules and requirements for terminology<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2004/02/skos/core#definition">http://www.w3.org/2004/02/skos/core#definition</a></p>
+<h4 id="93-annotation-properties-for-additional-metadata">9.3 Annotation properties for additional metadata<a class="headerlink" href="#93-annotation-properties-for-additional-metadata" title="Permanent link">&para;</a></h4>
+<h4 id="931-dctermsabstract">9.3.1 dcterms:abstract<a class="headerlink" href="#931-dctermsabstract" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> summary of the resource<br />
+<em>usageNote</em> describes an artifact such as a controlled vocabulary, ontology, or other similar resource<br />
+<em>subPropertyOf</em> dcterms:description<br />
+<em>isDefinedBy</em> <a href="http://purl.org/dc/terms/abstract">http://purl.org/dc/terms/abstract</a></p>
+<h4 id="932-skosexample">9.3.2 skos:example<a class="headerlink" href="#932-skosexample" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> supplies an example of the use of a concept<br />
+<em>usageNote</em> all classes in an ontology should have a skos:example<br />
+<em>subPropertyOf</em> skos:note<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2004/02/skos/core#example">http://www.w3.org/2004/02/skos/core#example</a></p>
+<h4 id="example_7">EXAMPLE<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
+<p><strong>lis:Role</strong><br />
+<em>example</em> The role an individual person takes in a work situation, such as a manager role or a student role.<br />
+<strong>lis:Location</strong><br />
+<em>example</em> An outdoor plant area, an opening in a wall, the space inside an enclosure</p>
+<h4 id="933-skospreflabel">9.3.3 skos:prefLabel<a class="headerlink" href="#933-skospreflabel" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> preferred lexical label for the ontology resource, in a given language<br />
+<em>usageNote</em> a resource has no more than one value of skos:prefLabel per language tag. Disjoint with skos:altLabel<br />
+<em>subPropertyOf</em> rdfs:label<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a></p>
+<h4 id="934-skosaltlabel">9.3.4 skos:altLabel<a class="headerlink" href="#934-skosaltlabel" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> alternative lexical label for the ontology resource<br />
+<em>usageNote</em> used for acronyms, abbreviations, spelling variants, and irregular plural/singular forms. Disjoint with skos:prefLabel<br />
+<em>subPropertyOf</em> rdfs:label<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a></p>
+<h4 id="935-cmns-avsynonym">9.3.5 cmns-av:synonym<a class="headerlink" href="#935-cmns-avsynonym" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> word that means exactly or nearly the same as another word in the same language<br />
+<em>usageNote</em> used to provide an alternate or multiple alternate words to the skos:label. For example, overhaul is a synonym of repair. ISO 1087:2019 provides the example `synonmy exists between deuterium and heavy hydrogen'<br />
+<em>subPropertyOf</em> skos:altLabel<br />
+<em>adaptedFrom</em> iof-av:synonym<br />
+<em>isDefinedBy</em> <a href="https://www.omg.org/spec/Commons/AnnotationVocabulary">https://www.omg.org/spec/Commons/AnnotationVocabulary</a></p>
+<h4 id="936-cmns-avabbreviation">9.3.6 cmns-av:abbreviation<a class="headerlink" href="#936-cmns-avabbreviation" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> designation formed by omitting parts from the full form of a term that denotes the same concept<br />
+<em>subPropertyOf</em> cmns-av:synonym<br />
+<em>example</em> chemical symbols: H, O, Mg; units of measure: km, kg, g<br />
+<em>isDefinedBy</em> <a href="https://www.omg.org/spec/Commons/AnnotationVocabulary">https://www.omg.org/spec/Commons/AnnotationVocabulary</a></p>
+<h4 id="937-cmns-avacronym">9.3.7 cmns-av:acronym<a class="headerlink" href="#937-cmns-avacronym" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> abbreviation that is made up of the initial letters of the components of the full form of a term or proper name or from syllables of the full form<br />
+<em>example</em> laser, ISO, GATT, UNESCO, UNICEF<br />
+<em>subPropertyOf</em> cmns-av:abbreviation<br />
+<em>isDefinedBy</em> <a href="https://www.omg.org/spec/Commons/AnnotationVocabulary">https://www.omg.org/spec/Commons/AnnotationVocabulary</a></p>
+<h4 id="938-cmns-avsymbol">9.3.8 cmns-av:symbol<a class="headerlink" href="#938-cmns-avsymbol" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> abbreviation that is a design or mark, or other non-alpha-numeric character(s) conventionally used to represent something, such as a currency or mathematical sign or operator<br />
+<em>subPropertyOf</em> cmns-av:synonym<br />
+<em>isDefinedBy</em> <a href="https://www.omg.org/spec/Commons/AnnotationVocabulary">https://www.omg.org/spec/Commons/AnnotationVocabulary</a></p>
+<h4 id="939-rdfscomment">9.3.9 rdfs:comment<a class="headerlink" href="#939-rdfscomment" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> textual comment to clarify the meaning of RDF properties and classes<br />
+<em>usageNote</em> this annotation should be avoided when documenting OBI ontologies. Instead authors should use skos:scopeNote <a href="#id-0cf696e7-c9fa-4a61-a559-d75a677a2dda">9.3.12</a>, iof-av:explanatoryNote <a href="#id-134d0969-d79f-49d1-8f09-71ea5c1763d7">9.3.13</a>, iof-av:usageNote <a href="#id-b9a791fc-63b8-458b-9f68-f51f240f78b0">9.3.14</a> when additional information about the OBI resource is needed<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a></p>
+<h4 id="9310-rdfsseealso">9.3.10 rdfs:seeAlso<a class="headerlink" href="#9310-rdfsseealso" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> indicates a resource that might provide additional information about the subject resource<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a></p>
+<h4 id="9311-rdfsisdefinedby">9.3.11 rdfs:isDefinedBy<a class="headerlink" href="#9311-rdfsisdefinedby" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> indicates a resource defining the subject resource<br />
+<em>usageNote</em> may be used to indicate an RDF vocabulary in which the resource is described<br />
+<em>subPropertyOf</em> rdfs:seeAlso<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a></p>
+<h4 id="9312-skosscopenote">9.3.12 skos:scopeNote<a class="headerlink" href="#9312-skosscopenote" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> clarifies the meaning and/or use of a concept<br />
+<em>usageNote</em> clarifies the scope of use of an OBI artefact. It supplies some, possibly partial, information about the intended meaning of a concept, especially as an indication of how the use of a concept is limited in indexing practice<br />
+<em>example</em> ex:microwaveFrequencies skos:scopeNote used for frequencies between 1 GHz to 300 Ghz"@en<br />
+<em>isDefinedBy</em> <a href="http://www.w3.org/2004/02/skos/core#scopeNote">http://www.w3.org/2004/02/skos/core#scopeNote</a></p>
+<h4 id="9313-iof-avexplanatorynote">9.3.13 iof-av:explanatoryNote<a class="headerlink" href="#9313-iof-avexplanatorynote" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> provides additional explanatory information about a resource<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote</a></p>
+<h4 id="9314-iof-avusagenote">9.3.14 iof-av:usageNote<a class="headerlink" href="#9314-iof-avusagenote" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> provides information about how a given OBI resource is used in context<br />
+<em>seeAlso</em> cmns-av:usageNote<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote</a></p>
+<h4 id="94-annotation-properties-for-formal-and-semi-formal-definitions">9.4 Annotation properties for formal and semi-formal definitions<a class="headerlink" href="#94-annotation-properties-for-formal-and-semi-formal-definitions" title="Permanent link">&para;</a></h4>
+<h4 id="941-general">9.4.1 General<a class="headerlink" href="#941-general" title="Permanent link">&para;</a></h4>
+<p>Formal and semi-formal definitions make definitions explicit and should be provided for classes.</p>
+<h4 id="942-cmns-avlogicaldefinition">9.4.2 cmns-av:logicalDefinition<a class="headerlink" href="#942-cmns-avlogicaldefinition" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> form of a formal expression, such as the mathematical or logic representation, for the resource<br />
+<em>subPropertyOf</em> skos:definition</p>
+<h4 id="943-iof-avisprimitive">9.4.3 iof-av:isPrimitive<a class="headerlink" href="#943-iof-avisprimitive" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> boolean flag indicating that necessary and sufficient conditions are not provided at this time<br />
+<em>usageNote</em> only applies to classes<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive</a></p>
+<h4 id="944-iof-avprimitiverationale">9.4.4 iof-av:primitiveRationale<a class="headerlink" href="#944-iof-avprimitiverationale" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> reason why the necessary and sufficient conditions were not or could not be provided at this time<br />
+<em>subPropertyOf</em> skos:note<br />
+<em>usageNote</em> only applies to classes<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/primitiveRationale">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/primitiveRationale</a></p>
+<h4 id="945-iof-avfirstorderlogicdefinition">9.4.5 iof-av:firstOrderLogicDefinition<a class="headerlink" href="#945-iof-avfirstorderlogicdefinition" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> formal definition of construct using predicate logic semantics<br />
+<em>subPropertyOf</em> skos:note<br />
+<em>usageNote</em> shall provide individually necessary and sufficient conditions<br />
+<em>usageNote</em> shall occur exactly once if the term is not primitive (isPrimitive is false)<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/firstOrderLogicDefinition">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/firstOrderLogicDefinition</a></p>
+<h4 id="946-iof-avsemiformalnaturallanguagedefinition">9.4.6 iof-av:semiFormalNaturalLanguageDefinition<a class="headerlink" href="#946-iof-avsemiformalnaturallanguagedefinition" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> transitional definition expressing first-order logic definition using semantics definition understandable by ontologically knowledgable domain practitioner without predicate logic semantics<br />
+<em>subPropertyOf</em> skos:note<br />
+<em>usageNote</em> only applies to classes<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageDefinition">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageDefinition</a></p>
+<h4 id="947-iof-avfirstorderlogicaxiom">9.4.7 iof-av:firstOrderLogicAxiom<a class="headerlink" href="#947-iof-avfirstorderlogicaxiom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> axiom of construct using predicate logic semantics<br />
+<em>usageNote</em> may have more that one first order logic axiom annotation<br />
+<em>usageNote</em> only applies to classes<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3</p>
+<h4 id="948-iof-avsemiformalnaturallanguageaxiom">9.4.8 iof-av:semiFormalNaturalLanguageAxiom<a class="headerlink" href="#948-iof-avsemiformalnaturallanguageaxiom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> transitional definition expressing first-order logic <em>axiom</em> using semantics understandable by ontologically knowledgable domain practitioner without predicate logic semantics<br />
+<em>usageNote</em> may have more that one semi-formal natural language logic axiom annotation<br />
+<em>usageNote</em> only applies to classes<br />
+<em>seeAlso</em> IOF Annotation Property Guide V2.3<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxiom">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxiom</a></p>
+<h4 id="95-annotation-properties-for-provenance-and-versioning">9.5 Annotation properties for provenance and versioning<a class="headerlink" href="#95-annotation-properties-for-provenance-and-versioning" title="Permanent link">&para;</a></h4>
+<h4 id="951-pavpreviousversion">9.5.1 pav:previousVersion<a class="headerlink" href="#951-pavpreviousversion" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="952-pavhasearlierversion">9.5.2 pav:hasEarlierVersion<a class="headerlink" href="#952-pavhasearlierversion" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="953-pavderivedfrom">9.5.3 pav:derivedFrom<a class="headerlink" href="#953-pavderivedfrom" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="954-pavlastupdatedon">9.5.4 pav:lastUpdatedOn<a class="headerlink" href="#954-pavlastupdatedon" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="955-dctermsource">9.5.5 dcterm:source<a class="headerlink" href="#955-dctermsource" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="956-iof-adaptedfrom">9.5.6 iof-adaptedFrom<a class="headerlink" href="#956-iof-adaptedfrom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> definitive source of the subject resource<br />
+<em>subPropertyOf</em> dcterm:source<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom</a></p>
+<h4 id="957-iofdirectsource">9.5.7 iof:directSource<a class="headerlink" href="#957-iofdirectsource" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> source for the resource that was modified to create the subject resource<br />
+<em>subPropertyOf</em> dcterm:source<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/directSource">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/directSource</a></p>
+<h4 id="958-iof-avcounterexample">9.5.8 iof-av:counterExample<a class="headerlink" href="#958-iof-avcounterexample" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> example that refutes or disproves a concept in some scenario and is intended to demonstrate how the concept might be misused<br />
+<em>subPropertyOf</em> skos:note<br />
+<em>isDefinedBy</em> <a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/counterExample">https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/counterExample</a></p>
+<h4 id="959-dctermstitle">9.5.9 dcterms:title<a class="headerlink" href="#959-dctermstitle" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9510-dctermslicence">9.5.10 dcterms:licence<a class="headerlink" href="#9510-dctermslicence" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9511-dctermsdescription">9.5.11 dcterms:description<a class="headerlink" href="#9511-dctermsdescription" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9512-dctermsissued">9.5.12 dcterms:issued<a class="headerlink" href="#9512-dctermsissued" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9513-dctermscontributor">9.5.13 dcterms:contributor<a class="headerlink" href="#9513-dctermscontributor" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9514-dctermscreator">9.5.14 dcterms:creator<a class="headerlink" href="#9514-dctermscreator" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9515-pavcreatedby">9.5.15 pav:createdBy<a class="headerlink" href="#9515-pavcreatedby" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="9516-pavcontributedby">9.5.16 pav:contributedBy<a class="headerlink" href="#9516-pavcontributedby" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/pav/">http://purl.org/pav/</a></p>
+<h4 id="9517-dctermsmodified">9.5.17 dcterms:modified<a class="headerlink" href="#9517-dctermsmodified" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9518-dctermspublisher">9.5.18 dcterms:publisher<a class="headerlink" href="#9518-dctermspublisher" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9519-dctermsrights">9.5.19 dcterms:rights<a class="headerlink" href="#9519-dctermsrights" title="Permanent link">&para;</a></h4>
+<p><em>isDefinedBy</em> <a href="http://purl.org/dc/terms">http://purl.org/dc/terms</a></p>
+<h4 id="9520-cmns-avcopyright">9.5.20 cmns-av:copyright<a class="headerlink" href="#9520-cmns-avcopyright" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same<br />
+<em>subPropertyOf</em> dcterms:rights<br />
+<em>isDefinedBy</em> <a href="https://www.omg.org/spec/Commons/AnnotationVocabulary">https://www.omg.org/spec/Commons/AnnotationVocabulary</a></p>
+<h4 id="96-annotation-properties-for-representing-resource-evolution">9.6 Annotation properties for representing resource evolution<a class="headerlink" href="#96-annotation-properties-for-representing-resource-evolution" title="Permanent link">&para;</a></h4>
+<h4 id="961-lisoriginatesfrom">9.6.1 lis:originatesFrom<a class="headerlink" href="#961-lisoriginatesfrom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> associates a resource with the resource it originates from<br />
+<em>isDefinedBy</em> <a href="https://rds.posccaesar.org/ontology/lis14/rdl/originatesFrom/">https://rds.posccaesar.org/ontology/lis14/rdl/originatesFrom/</a></p>
+<h4 id="962-listransformedfrom">9.6.2 lis:transformedFrom<a class="headerlink" href="#962-listransformedfrom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> the current resource originates from another resource by transformation<br />
+<em>subpropertyOf</em> lis:originatesFrom<br />
+<em>isDefinedBy</em> <a href="https://rds.posccaesar.org/ontology/lis14/rdl/transformedFrom/">https://rds.posccaesar.org/ontology/lis14/rdl/transformedFrom/</a></p>
+<h4 id="963-lismergedfrom">9.6.3 lis:mergedFrom<a class="headerlink" href="#963-lismergedfrom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> the current resource originates from one or several other resources by merging.<br />
+<em>subpropertyOf</em> lis:originatesFrom<br />
+<em>isDefinedBy</em> <a href="https://rds.posccaesar.org/ontology/lis14/rdl/mergedFrom/">https://rds.posccaesar.org/ontology/lis14/rdl/mergedFrom/</a></p>
+<h4 id="964-lissplitfrom">9.6.4 lis:splitFrom<a class="headerlink" href="#964-lissplitfrom" title="Permanent link">&para;</a></h4>
+<p><em>definition</em> the current resource originates from another ontology resource by splitting.<br />
+<em>subpropertyOf</em> lis:originatesFrom<br />
+<em>isDefinedBy</em> <a href="https://rds.posccaesar.org/ontology/lis14/rdl/splitFrom/">https://rds.posccaesar.org/ontology/lis14/rdl/splitFrom/</a></p>
+<h2 id="annex-a">Annex A<a class="headerlink" href="#annex-a" title="Permanent link">&para;</a></h2>
+<p><em>Annexes are an optional element of the text.</em><br />
+<em>For rules on the drafting of annexes, refer to the <a href="https://www.iec.ch/standardsdev/resources/draftingpublications/directives/subdivision/annexes.htm">ISO/IEC Directives, Part 2:2018, Clause 20</a></em><br />
+<strong>To create new annexes, use the Insert Annex function in the ribbon above.</strong><br />
+<em>• Specify whether the annex is normative or informative.</em><br />
+<em>• All annexes need to be referred to at least once in the main body of the text.</em><br />
+<em>• For an Annex to be considered normative, it needs to be referred to in a requirement in the main body of the text.</em></p>
+<h4 id="bibliography">Bibliography<a class="headerlink" href="#bibliography" title="Permanent link">&para;</a></h4>
+<p><strong>[1]</strong> iso:proj:76835ISO/IEC 10646:2020</p>
+<h4 id="information-technology-universal-coded-character-set-ucs">Information technology — Universal coded character set (UCS)<a class="headerlink" href="#information-technology-universal-coded-character-set-ucs" title="Permanent link">&para;</a></h4>
+<p><strong>[2]</strong> iec:proj:21615IEC 61360-1:2017</p>
+<h4 id="standard-data-element-types-with-associated-classification-scheme-part-1-definitions-principles-and-methods">Standard data element types with associated classification scheme - Part 1: Definitions - Principles and methods<a class="headerlink" href="#standard-data-element-types-with-associated-classification-scheme-part-1-definitions-principles-and-methods" title="Permanent link">&para;</a></h4>
+<p><strong>[3]</strong> Ramanathan Guha and Dan Brickley. RDF schema 1.1. W3C recommendation, W3C, February 2014. https://www.w3.org/TR/2014/REC‑rdf‑schema‑20140225/.<br />
+<strong>[4]</strong> Sean Bechhofer and Alistair Miles. SKOS simple knowledge organization system reference. W3C recommendation, W3C, August 2009. https://www.w3.org/TR/2009/REC‑skosreference‑20090818/.<br />
+<strong>[5]</strong> Annotation Commons, EDM Council, Inc. 2022. https://www.omg.org/spec/Commons/AnnotationVocabulary/<br />
+<strong>[6]</strong> Todd Schneider, Evan Wallace, IOF Technical Oversight Board, et al., Industrial ontology foundry (IOF) annotation vocabulary, 2023. https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/.<br />
+<strong>[7]</strong> Paolo Ciccarese et al. PAV ontology: Provenance, authoring and versioning. Journal of Biomedical Semantics, 4:37, 2013. Available at https://bioportal.bioontology.org/ontologies/PAV.<br />
+<strong>[8]</strong> DCMI. DCMI metadata terms. Technical report, Dublin Core Metadata Initiative, 2020. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["toc.integrate"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
