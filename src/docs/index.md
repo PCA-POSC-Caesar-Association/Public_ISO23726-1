@@ -7,7 +7,7 @@
 ### Abstract
 This document provides guidance to industry users and the semantic data modelling community on 1) the vision for the ISO 23726 Ontology-based Interoperability (OBI) series, and 2) a set of principles which resources will have to comply with in order to be considered `compliant` with IDO and the ISO 23726 series. The [Industrial Data Ontology (IDO)](https://rds.posccaesar.org/ontology/lis14/) is the upper ontology in the ISO 23726 series. IDO is currently inside the ISO process and due to be published as an ISO standard in 2026.  
   
-The contents of this document will be submitted to ISO as part of ISO 23726-1 in October 2025. The standardisation process is expected to take 3 years. During this period the contents of this document will evolve as other organisations and national bodies work to shape the ideas presented in this initial version. Once inside the ISO process only members of the ISO TC184/SC4 WG26 committee and the liaison groups will have access to the draft standard and any associated digital artefacts until it is published in 2027/2028. 
+The contents of this document will be submitted to ISO as part of ISO 23726-1 in October 2025. The standardisation process is expected to take 2 years. During this period the contents of this document will evolve as other organisations and national bodies work to shape the ideas presented in this initial version. Once inside the ISO process only members of the ISO TC184/SC4 WG26 committee and the liaison groups will have access to the draft standard and any associated digital artefacts until it is published in 2027. 
 
 ### Licence
 [CC-BY-SA-4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -29,7 +29,7 @@ IDO is implemented as an OWL 2 [upper ontology](#90902_id-a2afc511-994c-4a84-8aa
 ## 1 Scope
 This draft provides an overview and the fundamental principles of the multipart standard ISO 23726 series _Industrial automation systems and integration – Ontology based interoperability (OBI)._  
 This draft specifies the principles for ontologies and artefacts aligned with IDO [upper ontology](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) to be considered part of the OBI series.  
-This draft is applicable for the representation of engineering data associated with all phases of the life cycle of industrial products, plants and systems to enable [semantic interoperability](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9).  
+This draft is applicable in the construction of ontologies and artefacts for the representation of engineering data associated with all phases of the life cycle of industrial products, plants and systems to enable [semantic interoperability](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9).  
 The following are outside the scope of this draft:  
   1. specification of ontology languages.
   2. specification of [Semantic Web](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) standards such as Resource Description Framework (RDF), SHACL, SPARQL, and [Internationalized Resource Identifiers](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) (IRIs).
@@ -61,7 +61,7 @@ Note 3 to entry: An [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a
 
 #### 3.1.3
 **reference ontology**  
-provides a shared, formal understanding of the concepts and relationships within a specific domain or field of knowledge  
+ontology based on a shared understanding of the concepts and relationships within a specific domain or field of knowledge  
 Note 1 to entry: Reference ontologies provide a common vocabulary and structure. They are reusable across multiple applications.  
 Note 2 to entry: Reference ontologies are stable and actively maintained.  
 Note 3 to entry: There is no agreement in the literature as to a naming convention for ontologies that sit between the [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229)and an [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a64c-bd29075672fa). Various names such as Core, Domain, Domain-independent, Domain-dependent are used but not clearly defined. The term [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) is used in this standard as a label for all of these terms. [Application ontologies (3.1.1)](#90902_id-12ab04b2-4d7c-4789-ba9e-4791b2bf1baa) will usually import a number of reference ontologies from both within the enterprise and from trusted external groups such as ISO.  
@@ -70,7 +70,7 @@ Note 3 to entry: There is no agreement in the literature as to a naming conventi
 #### 3.1.4
 **upper ontology**  
 top level ontology  
-defines abstract concepts and general relationships that are common across all domains  
+ontology of abstract concepts and general relationships that are common across all domains  
 Note 1 to entry: Abstract concepts are things like Object, Event, Process, Role, Quality and Function and general relationships are relations such as lis:partOf, lis:participatesIn and lis:hasQuality
 
 ### 3.2 Ontology and RDF concepts
@@ -95,8 +95,8 @@ Note 3 to entry: [https://www.w3.org/TR/owl2-syntax/#Annotation_Properties](http
 #### 3.2.3
 **class restriction**  
 OWL class restriction  
-type of logical [axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) that constrain the properties and relationships of individuals within a class  
-Note 1 to entry: The main types of class restrictions in OWL ontologies (owl:Restriction) are existential (some), universal (only), value restriction (have a specific value for a property) and cardinality (have exactly, at least, or at most a certain number of relations).  
+logical [axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) that constrain the properties and relationships of individuals within a class  
+Note 1 to entry: The main types of class restrictions in OWL ontologies (owl:Restriction) are existential (some), universal (only), value restriction (have a specific value for a property) and cardinality restriction (have exactly, at least, or at most a certain number of relations).  
 <div class="sts-tbx-sec" id="90902_id-dbf73766-faeb-4a8c-ffc8-71e66fb154da"></div> 
 
 #### 3.2.4
@@ -114,16 +114,17 @@ Note 1 to entry: Different aspects of [expressivity (3.2.5)](#90902_id-ae7ee2d0-
   3. Axioms and constraints - ability to represent general class axioms, disjointness, property hierarchies, and cardinality constraints.
 
 
-Note 2 to entry: More expressive ontologies allow deeper automated reasoning (e.g. classification, consistency checking) but may be computationally more expensive or even undecidable.  
+Note 2 to entry: The use of axioms such as cardinality constraints or restrictions on makes implicit knowledge explicit and this explicit knowledge can be used by reasoners to infer missing information or to be used as data quality rule for the validation of instance data.   
 <div class="sts-tbx-sec" id="90902_id-98625d31-c4dd-4272-8204-817b4517dd53"></div> 
 
 #### 3.2.6
-**ontological commitment**  
-agreement to use the shared vocabulary in a coherent and consistent manner  
-Note 1 to entry: a commitment to an [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) is a guarantee of consistency, but not completeness, with respect to queries and assertions using the vocabulary defined in the ontology   
+**OBI design commitment**  
+commitment to a specification of a conceptualization  
+Note 1 to entry: a commitment to an [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) is a guarantee of consistency, but not completeness, with respect to queries and assertions using the vocabulary defined in the ontology.   
 
-Note 2 to entry: minimizing [ontological commitment (3.2.6)](#90902_id-98625d31-c4dd-4272-8204-817b4517dd53) means making as few claims as possible about the world being modelled.  
-[SOURCE:Gruber, Thomas R., and Gregory R. Olsen. "An ontology for engineering mathematics." In _Principles of Knowledge Representation and Reasoning_ , pp. 258-269. Morgan Kaufmann, 1994]  
+Note 2 to entry: This commitment is akin to a contract to ensure that data are represented and exchanged in an agreed manner. 
+
+Note 3 to entry: An agreement to ensure ontology patterns are modelled in a way that is approved by, and consistent with, the OBI ecosystem.
 <div class="sts-tbx-sec" id="90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e"></div> 
 
 #### 3.2.7
@@ -147,7 +148,6 @@ inference of implicit facts from knowledge expressed in an OWL 2 ontology using 
 **semantic interoperability**  
 interoperability so that the meaning of the data within the context of a subject area is understood by the participating systems  
 Note 1 to entry: Systems include pieces of equipment, software, human and computing systems.  
-
 Note 2 to entry: This is accomplished by linking data elements to a controlled, shared vocabulary.  
 Note 3 to entry: Ensures that data from current and legacy systems, sensors, software tools and databases can be integrated and used without manual reconciliation or misunderstanding.  
 Note 4 to entry: A foundation for Industry 4.0, Smart Factories and Digital Product passports.  
@@ -166,7 +166,7 @@ object or datatype property in OWL intended as equivalent in meaning to a modell
 **competency question**  
 question formulated in natural language that defines a formal requirement in the ontology engineering process  
 Note 1 to entry: Competency questions capture requirements from domain experts and check they can be addressed and guide developers in identifying what classes, properties, and constraints are needed.  
-Note 2 to entry: Competency questions allows a reasoner or query engine to produce a correct and complete answer to a question that the ontology was intended to support  
+Note 2 to entry: Competency questions are used to validate a reasoner or query engine can produce the answer to a question that the ontology was built to address.  
 <div class="sts-tbx-sec" id="90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea"></div> 
 
 #### 3.3.2
@@ -186,24 +186,25 @@ Note 1 to entry: Used to streamline the design of an ontology or artefact by off
 #### 3.3.4
 **ontology template**  
 template  
-means by which ontology models and modelling [patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) can be instantiated transforming conceptual knowledge and instance data into an OWL/RDF serialization  
+definition of a structure and its expansion that can translate a simplified representation of instance data into an OWL RDF serialization of the instance
+ 
 
 Note 1 to entry: Best practice is to map templates to the modelling patterns that they contribute to instantiating (noting that several templates are involved in the instantiation of one modelling [pattern (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691)).  
+Note 2 to entry: Means by which ontology models and modelling [patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) can be instantiated transforming conceptual knowledge and instance data into an OWL/RDF serialization. 
 <div class="sts-tbx-sec" id="90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf"></div> 
 
 #### 3.3.5
 **reference data library**  
 RDL  
-managed collection of reference data  
-[SOURCE: ISO 15926-1:2004]  
+vocabulary of industrial terms organized according to ontological categories  
+[SOURCE: ISO PWI 23726-2]  
 Note 1 to entry: IDO is intended to be a suitable basic vocabulary for Reference Data Libraries (RDL) represented as OWL 2 ontologies.  
 
-Note 2 to entry: An [RDL (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf) provides top-level categories, such as Object, Location, Activity, according to which [RDL (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf) elements can be categorized.  
-<div class="sts-tbx-sec" id="90902_id-52907548-af05-4df7-819b-16eb3c223620"></div> 
 
 #### 3.3.6
 **use case**  
-technique for capturing potential functional requirements
+description of a scenario to which an ontology is applied.
+Note to entry: Use cases ground ontology development in a practical need, assist with the design of competency questsions and provide a way to evaluate the suitability of the ontology for a specific need.
 
 ### 3.4 General terms
 <div class="sts-tbx-sec" id="90902_id-cbf2491c-8def-4a9e-bc12-0c1929d85096"></div> 
@@ -237,28 +238,28 @@ extension of the World Wide Web in which data are structured and tagged with [me
 #### 3.4.5
 **uniform resource identifier**  
 URI  
-compact sequence of characters that identifies an abstract or physical resource
+unique sequence of characters that identifies an abstract or physical resource
 
 ### 3.5 Terms related to organisational groups
 <div class="sts-tbx-sec" id="90902_id-4509e841-21f3-4527-ace6-f0a28443b248"></div> 
 
 #### 3.5.1
 **maintenance agency**  
-MA  
-body appointed by ISO or an External group responsible for the maintenance, application, and administration, and publication of ontology and artefacts  
-Note 1 to entry: In the OBI series there are two types of [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248), the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) and any ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248)  
-Note 2 to entry: A key responsibility for a [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) is the provision of a namespace for the [IRIs (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and a website on which ontology artefact (3.5.3) are made available.  
+body appointed by ISO (ISO-recognised) or an external (ISO-external) group responsible for the maintenance, application, and administration, and publication of ontology and artefacts  
+Note 1 to entry: A key responsibility for a [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) is the provision of a namespace for the [IRIs (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and a website on which ontology artefact (3.5.3) are made available.  
 <div class="sts-tbx-sec" id="90902_id-a818dabf-317e-4318-a9b1-31ca624cc493"></div> 
 
 #### 3.5.2
 **OBI ecosystem**  
-[OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) , stakeholders, and processes to develop, maintain and deploy solutions to deliver enterprise [semantic interoperability (3.2.9)](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9)  
+system of [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) , stakeholders, and processes to develop, maintain and deploy solutions to deliver enterprise [semantic interoperability (3.2.9)](#90902_id-14833992-ad1e-4e12-fcbd-31b74aab0be9)  
 <div class="sts-tbx-sec" id="90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c"></div> 
 
 #### 3.5.3
 **OBI artefact**  
-objects created, documented, controlled, maintained and used in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493)  
-Note 1 to entry: These artefacts are assured by the [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) of the ISO 23726 WG26 committee or the [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) of an external group.  
+object created, documented, controlled, maintained and used in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493)  
+
+Note 1 to entry: Examples include reference ontologies, ontology patterns, ontology templates, reference data libraries, and artefacts such as data quality rules and SHACL.
+Note 2 to entry: These artefacts are assured by a [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
 
 ## 4 Parts in the OBI series
 
@@ -266,15 +267,15 @@ Note 1 to entry: These artefacts are assured by the [Maintenance Agency (3.5.1)]
 This document presents a vision for the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493) and a set of principles (Clause 6) to ensure artefacts in the OBI series are compliant with a set of principles.
 
 ### 4.2 Vocabulary
-This document describes the terms and definitions used in the ISO 23726 standard series.
+Document describing the terms and definitions used in the ISO 23726 standard series.
 
 ### 4.3 Industrial Data Ontology
-This document describes the Industrial Data Ontology (IDO), an ontology intended for industrial data and information, to build vocabularies and manage asset models which employ reference data libraries and exploit OWL DL.  
+This document describes the Industrial Data Ontology (IDO), an upper ontology intended for industrial data and information, to build vocabularies and manage asset models which employ reference data libraries and exploit OWL DL.  
 The IDO standard described in ISO 23726-3 provides a foundation for all parts of the ISO 23726 standards.  
 The purpose of the IDO standard is to serve the representation and integration of industrial data and industry standards. This means, to build vocabularies and asset models, to manage asset models which employ reference data libraries, and to support automated machine reasoning and data quality. The IDO standard supports information models used in all life cycle phases of industrial systems, processes and products.
 
 ### 4.4 Schedule Data Ontology
-The Schedule Data Ontology specifies the vocabulary for schedule data and information. It is intended for industrial schedule data and information. The ontology provides definitions for terms related to schedules, schedule activity, work patterns for schedule execution, and the relationships between schedule activities and resources.
+The Schedule Data reference ontology specifies the vocabulary for schedule data and information. It is intended for industrial schedule data and information. The ontology provides definitions for terms related to schedules, schedule activity, work patterns for schedule execution, and the relationships between schedule activities and resources.
 
 ## 5 OBI ecosystem
 
@@ -285,9 +286,9 @@ Figure 2 shows artefacts in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-
 
 a) Industrial Data Ontology ISO 23726-3 (IDO) - this [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) is shown at the core of the diagram.
 
-b) ISO 23726 managed artefacts from the ISO 23726 series. These shared artefacts are shown as the grey circle around IDO. They are assured by ISO processes and available through ISO. They are governed by the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) for ISO 23726.
+b) ISO 23726 managed artefacts from the ISO 23726 series. These shared artefacts are shown as the grey circle around IDO. They are assured by ISO processes and available through ISO. They are governed by the ISO-recognised [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) for ISO 23726.
 
-c) External group managed artefacts that meet the principles set out in this Standard. These are shown in the white circle. External groups include, for example, other standards bodies and industry organisations. Within each external group there is a body (called the ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248)) responsible for the assurance and maintenance of the artefacts.
+c) External group managed artefacts that meet the principles set out in this Standard. These are shown in the white circle. External groups include, for example, other standards bodies and industry organisations. These artefacts shall be managed and maintained with quality control processes equivalent to those of the ISO-recognized maintenance agency. 
 
 d) Shared OBI series managed artefacts (OBI artefacts and external group managed artefacts). These sit within the black dashed line in Figure 2. The creation and maintenance of these shared artefacts enables efficient construction of ontologies. Examples of common shared artefacts include [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914), and [reference data libraries (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf).
 
@@ -306,18 +307,16 @@ Figure 2 — Artefacts in the OBI ecosystem. Artefacts inside the dashed line ar
 ### 5.2 Stakeholders in the OBI ecosystem
 Stakeholders in this ontology-centric ecosystem include (but are not limited to) asset owners and operators, engineering product and process plant designers, standards organisations, industry groups that manage reference data libraries, organisations involved knowledge representation and AI, and those providing ontology development and maintenance services, assurance and conformity assessment services.  
 The Maintenance Agencies are a vital component of the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493) because enterprises require quality control to build trust that artefacts are managed and maintained by an accountable body.  
-The diagram in Figure 3 shows an example of how an enterprise might use trusted artefacts from 1) ISO 23726, 2) its internal artefacts (shown in the upper box), and 3) artefacts provided by external groups compliant with this OBI standard (shown in the white box). The figure also includes some examples of roles involved in each stage of the process. The same person may have a role as part of an enterprise's internal process as well as part of an external group's process.
+The diagram in Figure 3 shows an example of how an enterprise might use trusted artefacts from 1) ISO 23726, 2) its internal artefacts (shown in the upper box), and 3) artefacts provided by external groups compliant with this OBI standard (shown in the white box). Figure 3 also includes some examples of roles involved in each stage of the process. The same person may have a role as part of an enterprise's internal process as well as part of an external group's process.
   
 Figure 3 — Illustrative example of processes and roles involved in managing an enterprise ontology ecosystem which uses both internal and externally-managed trusted OBI series ontologies
 
 ![graphic-1752628595045](./figs/Fig3.png)
 
-### 5.3 Ontology alignment
-A shared ecosystem requires [ontological alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) to ensure new artefacts are aligned to IDO or to existing IDO-aligned [reference ontologies (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) in the OBI series. The goal is to avoid adding classes and properties that are already represented in the OBI series.  
-.Requirements for [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) are specified in 6.6
 
-### 5.4 Reference ontologies
-A [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) is a domain-specific ontology that models key concepts in a domain so that other more specialized ontologies or applications can reuse or extend it. A trusted [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) can be used across multiple applications. A [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) does not necessarily aim to model everything in the domain.  
+### 5.3 Reference ontologies
+A [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) is a domain-specific ontology that models key concepts in a domain so that other more specialized ontologies or applications can reuse or extend it. A trusted [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) can be used across multiple applications. 
+A [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) does not necessarily aim to model everything in the domain. It requires an agreement on the level of expressivity required to represent concepts in the domain. 
 There is no agreement in the community as to a naming convention for ontologies between the top-level and an [application ontology (3.1.1)](#90902_id-12ab04b2-4d7c-4789-ba9e-4791b2bf1baa). Various names such as Core, Domain, Domain-independent, Domain-dependent are used but not clearly defined. Reference ontologies is used here as a label for all of these. Many [application ontologies (3.1.1)](#90902_id-12ab04b2-4d7c-4789-ba9e-4791b2bf1baa) will import a number of [reference ontologies (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914). This information is presented in Figure 4.
   
 Figure 4 — Illustration of the different terms used in ISO 23726 to describe different types of ontologies
@@ -340,21 +339,25 @@ There is an evolving space developing ontologies for specific domains such as pa
 EXAMPLE 3  
 Ontologies for business processes (e.g. scheduling, maintenance), for equipment (e.g. piping and valves), and for specific international standards (e.g. IEC 61360-1:2017<a href="#ref-2">[2]</a>).
 
+### 5.4 Ontology alignment
+A shared ecosystem requires [ontological alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) to ensure new artefacts are aligned to IDO or to existing IDO-aligned [reference ontologies (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) in the OBI series. The goal is to avoid adding classes and properties that are already represented in the OBI series.  
+.Requirements for [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) are specified in 6.6
+
 ### 5.5 Reference data libraries
-The engineering community has a history in developing reference data libraries ([RDL (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf)). These are intended as shared resources managed by standards bodies and industry associations. Examples include CFIHOS, ECLASS, ISO 15926-4 and IEC CDD.  
+The engineering community has a history in developing reference data libraries ([RDL (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf)). These are intended as shared resources managed by standards bodies and industry associations. Examples include CFIHOS, ECLASS, ISO 15926-4 and IEC CDD although in their current forms these reference data libraries are not IDO compliant.  
 For use in the OBI series these [reference data libraries (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf) are be aligned to the IDO [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229), or 2) to an existing IDO compliant [reference ontology, (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914) or 3) to an existing OBI series [ontology module (3.3.2)](#90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea).  
 These RDLs may be managed by different external groups. These groups sit outside of the control of the ISO 23726 committee. In these situations, the following are some suggestions.
 
 a) Both groups align completely, and prefer to share a term and namespace
 
-b) Both groups align (perhaps after one or both groups make some concessions modifications) and they get to create the "valve" term in each of their namespaces with an appropriate annotation between the two terms.
+b) Both groups align (perhaps after one or both groups make some concessions modifications) and they get to create the term in each of their namespaces with an appropriate axiom between the two terms.
 
 c) The groups cannot meet a common ground. They diverge, but note a "caveat" in their [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e), noting the misalignment with another term / concept in the OBI series.
 
 
 ### 5.6 Relationship to Semantic Web technologies
-IDO is an OWL 2 [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229). It is formulated in OWL DL, a sublanguage of OWL 2 based on [description logics (3.2.4)](#90902_id-dbf73766-faeb-4a8c-ffc8-71e66fb154da) (DLs). DLs are a family of languages used in artificial intelligence and [Semantic Web (3.4.4)](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) technologies for logic-based knowledge representation and reasoning. Typical [ontology reasoning (3.2.8)](#90902_id-75768bd8-00ef-4c11-a67a-8e2dd8d9566e) tasks include: (1) consistency checks; (2) automated classification, i.e. inference of implicit class hierarchies; (3) inference of new facts. OWL DL reasoners are software engines that automatically perform OWL DL [ontology reasoning (3.2.8)](#90902_id-75768bd8-00ef-4c11-a67a-8e2dd8d9566e) tasks. In addition to providing a high-level vocabulary for representing industrial assets and processes, IDO's modelling patterns are designed to enable efficient automated reasoning for IDO-aligned ontologies by OWL DL reasoners.  
-OWL 2 stands for Web Ontology Language, it is a W3C recommendation. The W3C (World Wide Web Consortium) is an international organization responsible for developing and maintaining open standards for the World Wide Web. IDO is an open standard for semantic exchange of industrial data between an organization's internal and external partners. IDO leverages the OWL formalisms and other [Semantic Web (3.4.4)](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) standards like RDF and SHACL developed by W3C. These underpin how the internet works to enable semantic exchange of existing data.
+IDO is an OWL 2 [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229). It is formulated in OWL DL, a sublanguage of OWL 2 based on [description logics (3.2.4)](#90902_id-dbf73766-faeb-4a8c-ffc8-71e66fb154da) (DLs). DLs are a family of languages used in artificial intelligence and [Semantic Web (3.4.4)](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) technologies for logic-based knowledge representation and reasoning. Typical [ontology reasoning (3.2.8)](#90902_id-75768bd8-00ef-4c11-a67a-8e2dd8d9566e) tasks include: (1) consistency checks; (2) generation of taxonomical classification, i.e. inference of implicit class hierarchies; (3) inference of new facts. OWL DL reasoners are software engines that perform automated OWL DL [ontology reasoning (3.2.8)](#90902_id-75768bd8-00ef-4c11-a67a-8e2dd8d9566e) tasks without human intervention. In addition to providing a high-level vocabulary for representing industrial assets and processes, IDO's modelling patterns are designed to enable efficient automated reasoning for IDO-aligned ontologies by OWL DL reasoners.  
+OWL 2 stands for Web Ontology Language, it is a W3C recommendation. The W3C (World Wide Web Consortium) is an international organization responsible for developing and maintaining open standards for the World Wide Web. IDO is an open standard for semantic exchange of industrial data between an organization's internal and external partners. IDO leverages the OWL formalisms and other [Semantic Web (3.4.4)](#90902_id-4c838da8-8cf6-48ab-8b2f-47be27b44bda) standards like RDF and SHACL developed by W3C. These are proven and widely used technologies.
 
 ### 5.7 RDF vocabularies
 RDF-based vocabularies are a useful resource for modellers and to ensure standardization.  
@@ -364,23 +367,25 @@ DCMI Metadata Terms: a list of classes and properties to describe [metadata (3.4
 
 ### 5.8 Modelling templates, patterns and data quality rules
 
-#### 5.8.1 Introduction
-In the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493) ontologies are knowledge-centric and application-independent but many enterprise data models are application-dependent and data centric. This is illustrated in Figure 5.  
-OWL/RDF serialised instance data in an [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a64c-bd29075672fa) can be used in multiple enterprise applications. Each application has its own data model built for a specific business purpose.  
-Ensuring data in enterprise applications has the same semantic meaning as intended in enterprise ontologies is a key goal for the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493).
-  
+#### 5.8.1 Example
+In the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493) ontologies are knowledge-centric and application-independent but many enterprise data models are application-dependent and data centric. A typical example for a specific enterprise application is shown in Figure 5. Figure 5 represents physical properties of a motor using a modelling pattern. 
+
 Figure 5 —  
 Example based on a motor (ex:Motor71) and representation of its mass (20 kg) to illustrate how SHACL may be used in both the knowledge and application layers
 
 ![graphic-1754012236701](./figs/Fig5.png)
 
-The top two boxes of Figure 5 show the ontology (upper layer) and an example of an enterprise's instance data (middle layer). The ontology is application-independent and represents facts about an object and its properties (in this case a motor is used as an example). Different applications will have need specific data (application-dependent views). For example, electrical engineering-centric and safety professional-centric views are shown. Two common uses of SHACL are shown. These are to 1) to apply general, application-independent constraints on enterprise ontology (SHACL shape in the top layer) or to apply application-dependent constraints in addition to those specified in the data (SHACL shapes in the lowest layer).
+The top two boxes of Figure 5 show the ontology (upper layer) and an example of an enterprise's instance data (middle layer). The ontology is application-independent and represents facts about an object and its properties (in this case a motor is used as an example). Different applications will have need specific data (application-dependent views). For example, electrical engineering-centric and safety professional-centric views are shown. 
+
+Two common uses of SHACL are shown. These are to 1) to apply general, application-independent constraints on enterprise ontology (SHACL shape in the top layer) or to apply application-dependent constraints in addition to those specified in the data (SHACL shapes in the lowest layer).
+
+The modelling pattern for the OWL/RDF serialised instance data shown in Figure 5 can be used in multiple applications to ensure data in different enterprise applications has the same semantic meaning. This is a key goal for the OBI ecosystem.
 
 #### 5.8.2 Ontology templates
 Ontology templates are used to produce ontologies and to populate existing ontologies with data. Ontology templates make these processes reproducible and testable. Data quality rules can be developed for templates.
 
 #### 5.8.3 Ontology (modelling) patterns
-[Ontology patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) for representing and instantiating patterns are an integral part of the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493).  
+[Ontology patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) capturing common ontological modelling patterns and solutions are an integral part of the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493).  
 [Ontology patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) are reusable artefacts to represent structures commonly found in knowledge bases. Just like software design patterns, they are used by modellers to create reusable, maintainable and scalable ontologies. Use of existing [ontology patterns (3.3.3)](#90902_id-375bcae2-7d95-4df7-ed03-626059f2b691) reduces modelling effort. The benefits include reducing mapping effort, reducing potential for errors, and facilitating integration. The resulting standardization enables tooling to be built.  
 The IDO ontology supports development of both fine and coarse grained modelling patterns. The selection of a particular level of detail is a modelling choice. High and low levels of detail in conceptual models refer to the granularity and specificity with which entities, relationships, and constraints are described.  
 Models with high levels of detail make use fine-grained modeling patterns. These provide a verbose representation of elements in the ontology. Models with low levels of detail make use of [shortcut property (3.2.10)](#90902_id-c1a1aa0f-2558-417a-99df-61bdf46a076d) to provide a more compact representation.
@@ -398,11 +403,11 @@ SHACL (Shapes Constraint Language) is a language for validating RDF graphs again
 Reasoners (e.g. HermiT, Pellet, ELK), when applied to OWL ontologies, enforce data quality rules using logical axioms defined in the ontology.
 
 #### 5.8.6 Use of SHACL
-OWL and SHACL are both part of the same linked data ecosystem. Both OWL and SHACL use graph‑shaped RDF data. However there are differences.  
-  1. Both OWL and SHACL are open standards, which allows them to be used across tools and vendors.
-  2. OWL operates under the open world assumption (OWA), and SHACL under the closed world assumption (CWA).
-  3. OWL is descriptive, while SHACL is prescriptive.
-  4. OWL can be used for reasoning, and SHACL can be used for validation.
+OWL and SHACL are both part of the same linked data ecosystem. Both OWL and SHACL use graph‑shaped RDF data and are open standards, which allows them to be used across tools and vendors. 
+However there are differences.  
+  1. OWL operates under the open world assumption (OWA), and SHACL under the closed world assumption (CWA).
+  2. OWL is descriptive, while SHACL is prescriptive.
+  3. OWL can be used for reasoning, and SHACL can be used for validation.
 
 
 SHACL shapes are a closed world complement to OWL and are used to enforce constraints on modelling patterns and individuals in the ontology. These constraints for example 1) make relations and its cardinalities explicit and 2) can be used for automated validation of each RDF instance in the ontology. SHACL shapes developed for reference ontologies or modelling patterns may be shared artefacts.  
@@ -426,20 +431,19 @@ Ontologies, [ontology modules (3.3.2)](#90902_id-f0a96969-59c0-45d2-f367-dcf0066
 Each standard describing an ontology in the OBI series shall be accompanied by a digital file containing a serialisation of all the classes and properties described in the standard document.  
 Each reference and application ontology in the OBI series shall be accompanied by a use case, competency questions, and digital file with instance data to demonstrate reasoning and compliance with the ontological commitments in IDO. Ontologies and use cases in the OBI series should be relevant for industry.
 
-### 6.4 Axiomisation
-Resources in an OBI series ontology should be axiomised to constrain the meaning of that resource by specifying rules, properties and relationships it shall satisfy in order to make the resource semantically distinct from all the other resources. Constraints should define criteria for an individual's membership in classes, for being related by object or data property, and for the purpose of any individual.  
-The extend of [axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) use should consider the intended use of the ontology.  
+### 6.4 Axioms, rules and constraints
+Resources in an OBI series ontology should be defined to constrain the meaning of that resource by specifying axioms, rules, properties and relationships necessary to make the resource semantically distinct from all the other resources. Constraints should define criteria for an individual's membership in classes, for being related by object or data property, and for the purpose of any individual.  
+The extent of [axiom (3.2.1)](#90902_id-f6f5d02c-8539-48dc-e037-64849b136806) used should consider the intended use of the ontology.  
 NOTE 1 Some axioms are used for consistency checking and to avoid duplication but over-use of axioms can impact reasoning performance and result in complex structures.  
 NOTE 2 Consideration of [competency questions (3.3.1)](#90902_id-6deda62d-4bef-458e-a4b9-fc17de42c121) can inform axiomisation choices.
 
-### 6.5 Annotation
-Ontology models should be documented with [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) described in Clause 8.  
-Other annotations can be included but these are as an addition to the ones listed in Clause 8 and should be governed by a documented process.  
-Classes and properties in an ontology should be documented with [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) listed in Clause 9.
+Where rules in languages other than OWL are contained in an OBI series part, evidence that the application of the rules will yield results consistent with the IDO [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) should be provided.  
+NOTE 3 Rules for checking correctness are considered complementary to OWL 2 consistency checking, not a replacement.  
+NOTE 4 As an example, the generation of rules in other languages (such as the SPARQL 'CONSTRUCT' statement).
 
-### 6.6 Ontology alignment, review and documentation
+### 6.5 Ontology alignment, review and documentation
 
-#### 6.6.1 Ontology alignment
+#### 6.5.1 Ontology alignment
 Each class in an OWL ontology or [reference data library (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf) contained in the OBI series shall be a direct or indirect subclass of an IDO class.  
 This requirement can be fulfilled in one of the following ways: 1) By subclassing directly from the IDO [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229); 2) By subclassing from an existing IDO-compliant [reference ontology, (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914); or 3) By subclassing from an [ontology module (3.3.2)](#90902_id-f0a96969-59c0-45d2-f367-dcf0066267ea) within the OBI series.  
 Each property in an OWL ontology or [reference data library (3.3.5)](#90902_id-94d8adaf-b5ac-475d-fa03-878c2eb37fdf) contained in the OBI series should extend as sub-properties whenever appropriate.  
@@ -447,10 +451,10 @@ This can be achieved 1) directly from the IDO [upper ontology (3.1.4)](#90902_id
 New OBI series classes and properties should not redefine, or duplicate classes and properties defined in other OBI series ontologies.  
 The highest level of detail (conceptual representation) should be used when assessing [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e)
 
-#### 6.6.2 Review of ontology alignment decisions
-All [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) decisions for artefacts in the ISO 23726 series shall be reviewed and approved by the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
-All [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) decisions for artefacts created by external groups that seek to be recognised as part of the OBI series shall be reviewed and approved by that external group's ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
-All ontology alignments should be documented as described in 6.6.3  
+#### 6.5.2 Review of ontology alignment decisions
+All [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) decisions for artefacts in the ISO 23726 series shall be reviewed and approved by a [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+All [ontology alignment (3.2.7)](#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e) decisions for artefacts created by external groups that seek to be recognised as part of the OBI series shall be reviewed and approved using processes equivalent to this of the ISO-recognised [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+ 
 NOTE In certain cases a superproperty is created that is outside of the IDO, an IDO compliant [reference ontology (3.1.3)](#90902_id-996eca6e-ae2b-4f5b-e84c-1638f3bd2914), or other existing [OBI artefact (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) . This is a design choice as it is not practically possible or desirable to provide an exhaustive set of super-relations for all future needs.  
 Details to assist in consistent treatment of misalignment situations will be developed in guidance documents.  
 EXAMPLE  
@@ -462,8 +466,10 @@ b) The proposed ontology creates the term in their own namespace and uses a rdfs
 
 c) The proposed ontology retains a concept with a different interpretation from OBI, documents this in their [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) and follows the ontology conflict clause in 6.8.
 
+### 6.5.3 Ontological conflicts
+[Ontological commitments (3.2.6)](#90902_id-98625d31-c4dd-4272-8204-817b4517dd53) for ontologies in external reference ontologies should not conflict with modelling [class restrictions (3.2.3)](#90902_id-24e5dbde-d01b-4709-d1b4-3f4f9b2c1fed) in existing OBI ontologies. Where such conflicts exist, solutions to map between the artefact in the external source to the existing OBI ontologies shall be proposed and documented as described in 6.6.3.
 
-#### 6.6.3 Documentation on ontology alignment
+#### 6.5.4 Documentation on ontology alignment
 Each alignment should be expressed as an ontology that:  
   1. imports IDO, other relevant existing OBI modules and the external ontology,
   2. asserts subclass or subproperty relationships and/or axioms, and
@@ -479,43 +485,45 @@ Each alignment shall be documented as follows.
 
 Documentation on alignment shall use annotation properties described in Clause 8 and Clause 9
 
-### 6.7 Ontology modularisation
-Ontology developers should make modular ontologies designed for re-use for different applications and ease of ontology maintenance. Justification of the inclusions and exclusions in the module should be captured using annotation properties described in Clause 9.3.
+### 6.6 Annotation
+Ontology models should be documented with [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) described in Clause 8.  
+Other annotations can be included but these are as an addition to the ones listed in Clause 8 and should be governed by a documented process.  
+Classes and properties in an ontology should be documented with [metadata (3.4.3)](#90902_id-5c183346-1414-49e8-be56-8dc3a60d704e) listed in Clause 9.
+Other annotations can be included but these are as an addition to the ones listed in Clause 9 and should be governed by a documented process. 
 
-### 6.8 Ontological conflicts
-[Ontological commitments (3.2.6)](#90902_id-98625d31-c4dd-4272-8204-817b4517dd53) for ontologies in external reference ontologies should not conflict with modelling [class restrictions (3.2.3)](#90902_id-24e5dbde-d01b-4709-d1b4-3f4f9b2c1fed) in existing OBI ontologies. Where such conflicts exist, solutions to map between the artefact in the external source to the existing OBI ontologies shall be proposed and documented as described in 6.6.3
+### 6.7 Versioning and storage of artefacts
+The ontologies that are part of the OBI series shall be version controlled.  
+Each versioned OBI series ontology should have stable [IRIs (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) .  
+Annotations provided in 9.5 and 9.6 shall be used to document ontologies and their evolution.  
+NOTE Classes, properties, individuals and axioms in an ontology do not have version numbers. This is to ensure that the IRIs of the resources defined in an ontology are stable independent from the version of the ontology.
+
+### 6.8 Ontology modularisation
+Ontology developers should make modular ontologies designed for re-use for different applications and ease of ontology maintenance. 
+Justification of the inclusions and exclusions in the module should be captured using annotation properties described in Clause 9.3.
+Import statements pointing to specific versions of re-used ontologies should be used to enure that the resolved IRIs are correctly referring to the versioned ontology.
+When ontologies are re-used there should be a clear hierarchy of imports to avoid circular imports.
+
 
 ### 6.9 Ontology evaluation
 All ontologies in the OBI series shall have suitable ontology quality tests. These tests should provide evidence of ontology evaluation with, for example, model checking processes, syntax checkers, and reasoners.  
-Processes for ontology evaluation of ISO-managed artefacts shall be reviewed and approved by the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
-Processes for ontology evaluation of [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) managed by external groups are the responsibility of the external group and the evaluation should be done by an ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
-Examples of issues examined by model checkers include but are not limited to the following.  
+Processes for ontology evaluation of ISO-managed artefacts shall be reviewed and approved by the ISO-recognised [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+Processes for ontology evaluation of [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) managed by external groups are the responsibility of the external group and the evaluation should be done to a standard equivalent to that of the [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+Examples of issues examined by model checkers include but are not limited to those below.  
 EXAMPLE 1  
 The presence of polysemous elements - ontology elements whose name has different meaning and represents more than one conceptual idea.  
 EXAMPLE 2  
 Creation of synonyms when two or more classes that have the same meaning but different names. Such as common synonyms for foundation: base, footing and substructure.  
-EXAMPLE 3  
-Missing annotations properties such as documented in Clause 8 and Clause 9.
 
-### 6.10 Rule consistency
-Where rules in languages other than OWL are contained in an OBI series part, evidence that the application of the rules will yield results consistent with the IDO [upper ontology (3.1.4)](#90902_id-a2afc511-994c-4a84-8aa1-4d8e28292229) should be provided.  
-NOTE 1 Rules for checking correctness. Such rules are considered complementary to OWL 2 consistency checking, not a replacement.  
-NOTE 2 Rules that generate triples (including axioms). This will apply to templates and transformation/generation rules in various other languages (such as SPARQL constructs).
+### 6.10 Ontology maintenance agencies and process
 
-### 6.11 Shared OBI artefact ownership
-Shared OBI series artefacts issued by the ISO OBI standards (ISO 23726) community shall be managed by the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
-OBI series artefacts issued by external group organisations shall have independent evaluation of their alignment by an ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) to ensure conformance with the Principles in Clause 6.
-
-### 6.12 Ontology maintenance agencies and process
-
-#### 6.12.1 Ontology maintenance agency
-An ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) is responsible for maintaining the publishing updates to digital versions of artefacts that are part of the ISO 23726 series.  
+#### 6.10.1 Ontology maintenance agency
+A [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) is responsible for maintaining the publishing updates to digital versions of artefacts that are part of the ISO 23726 series.  
 NOTE 1 ISO 23726 managed documents will have a regular maintenance process at a time interval prescribed by ISO.  
-External groups seeking to propose and manage [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) shall have a documented and auditable quality management process to ensure conformance with the Principles in Clause 6. [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) created by external groups shall be managed by an external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+External groups seeking to propose and manage [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) shall have a documented and auditable quality management process to ensure conformance with the principles in Clause 6. [OBI artefacts (3.5.3)](#90902_id-31bd7981-8f1f-4656-9397-906ddd3b070c) created by external groups shall be managed using processes equivalent to those of a maintenance agency.  
 NOTE 2 Independent review by an external ontology expert is an option.
 
-#### 6.12.2 Maintenance process
-A maintenance process shall be documented by the [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
+#### 6.10.2 Maintenance process
+A maintenance process shall be documented by a [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248).  
 EXAMPLE  
 Examples of questions addressed in the maintenance process include the following.
 
@@ -540,19 +548,17 @@ i) How will updates to versions of imported ontologies be managed?
 
 This process shall include mechanisms for feedback from users.
 
-### 6.13 Versioning and storage of artefacts
-The ontologies that are part of the OBI series shall be version controlled.  
-Classes, properties, individuals and axioms in an ontology do not have version numbers.  
-Each versioned OBI series ontology should have stable [IRIs (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) .  
-Import statements pointing to specific versions of re-used ontologies should be used to ensure appropriate [IRIs (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) are being used.  
-Annotations provided in 9.5 and 9.6 shall be used to document ontologies and their evolution.  
-NOTE Users are encouraged to develop a set of checks for importing ontologies. For example, checks to ensure that classes, object properties and axioms in the imported ontology do not have relations outside of the current module that result in circular relationships.
+### 6.10.3 OBI artefact ownership
+OBI artefacts issued by the ISO OBI standards (ISO 23726) community shall be managed by the [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) as shown in Figure 2.  
+OBI series artefacts issued by external group organisations shall have independent evaluation of their alignment using processes equivalent to those in the maintenance agency to ensure conformance with the principles in Clause 6.
+
+
 
 ## 7 Grounding in mathematical logic
-OWL 2 is based on description logics (DL) which are fragments of First-order logic (FOL). FOL is a mathematical framework, specifically a formal system used in mathematical logic to express statements about structures as follows.  
+This clause justifies why OWL 2 is chosen for use in ISO 23726 ontologies. OWL 2 is based on description logics (DL) which are fragments of First-order logic (FOL). FOL is a mathematical framework, specifically a formal system used in mathematical logic to express statements about structures as follows.  
   1. Formal Language: FOL provides a precise way to define mathematical statements using quantifiers (∀, ∃), logical connectives (∧, ∨, →, ¬), and predicates.
   2. Inference System: It includes rules for reasoning (deduction), such as modus ponens and universal instantiation.
-  3. Model Theory: FOL allows us to study the meaning (semantics) of logical statements by defining structures that satisfy them.
+  3. Model Theory: FOL expresses the meaning (semantics) of logical statements by defining structures that satisfy them.
 
 
 Specifically, OWL 2 corresponds closely to SROIQ(D), a highly expressive (3.2.5), decidable DL. This enables automated reasoning in knowledge representation such as satisfiability checking and automated classification.
@@ -563,24 +569,24 @@ Specifically, OWL 2 corresponds closely to SROIQ(D), a highly expressive (3.2.5)
 This section describes formatting and annotation guidelines for ontology constructs in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493). These guidelines are intended to ensure a consistent approach to formatting across the [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a64c-bd29075672fa) user base.
 
 ### 8.2 Namespace
-Ontologies created and managed by under the OBI standard should use a namespace provided by the ISO-recognised [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) - as listed by ISO on [https://www.iso.org/maintenance_agencies.html](https://www.iso.org/maintenance_agencies.html)  
-The IDO [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) is [https://rds.posccaesar.org/ontology/lis14/ont/core/](https://rds.posccaesar.org/ontology/lis14/ont/core/)  
+Ontologies created and managed by under the OBI standard should use a namespace provided by the [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) - as listed by ISO on [https://www.iso.org/maintenance_agencies.html](https://www.iso.org/maintenance_agencies.html)  
+Entities in IDO [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) that uses the namespace [https://rds.posccaesar.org/ontology/lis14/ont/core/](https://rds.posccaesar.org/ontology/lis14/ont/core/)  
 Versioning of the ontology will be managed by a version extension at the end of the [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) , such as [https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/](https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/)  
-Ontologies created and managed by external groups should use a suitable namespace managed by the ISO-external [Maintenance Agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248). The namespace format should follow the format in this 8.2
+Ontologies created and managed by external groups should use a suitable namespace. The namespace format should follow the format in this sub-clause.
 
 ### 8.3 Sub-directory structure
-Reference ontologies will have the following URL structure [http://rds.posccaesar.org/ontology/XXX/ont/core](http://rds.posccaesar.org/ontology/XXX/ont/core)  
+Reference ontologies shall have the following URL structure [http://rds.posccaesar.org/ontology/XXX/ont/core](http://rds.posccaesar.org/ontology/XXX/ont/core) where XXX is a placeholder for an acronym of the respective ontologu with no limit on characters.  
 EXAMPLE 1  
-For the Schedule Data Ontology (SDO) the following URL is proposed: [http://rds.posccaesar.org/ontology/sdo/ont/core](http://rds.posccaesar.org/ontology/sdo/ont/core)  
-SWRL Rules, SHACL shapes and property chains shall be in dedicated directories under the ontology with which they are associated.  
+For the Schedule Data Ontology the following URL is proposed: [http://rds.posccaesar.org/ontology/sdo/ont/core](http://rds.posccaesar.org/ontology/sdo/ont/core)  
+SWRL Rules and SHACL shapes shall be in dedicated directories under the ontology with which they are associated.  
 EXAMPLE 2  
   1. [https://rds.posccaesar.org/ontology/lis14/ont/core/swrl/](https://rds.posccaesar.org/ontology/lis14/ont/core/swrl/)
   2. [https://rds.posccaesar.org/ontology/lis14/ont/core/shacl/](https://rds.posccaesar.org/ontology/lis14/ont/core/shacl/)
-  3. [https://rds.posccaesar.org/ontology/lis14/ont/core/propertychain/](https://rds.posccaesar.org/ontology/lis14/ont/core/propertychain/)
+
 
 
 ### 8.4 Prefixes
-Ontologies in OWL employ namespace prefixes. These should be declared in each ontology artefact in the OBI series.  
+Namespace prefixes for ontologies in OWL should be declared in each ontology artefact in the OBI series.  
 EXAMPLE  
   1. Prefix: rdf: [http://www.w3.org/1999/02/22-rdf-syntax-ns#](http://www.w3.org/1999/02/22-rdf-syntax-ns#)
   2. Prefix: ssn: [http://www.w3.org/ns/ssn/](http://www.w3.org/ns/ssn/)
@@ -588,26 +594,30 @@ EXAMPLE
 
 
 ### 8.5 Class names
-Class name in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label without language tag shall be a noun group in singular, given in Pascal Case (also known as Upper Camel Case), each word capitalized, and no separation or punctuation between words. Class names should not use numeric identifiers for classes. No acronyms should be used except those in the dictionary, such as RADAR.  
+Class name in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label without language tag shall be a noun group in singular, given in PascalCase (also known as UpperCamelCase).
+Class names and labels should be human readable.
+Class names and labels should be in English.
+Class names should not use numeric identifiers for classes.
+No acronyms should be used except those in the dictionary, such as RADAR, which should be converted to Radar in PascalCase.  
 Annotation labels for class names with language tags (e.g. Japanese, Chinese, German) should be human readable.  
 EXAMPLE  
-The class physical object is written as _PhysicalObject_ with an example [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) as follows. A postscript can be used to specify language variants.  
-  1. [http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject](http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject)
-  2. [https://rds.posccaesar/ontology/lis14/rdl/PhysischesObjekt@de](https://rds.posccaesar/ontology/lis14/rdl/PhysischesObjekt@de)
-  3. [https://rds.posccaesar/ontology/lis14/rdl/ObjetPhysique@fr](https://rds.posccaesar/ontology/lis14/rdl/ObjetPhysique@fr)
+The rdfs:label for the class "physical object" can be written as follows using a postscript to specify language variants.  
+ 1. rdfs:label "PhysicalObject"
+ 2. rdfs:label "Physical object"@en
+ 3. rdfs:label "Physikalisches Objekt"@de
 
 
 ### 8.6 Object property names
-Object property names in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label without language tag shall be verb phrases in third person singular in present tense, in lower Camel Case, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.  
-Object property names should be human readable.  
-Object property names should be in English.  
+Object property names in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label shall be verb phrases in third person singular in present tense, in lowerCamelCase. 
+Object property names and labels should be human readable.  
+Object property names and labels should be in English.  
 EXAMPLE  
-  1. The object property _hasArrangedPart_ in [http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart](http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart)
-  2. The annotation property hasEarlierVersion in [http://purl.org/pav/hasEarlierVersion](http://purl.org/pav/hasEarlierVersion)
+  1. The object property _lis:hasArrangedPart_ in [http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart](http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart)
+  2. The annotation property pav:hasEarlierVersion in [http://purl.org/pav/hasEarlierVersion](http://purl.org/pav/hasEarlierVersion)
 
 
 ### 8.7 Data property names
-Data property names shall be be a noun group in singular, in lower Camel Case, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.  
+Data property names shall be be a noun group in singular, in lowerCamelCase.  
 Data property names should be human readable.  
 Data property names should be in English.  
 EXAMPLE  
@@ -631,7 +641,7 @@ Annotation property definitions shall not start with an `a' or 'the'.
 ### 9.2 Required annotation properties
 
 #### 9.2.1 rdfs:label
-_definition_ instance of rdf:property used to provide a human-readable version of a resource's name  
+_definition_ instance of rdf:Property used to provide a human-readable version of a resource's name  
 _usageNote_ every ontology class, object property, data property and SHACL shape in OBI shall have an rdfs:label  
 _usageNote_ labels shall be unique across all OBI ontologies and should be unique across all imported non-OBI ontologies in a given natural language  
 _usageNote_ lables for other languages may be provided, but if so they must be language tagged  
@@ -663,7 +673,7 @@ _isDefinedBy_ [http://www.w3.org/2004/02/skos/core#example](http://www.w3.org/20
 EXAMPLE  
 **lis:Role**  
 _example_ The role an individual person takes in a work situation, such as a manager. A student role.  
-**Lis:Location**  
+**lis:Location**  
 _example_ An outdoor plant area, an opening in a wall, the space inside an enclosure
 
 #### 9.3.3 skos:prefLabel
@@ -688,7 +698,7 @@ _isDefinedBy_ [https://www.omg.org/spec/Commons/AnnotationVocabulary](https://ww
 #### 9.3.6 cmns-av:abbreviation
 _definition_ designation formed by omitting parts from the full form of a term that denotes the same concept  
 _subPropertyOf_ cmns-av:synonym  
-_example_ Chemical Symbols: H, O, Mg; Units of Measure: Km, Kg, G  
+_example_ chemical Symbols: H, O, Mg; units of Measure: Km, Kg, G  
 _isDefinedBy_ [https://www.omg.org/spec/Commons/AnnotationVocabulary](https://www.omg.org/spec/Commons/AnnotationVocabulary)
 
 #### 9.3.7 cmns-av:acronym
@@ -720,7 +730,7 @@ _isDefinedBy_ [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/
 #### 9.3.12 skos:scopeNote
 _definition_ clarifies the meaning and/or use of a concept  
 _usageNote_ clarifies the scope of use of an OBI artefact. It supplies some, possibly partial, information about the intended meaning of a concept, especially as an indication of how the use of a concept is limited in indexing practice  
-_example_ ex:microwaveFrequencies skos:scopeNote Used for frequencies between 1GHz to 300Ghz"@en  
+_example_ ex:microwaveFrequencies skos:scopeNote used for frequencies between 1GHz to 300Ghz"@en  
 _isDefinedBy_ [http://www.w3.org/2004/02/skos/core#scopeNote](http://www.w3.org/2004/02/skos/core#scopeNote)
 
 #### 9.3.13 iof-av:explanatoryNote
