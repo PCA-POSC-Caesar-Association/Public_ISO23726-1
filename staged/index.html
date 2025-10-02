@@ -788,11 +788,9 @@ Classes and properties in an ontology should be documented with <a href="#90902_
 Other annotations can be included but these are as an addition to the ones listed in Clause 9 and should be governed by a documented process. </p>
 <h3 id="67-versioning-and-storage-of-artefacts">6.7 Versioning and storage of artefacts<a class="headerlink" href="#67-versioning-and-storage-of-artefacts" title="Permanent link">&para;</a></h3>
 <p>The ontologies that are part of the OBI series shall be version controlled.<br />
-Classes, properties, individuals and axioms in an ontology do not have version numbers.<br />
 Each versioned OBI series ontology should have stable <a href="#90902_id-fe088aab-9638-49db-e45b-316b4f274a11">IRIs (3.4.2)</a> .<br />
-Import statements pointing to specific versions of re-used ontologies should be used to ensure appropriate <a href="#90902_id-fe088aab-9638-49db-e45b-316b4f274a11">IRIs (3.4.2)</a> are being used.<br />
 Annotations provided in 9.5 and 9.6 shall be used to document ontologies and their evolution.<br />
-NOTE Users are encouraged to develop a set of checks for importing ontologies. For example, checks to ensure that classes, object properties and axioms in the imported ontology do not have relations outside of the current module that result in circular relationships.</p>
+NOTE Classes, properties, individuals and axioms in an ontology do not have version numbers. This is to ensure that the IRIs of the resources defined in an ontology are stable independent from the version of the ontology.</p>
 <h3 id="68-ontology-modularisation">6.8 Ontology modularisation<a class="headerlink" href="#68-ontology-modularisation" title="Permanent link">&para;</a></h3>
 <p>Ontology developers should make modular ontologies designed for re-use for different applications and ease of ontology maintenance. 
 Justification of the inclusions and exclusions in the module should be captured using annotation properties described in Clause 9.3.
@@ -827,7 +825,7 @@ Examples of questions addressed in the maintenance process include the following
 <p>h) How will <a href="#90902_id-70c1695a-814e-45f5-c952-a68cf5c2737e">ontology alignment (3.2.7)</a> be checked and assured?</p>
 <p>i) How will updates to versions of imported ontologies be managed?</p>
 <p>This process shall include mechanisms for feedback from users.</p>
-<h3 id="611-shared-obi-artefact-ownership">6.11 Shared OBI artefact ownership<a class="headerlink" href="#611-shared-obi-artefact-ownership" title="Permanent link">&para;</a></h3>
+<h3 id="6103-obi-artefact-ownership">6.10.3 OBI artefact ownership<a class="headerlink" href="#6103-obi-artefact-ownership" title="Permanent link">&para;</a></h3>
 <p>OBI artefacts issued by the ISO OBI standards (ISO 23726) community shall be managed by the <a href="#90902_id-4509e841-21f3-4527-ace6-f0a28443b248">maintenance agency (3.5.1)</a> as shown in Figure 2.<br />
 OBI series artefacts issued by external group organisations shall have independent evaluation of their alignment using processes equivalent to those in the maintenance agency to ensure conformance with the principles in Clause 6.</p>
 <h2 id="7-grounding-in-mathematical-logic">7 Grounding in mathematical logic<a class="headerlink" href="#7-grounding-in-mathematical-logic" title="Permanent link">&para;</a></h2>
