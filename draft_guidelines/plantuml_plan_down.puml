@@ -1,0 +1,31 @@
+@startuml
+
+hide empty members
+hide object fields
+hide circle
+
+class Object
+class Specified
+class Agent
+class Plan
+class PlanExecution
+class PlanDocument
+class InformationObject
+class SpecifiedCapability
+
+
+
+
+SpecifiedCapability --|> Specified : "subClassOf" 
+Plan --|>  SpecifiedCapability : "subClassOf"
+PlanDocument --|>  InformationObject : "subClassOf"
+Agent --|>  Object : "subClassOf"
+
+Agent --> PlanExecution : "participatesIn"
+Plan --> PlanExecution : "realizedIn"
+Agent --> Plan : "hasCapabilityToPlan"
+PlanExecution --> PlanDocument : "concretizes"
+
+
+@enduml
+
