@@ -5,7 +5,7 @@
 #### Development team: Pål Rylandsholm, Maja Milicic Brandt, Johan W Kluwer, Caitlin Woods, Dirk Walter, Inghild Kaarstad
 
 ### Abstract
-This document provides guidance to industry users and the semantic data modelling community on 1) the vision for the ISO 23726 Ontology-based Interoperability (OBI) series, and 2) a set of principles which resources will have to comply with in order to be considered `compliant` with IDO and the ISO 23726 series. The [Industrial Data Ontology (IDO)](https://rds.posccaesar.org/ontology/lis14/) is the upper ontology in the ISO 23726 series. IDO is currently inside the ISO process and due to be published as an ISO standard in 2026.  
+This document provides guidance to industry users and the semantic data modelling community on 1) the vision for the ISO 23726 Ontology-based Interoperability (OBI) series, and 2) a set of principles which resources will have to comply with in order to be considered compliant with IDO and the ISO 23726 series. The [Industrial Data Ontology (IDO)](https://rds.posccaesar.org/ontology/lis14/) is the upper ontology in the ISO 23726 series. IDO is currently inside the ISO process and due to be published as an ISO standard in 2026.  
   
 The contents of this document was submitted to ISO as part of ISO 23726-1 in October 2025. The committee draft (CD) was registered in January 2026. The standardisation process is expected to take 3 years. During this period the contents of this document will evolve as other organisations and national bodies work to shape the ideas presented in this initial version. Once inside the ISO process only members of the ISO TC184/SC4 WG26 committee and the liaison groups will have access to the draft standard and any associated digital artefacts until it is published in February 2028. 
 
@@ -457,7 +457,7 @@ The middle layer shows one example of instance data. In this case for ex:Motor71
 A SHACL shape defined in the application-independent upper lay can be used to validate data at the instance level. For example the SHACL shape on the right hand side of the Figure 5 checks to see if 1) lis:datumUOM has exactly kilogram as unit of measurement that is a valid instance of lis:UnitOfMeasure, and 2) at least one datum value (lis:datumValue) where the datatype is xsd:float.  
 
 A SHACL shape can also be used to check if an ontology is following the defined guidelines. For example, it can be checked if the shapes in Figure 5 are in line with the patterns for such shapes defined in guidelines. SHACL shapes can also be converted to OWL restrictions. 
- 
+
 The lowest level shows how data modellers building applications can use SHACL shapes to ensure that attributes of interest to a specific application are consistent with the instance data and admissible to the ontology. This is shown by the illustration of different views for a) safety engineer, and b) an electrical engineer. SHACL used in this way links the data modellers to the ontology.
 
 ## 6 Fundamental principles
