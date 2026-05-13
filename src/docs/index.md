@@ -627,7 +627,7 @@ OBI resources should use a namespace with consistent formating defined by the on
 
 Example: 'http://xxx.hostorganisation.org/ontology/ontologyname/xxx/' where name/xxx/ is defined by the ontology developer. If following this format the xxx must not be ‘/ont/’ as the ‘ont/’ part is reserved for ontologies not for resources. 
 
-Note the IDO ontology uses ‘/rdl/’.
+Note the IDO ontology uses ‘/rdl/’ for resources in the IDO ontology http://rds.posccaesar.org/ontology/lis14/rdl/.
 
 
 ### 8.6 Class names
@@ -665,22 +665,23 @@ Annotation labels for object property names with language tags (e.g. Japanese, C
 
 One annotation label shall be in English.
 
-EXAMPLE  
-  1. The object property _lis:hasArrangedPart_ in [http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart](http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart)
-  2. The annotation property pav:hasEarlierVersion in [http://purl.org/pav/hasEarlierVersion](http://purl.org/pav/hasEarlierVersion)
+EXAMPLE : The object property _lis:hasArrangedPart_ in [http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart](http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart)
+
 
 
 ### 8.7 Data property names
 
 Data property names in IDO, the upper ontology, shall be human readable.
 
-Object property names in other OBI series ontologies should be uninformative but may be human readable.
+Data property names in other OBI series ontologies should be uninformative but may be human readable.
 
-If an object property name is human readable it shall be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.
+If an data property name is human readable it shall be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.
 
 The rdfs:label shall be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.
 
 Annotation labels for data property names with language tags (e.g. Japanese, Chinese, German) should be human readable.
+
+One annotation label shall be in English.
 
 ## 9 Annotation properties
 
