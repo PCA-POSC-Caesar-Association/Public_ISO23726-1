@@ -568,22 +568,45 @@ Specifically, OWL 2 corresponds closely to SROIQ(D), a highly expressive (3.2.5)
 ### 8.1 General
 This section describes formatting and annotation guidelines for ontology constructs in the [OBI ecosystem (3.5.2)](#90902_id-a818dabf-317e-4318-a9b1-31ca624cc493). These guidelines are intended to ensure a consistent approach to formatting across the [enterprise ontology (3.1.2)](#90902_id-25040f49-0155-4535-a64c-bd29075672fa) user base.
 
-### 8.2 Namespace
-Ontologies created and managed by under the OBI standard should use a namespace provided by the [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) - as listed by ISO on [https://www.iso.org/maintenance_agencies.html](https://www.iso.org/maintenance_agencies.html)  
-Entities in IDO [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) that uses the namespace [https://rds.posccaesar.org/ontology/lis14/ont/core/](https://rds.posccaesar.org/ontology/lis14/ont/core/)  
-Versioning of the ontology will be managed by a version extension at the end of the [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) , such as [https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/](https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/)  
-Ontologies created and managed by external groups should use a suitable namespace. The namespace format should follow the format in this sub-clause.
-
-### 8.3 Sub-directory structure
-Reference ontologies shall have the following URL structure [http://rds.posccaesar.org/ontology/XXX/ont/core](http://rds.posccaesar.org/ontology/XXX/ont/core) where XXX is a placeholder for an acronym of the respective ontologu with no limit on characters.  
-EXAMPLE 1  
-For the Schedule Data Ontology the following URL is proposed: [http://rds.posccaesar.org/ontology/sdo/ont/core](http://rds.posccaesar.org/ontology/sdo/ont/core)  
-SWRL Rules and SHACL shapes shall be in dedicated directories under the ontology with which they are associated.  
-EXAMPLE 2  
-  1. [https://rds.posccaesar.org/ontology/lis14/ont/core/swrl/](https://rds.posccaesar.org/ontology/lis14/ont/core/swrl/)
-  2. [https://rds.posccaesar.org/ontology/lis14/ont/core/shacl/](https://rds.posccaesar.org/ontology/lis14/ont/core/shacl/)
 
 
+### 8.2 Ontology Namespace
+
+Ontologies created and managed by under the OBI standard should use a namespace provided by the [maintenance agency (3.5.1)](#90902_id-4509e841-21f3-4527-ace6-f0a28443b248) - as listed by ISO on [https://www.iso.org/maintenance_agencies.html](https://www.iso.org/maintenance_agencies.html)
+
+The identifier structure for an ontology is made up of two parts a) a namespace and b) a local name.
+
+http://xxx.hostorganisation.org/ontology/ontologyname/ont/core
+
+As an example for the IDO Core ontology ‘http://rds.posccaesar.org/ontology/lis14/ont/core’ the namespace is ‘http://rds.poscaesar.org/ontology/lis14/ont/’ and the local name is ‘core’.
+
+The namespace is decomposed into a scheme name (http), domain name (rds/poscaesar.org), ontology name (lis14), an ontology module identifier (ont).
+
+The domain name component of the ontology identifier consists of:
+
+- Subdomain: A prefix to the domain name, which may be used (e.g., ‘xxx’ in xxx.hostorganisation.org).
+
+- Second-Level Domain (SLD ) : The primary domain name, which shall be present (e.g., ‘hostorganisation’ in hostorganisation.org).
+
+- Top-Level Domain (TLD): The suffix of the domain, which shall be present (e.g., ‘.org’ in hostorganisation.org).
+
+Versioning of the ontology will be managed by a version extension at the end of the [URI (3.4.5)](#90902_id-11c3c905-68c7-4f85-c5e4-9f92b409f6e3) , such as [https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/](https://rds.posccaesar.org/ontology/lis14/ont/core/3.0/) 
+
+Ontologies created and managed by external groups should use a suitable namespace. The namespace format should follow the following format.
+
+http://xxx.hostorganisation.org/ontology/ontologyname/ont/core/versionnumber
+
+### 8.3 Ontology sub-directory structure
+
+For extension ontologies in a series some examples are given below. The local names in each of these examples are for illustrative purposes.
+
+For ontology extensions:
+
+Generic format  http://xxx.hostorganisation.org/ontology/ontologyname/ont/ext
+
+For rules  http://xxx.hostorganisation.org/ontology/ontologyname/rules
+
+For documentation http://xxx.hostorganisation.org/ontology/ontologyname/doc
 
 ### 8.4 Prefixes
 Namespace prefixes for ontologies in OWL should be declared in each ontology artefact in the OBI series.  
@@ -592,14 +615,35 @@ EXAMPLE
   2. Prefix: ssn: [http://www.w3.org/ns/ssn/](http://www.w3.org/ns/ssn/)
   3. Prefix: qudt: [http://qudt.org/schema/qudt/](http://qudt.org/schema/qudt/)
 
+### 8.5 Namespace for OBI resources
 
-### 8.5 Class names
-Class name in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label without language tag shall be a noun group in singular, given in PascalCase (also known as UpperCamelCase).
-Class names and labels should be human readable.
-Class names and labels should be in English.
-Class names should not use numeric identifiers for classes.
-No acronyms should be used except those in the dictionary, such as RADAR, which should be converted to Radar in PascalCase.  
-Annotation labels for class names with language tags (e.g. Japanese, Chinese, German) should be human readable.  
+Resources such as class, relation, property or individual shall use a dedicated namespace. The goal is to provide a single, stable namespace for resource identifiers, independent of how ontology modules are organized over time and to supports adding, splitting, or reorganizing ontology modules under .../ont/… without changing resource identifiers.
+
+The use of multiple namespaces in the OBI series is a deliberate design choice aligned with widely adopted Linked Data and ontology publication practices.
+
+Different namespaces are used to make different kinds of things easy to identify, govern, publish, and evolve without disrupting established usage.
+
+OBI resources should use a namespace with consistent formating defined by the ontology developer. The namespace for resources shall be different from the namespace for the ontology.
+
+Example: 'http://xxx.hostorganisation.org/ontology/ontologyname/xxx/' where name/xxx/ is defined by the ontology developer. If following this format the xxx must not be ‘/ont/’ as the ‘ont/’ part is reserved for ontologies not for resources. 
+
+Note the IDO ontology uses ‘/rdl/’.
+
+
+### 8.6 Class names
+
+Class names and labels in IDO should be human readable.
+
+Class names in other OBI series ontologies should be uninformative but may be human readable.
+
+If a class name is human readable it shall be a noun group in singular, given in PascalCase (also known as UpperCamelCase).
+
+The rdfs:label without language tag shall be a noun group in singular, given in PascalCase (also known as UpperCamelCase).
+
+No acronyms should be used except those in the dictionary, such as RADAR, which should be converted to Radar in PascalCase.
+
+Annotation labels for class names with language tags (e.g. Japanese, Chinese, German) should be human readable.
+
 EXAMPLE  
 The rdfs:label for the class "physical object" can be written as follows using a postscript to specify language variants.  
  1. rdfs:label "PhysicalObject"
@@ -608,21 +652,35 @@ The rdfs:label for the class "physical object" can be written as follows using a
 
 
 ### 8.6 Object property names
-Object property names in the [IRI (3.4.2)](#90902_id-fe088aab-9638-49db-e45b-316b4f274a11) and the annotation label shall be verb phrases in third person singular in present tense, in lowerCamelCase. 
-Object property names and labels should be human readable.  
-Object property names and labels should be in English.  
+
+Object property names in IDO, the upper ontology, shall be human readable.
+
+Object property names in other OBI series ontologies should be uninformative but may be human readable.  
+
+If an object property name is human readable it shall be verb phrases in third person singular in present tense, in lowerCamelCase.
+
+The rdfs:label shall be verb phrases in third person singular in present tense, in lowerCamelCase.
+
+Annotation labels for object property names with language tags (e.g. Japanese, Chinese, German) should be human readable.
+
+One annotation label shall be in English.
+
 EXAMPLE  
   1. The object property _lis:hasArrangedPart_ in [http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart](http://rds.posccaesar.org/ontology/lis14/rdl/hasArrangedPart)
   2. The annotation property pav:hasEarlierVersion in [http://purl.org/pav/hasEarlierVersion](http://purl.org/pav/hasEarlierVersion)
 
 
 ### 8.7 Data property names
-Data property names shall be be a noun group in singular, in lowerCamelCase.  
-Data property names should be human readable.  
-Data property names should be in English.  
-EXAMPLE  
-  1. The data property [http://rds.posccaesar.org/ontology/lis14/rdl/datumValue](http://rds.posccaesar.org/ontology/lis14/rdl/datumValue)
 
+Data property names in IDO, the upper ontology, shall be human readable.
+
+Object property names in other OBI series ontologies should be uninformative but may be human readable.
+
+If an object property name is human readable it shall be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.
+
+The rdfs:label shall be a noun group in singular, in lowerCamelCase, the first word lower case and each subsequent word capitalized with no separation or punctuation between words.
+
+Annotation labels for data property names with language tags (e.g. Japanese, Chinese, German) should be human readable.
 
 ## 9 Annotation properties
 
